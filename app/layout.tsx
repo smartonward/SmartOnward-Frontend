@@ -1,10 +1,14 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
+export const viewport: Viewport = {
+  themeColor: "#2563EB",
+};
+
 export const metadata: Metadata = {
-  title: "SmartOnward — We Move Your Brand Onward",
+  title: "SmartOnward — Digital Growth & Automation Agency",
   description:
-    "SmartOnward is a full-service digital agency helping businesses grow through websites, content, social media, AI automation and smart marketing.",
+    "SmartOnward is a digital growth and automation agency helping businesses build their digital presence, grow customer reach and automate repetitive work.",
 };
 
 export default function RootLayout({
