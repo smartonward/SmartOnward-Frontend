@@ -35,7 +35,13 @@ export default function VideoAndReelsPage() {
       <nav>
         <div className="nav-inner">
           <Link href="/" className="logo" aria-label="SmartOnward home">
-            <img src="/logo.png" alt="SmartOnward Logo" className="logo-img" />
+            <img
+              src="/logo.png"
+              alt="SmartOnward Logo"
+              className="logo-img"
+              height={28}
+              style={{ height: "28px", width: "auto", maxHeight: "28px", objectFit: "contain" }}
+            />
             <div className="logo-text">
               <span>Smart</span>Onward
             </div>
@@ -505,7 +511,13 @@ export default function VideoAndReelsPage() {
           <div className="footer-grid">
             <div className="footer-brand">
               <div className="logo" style={{ marginBottom: 0 }}>
-                <img src="/logo.png" alt="SmartOnward Logo" className="logo-img" />
+                <img
+                  src="/logo.png"
+                  alt="SmartOnward Logo"
+                  className="logo-img"
+                  height={28}
+                  style={{ height: "28px", width: "auto", maxHeight: "28px", objectFit: "contain" }}
+                />
                 <div className="logo-text" style={{ color: "#fff" }}>
                   <span style={{ color: "#60A5FA" }}>Smart</span>Onward
                 </div>
