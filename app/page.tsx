@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -305,436 +306,496 @@ export default function Home() {
 
           <div className="service-grid">
             {/* 01 WEBSITE */}
-            <article className="service-card-new blue">
-              <div className="service-card-top">
-                <div className="service-icon-wrap">
-                  <svg viewBox="0 0 100 80" fill="none" aria-hidden="true">
-                    <rect
-                      x="12"
-                      y="11"
-                      width="57"
-                      height="48"
-                      rx="6"
-                      fill="#DBEAFE"
-                      stroke="#2563EB"
-                      strokeWidth="2"
-                    />
-                    <path d="M12 23h57" stroke="#2563EB" strokeWidth="2" />
-                    <circle cx="19" cy="17" r="2" fill="#2563EB" />
-                    <circle cx="26" cy="17" r="2" fill="#60A5FA" />
-                    <circle cx="33" cy="17" r="2" fill="#93C5FD" />
-                    <rect
-                      x="20"
-                      y="30"
-                      width="19"
-                      height="15"
-                      rx="2"
-                      fill="#fff"
-                      stroke="#93C5FD"
-                    />
-                    <path
-                      d="M22 42l6-6 4 4 3-3 4 5"
-                      stroke="#2563EB"
-                      strokeWidth="1.7"
-                    />
-                    <rect
-                      x="44"
-                      y="30"
-                      width="17"
-                      height="3"
-                      rx="1.5"
-                      fill="#93C5FD"
-                    />
-                    <rect
-                      x="44"
-                      y="37"
-                      width="13"
-                      height="3"
-                      rx="1.5"
-                      fill="#BFDBFE"
-                    />
-                    <rect
-                      x="44"
-                      y="44"
-                      width="9"
-                      height="3"
-                      rx="1.5"
-                      fill="#DBEAFE"
-                    />
-                    <rect
-                      x="68"
-                      y="25"
-                      width="20"
-                      height="38"
-                      rx="4"
-                      fill="#fff"
-                      stroke="#2563EB"
-                      strokeWidth="2"
-                    />
-                    <rect
-                      x="72"
-                      y="30"
-                      width="12"
-                      height="22"
-                      rx="2"
-                      fill="#EFF6FF"
-                    />
-                    <circle cx="78" cy="57" r="2" fill="#2563EB" />
-                  </svg>
+            <Link
+              href="/website-development"
+              className="service-card-link"
+              aria-label="Explore Website Development"
+            >
+              <article className="service-card-new blue">
+                <div className="service-card-top">
+                  <div className="service-icon-wrap">
+                    <svg viewBox="0 0 100 80" fill="none" aria-hidden="true">
+                      <rect
+                        x="12"
+                        y="11"
+                        width="57"
+                        height="48"
+                        rx="6"
+                        fill="#DBEAFE"
+                        stroke="#2563EB"
+                        strokeWidth="2"
+                      />
+                      <path d="M12 23h57" stroke="#2563EB" strokeWidth="2" />
+                      <circle cx="19" cy="17" r="2" fill="#2563EB" />
+                      <circle cx="26" cy="17" r="2" fill="#60A5FA" />
+                      <circle cx="33" cy="17" r="2" fill="#93C5FD" />
+                      <rect
+                        x="20"
+                        y="30"
+                        width="19"
+                        height="15"
+                        rx="2"
+                        fill="#fff"
+                        stroke="#93C5FD"
+                      />
+                      <path
+                        d="M22 42l6-6 4 4 3-3 4 5"
+                        stroke="#2563EB"
+                        strokeWidth="1.7"
+                      />
+                      <rect
+                        x="44"
+                        y="30"
+                        width="17"
+                        height="3"
+                        rx="1.5"
+                        fill="#93C5FD"
+                      />
+                      <rect
+                        x="44"
+                        y="37"
+                        width="13"
+                        height="3"
+                        rx="1.5"
+                        fill="#BFDBFE"
+                      />
+                      <rect
+                        x="44"
+                        y="44"
+                        width="9"
+                        height="3"
+                        rx="1.5"
+                        fill="#DBEAFE"
+                      />
+                      <rect
+                        x="68"
+                        y="25"
+                        width="20"
+                        height="38"
+                        rx="4"
+                        fill="#fff"
+                        stroke="#2563EB"
+                        strokeWidth="2"
+                      />
+                      <rect
+                        x="72"
+                        y="30"
+                        width="12"
+                        height="22"
+                        rx="2"
+                        fill="#EFF6FF"
+                      />
+                      <circle cx="78" cy="57" r="2" fill="#2563EB" />
+                    </svg>
+                  </div>
+                  <div className="service-number">01</div>
                 </div>
-                <div className="service-number">01</div>
-              </div>
-              <h3>Website Development</h3>
-              <p>
-                Fast, responsive websites and landing pages that make your value clear and turn visits into action.
-              </p>
-              <div className="service-tags-new">
-                <span className="service-tag-new">Business Websites</span>
-                <span className="service-tag-new">Landing Pages</span>
-                <span className="service-tag-new">UI/UX</span>
-                <span className="service-tag-new">SEO</span>
-              </div>
-            </article>
+                <h3>Website Development</h3>
+                <p>
+                  Fast, responsive websites and landing pages that make your value clear and turn visits into action.
+                </p>
+                <div className="service-tags-new">
+                  <span className="service-tag-new">Business Websites</span>
+                  <span className="service-tag-new">Landing Pages</span>
+                  <span className="service-tag-new">UI/UX</span>
+                  <span className="service-tag-new">SEO</span>
+                </div>
+                <div className="service-card-badge-link">
+                  <span>Explore Service</span>
+                  <span>→</span>
+                </div>
+              </article>
+            </Link>
 
             {/* 02 BRANDING */}
-            <article className="service-card-new green">
-              <div className="service-card-top">
-                <div className="service-icon-wrap">
-                  <svg viewBox="0 0 100 80" fill="none" aria-hidden="true">
-                    <rect
-                      x="16"
-                      y="18"
-                      width="48"
-                      height="39"
-                      rx="7"
-                      fill="#DCFCE7"
-                    />
-                    <path
-                      d="M26 29h22"
-                      stroke="#22C55E"
-                      strokeWidth="3"
-                      strokeLinecap="round"
-                    />
-                    <path
-                      d="M26 38h28"
-                      stroke="#86EFAC"
-                      strokeWidth="3"
-                      strokeLinecap="round"
-                    />
-                    <path
-                      d="M26 47h17"
-                      stroke="#BBF7D0"
-                      strokeWidth="3"
-                      strokeLinecap="round"
-                    />
-                    <rect
-                      x="57"
-                      y="13"
-                      width="28"
-                      height="28"
-                      rx="7"
-                      fill="#fff"
-                      stroke="#22C55E"
-                      strokeWidth="2"
-                    />
-                    <path
-                      d="M66 34V21l13 13M69 26h8"
-                      stroke="#16A34A"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <circle cx="22" cy="62" r="7" fill="#22C55E" />
-                    <path
-                      d="M19 62l2 2 4-5"
-                      stroke="#fff"
-                      strokeWidth="1.6"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
+            <Link
+              href="/branding-and-visual-design"
+              className="service-card-link"
+              aria-label="Explore Branding & Visual Design"
+            >
+              <article className="service-card-new green">
+                <div className="service-card-top">
+                  <div className="service-icon-wrap">
+                    <svg viewBox="0 0 100 80" fill="none" aria-hidden="true">
+                      <rect
+                        x="16"
+                        y="18"
+                        width="48"
+                        height="39"
+                        rx="7"
+                        fill="#DCFCE7"
+                      />
+                      <path
+                        d="M26 29h22"
+                        stroke="#22C55E"
+                        strokeWidth="3"
+                        strokeLinecap="round"
+                      />
+                      <path
+                        d="M26 38h28"
+                        stroke="#86EFAC"
+                        strokeWidth="3"
+                        strokeLinecap="round"
+                      />
+                      <path
+                        d="M26 47h17"
+                        stroke="#BBF7D0"
+                        strokeWidth="3"
+                        strokeLinecap="round"
+                      />
+                      <rect
+                        x="57"
+                        y="13"
+                        width="28"
+                        height="28"
+                        rx="7"
+                        fill="#fff"
+                        stroke="#22C55E"
+                        strokeWidth="2"
+                      />
+                      <path
+                        d="M66 34V21l13 13M69 26h8"
+                        stroke="#16A34A"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                      <circle cx="22" cy="62" r="7" fill="#22C55E" />
+                      <path
+                        d="M19 62l2 2 4-5"
+                        stroke="#fff"
+                        strokeWidth="1.6"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </div>
+                  <div className="service-number">02</div>
                 </div>
-                <div className="service-number">02</div>
-              </div>
-              <h3>Branding &amp; Visual Design</h3>
-              <p>
-                Build a recognizable identity with logo systems, brand guidelines and professional business collateral.
-              </p>
-              <div className="service-tags-new">
-                <span className="service-tag-new">Logo Design</span>
-                <span className="service-tag-new">Brand Identity</span>
-                <span className="service-tag-new">Pitch Decks</span>
-                <span className="service-tag-new">Collateral</span>
-              </div>
-            </article>
+                <h3>Branding &amp; Visual Design</h3>
+                <p>
+                  Build a recognizable identity with logo systems, brand guidelines and professional business collateral.
+                </p>
+                <div className="service-tags-new">
+                  <span className="service-tag-new">Logo Design</span>
+                  <span className="service-tag-new">Brand Identity</span>
+                  <span className="service-tag-new">Pitch Decks</span>
+                  <span className="service-tag-new">Collateral</span>
+                </div>
+                <div className="service-card-badge-link" style={{ color: "#16A34A" }}>
+                  <span>Explore Service</span>
+                  <span>→</span>
+                </div>
+              </article>
+            </Link>
 
             {/* 03 VIDEO */}
-            <article className="service-card-new purple">
-              <div className="service-card-top">
-                <div className="service-icon-wrap">
-                  <svg viewBox="0 0 100 80" fill="none" aria-hidden="true">
-                    <path
-                      d="M18 20l9-7h49a5 5 0 015 5v29a5 5 0 01-5 5H23a5 5 0 01-5-5V20z"
-                      fill="#EDE9FE"
-                      stroke="#7C3AED"
-                      strokeWidth="2"
-                    />
-                    <path d="M18 20h63l-10-9H27l-9 9z" fill="#C4B5FD" />
-                    <path d="M45 25l15 9-15 9V25z" fill="#7C3AED" />
-                    <rect
-                      x="62"
-                      y="40"
-                      width="24"
-                      height="25"
-                      rx="6"
-                      fill="#fff"
-                      stroke="#7C3AED"
-                      strokeWidth="2"
-                    />
-                    <path d="M62 48h24" stroke="#A78BFA" strokeWidth="2" />
-                    <path d="M69 54l7 4-7 4V54z" fill="#7C3AED" />
-                  </svg>
+            <Link
+              href="/video-and-reels"
+              className="service-card-link"
+              aria-label="Explore Video & Reels"
+            >
+              <article className="service-card-new purple">
+                <div className="service-card-top">
+                  <div className="service-icon-wrap">
+                    <svg viewBox="0 0 100 80" fill="none" aria-hidden="true">
+                      <path
+                        d="M18 20l9-7h49a5 5 0 015 5v29a5 5 0 01-5 5H23a5 5 0 01-5-5V20z"
+                        fill="#EDE9FE"
+                        stroke="#7C3AED"
+                        strokeWidth="2"
+                      />
+                      <path d="M18 20h63l-10-9H27l-9 9z" fill="#C4B5FD" />
+                      <path d="M45 25l15 9-15 9V25z" fill="#7C3AED" />
+                      <rect
+                        x="62"
+                        y="40"
+                        width="24"
+                        height="25"
+                        rx="6"
+                        fill="#fff"
+                        stroke="#7C3AED"
+                        strokeWidth="2"
+                      />
+                      <path d="M62 48h24" stroke="#A78BFA" strokeWidth="2" />
+                      <path d="M69 54l7 4-7 4V54z" fill="#7C3AED" />
+                    </svg>
+                  </div>
+                  <div className="service-number">03</div>
                 </div>
-                <div className="service-number">03</div>
-              </div>
-              <h3>Video &amp; Reels</h3>
-              <p>
-                Create attention-grabbing short-form content, promotional videos, product videos and AI-assisted creative.
-              </p>
-              <div className="service-tags-new">
-                <span className="service-tag-new">Reels</span>
-                <span className="service-tag-new">Promotional Videos</span>
-                <span className="service-tag-new">AI Video</span>
-                <span className="service-tag-new">Editing</span>
-              </div>
-            </article>
+                <h3>Video &amp; Reels</h3>
+                <p>
+                  Create attention-grabbing short-form content, promotional videos, product videos and AI-assisted creative.
+                </p>
+                <div className="service-tags-new">
+                  <span className="service-tag-new">Reels</span>
+                  <span className="service-tag-new">Promotional Videos</span>
+                  <span className="service-tag-new">AI Video</span>
+                  <span className="service-tag-new">Editing</span>
+                </div>
+                <div className="service-card-badge-link" style={{ color: "#7C3AED" }}>
+                  <span>Explore Service</span>
+                  <span>→</span>
+                </div>
+              </article>
+            </Link>
 
             {/* 04 SOCIAL */}
-            <article className="service-card-new orange">
-              <div className="service-card-top">
-                <div className="service-icon-wrap">
-                  <svg viewBox="0 0 100 80" fill="none" aria-hidden="true">
-                    <rect
-                      x="25"
-                      y="10"
-                      width="32"
-                      height="56"
-                      rx="7"
-                      fill="#FFF7ED"
-                      stroke="#EA580C"
-                      strokeWidth="2"
-                    />
-                    <rect
-                      x="30"
-                      y="17"
-                      width="22"
-                      height="31"
-                      rx="3"
-                      fill="#FFEDD5"
-                    />
-                    <circle cx="41" cy="55" r="3" fill="#EA580C" />
-                    <rect
-                      x="49"
-                      y="32"
-                      width="31"
-                      height="22"
-                      rx="7"
-                      fill="#fff"
-                      stroke="#FB923C"
-                      strokeWidth="2"
-                    />
-                    <path
-                      d="M57 39h15M57 45h10"
-                      stroke="#FDBA74"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                    />
-                    <circle cx="17" cy="31" r="9" fill="#EA580C" />
-                    <path
-                      d="M13 31l3 3 5-6"
-                      stroke="#fff"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <rect
-                      x="62"
-                      y="56"
-                      width="17"
-                      height="14"
-                      rx="4"
-                      fill="#F97316"
-                    />
-                    <path
-                      d="M66 65l3-3 3 2 4-5"
-                      stroke="#fff"
-                      strokeWidth="1.5"
-                    />
-                  </svg>
+            <Link
+              href="/social-media-management"
+              className="service-card-link"
+              aria-label="Explore Social Media Management"
+            >
+              <article className="service-card-new orange">
+                <div className="service-card-top">
+                  <div className="service-icon-wrap">
+                    <svg viewBox="0 0 100 80" fill="none" aria-hidden="true">
+                      <rect
+                        x="25"
+                        y="10"
+                        width="32"
+                        height="56"
+                        rx="7"
+                        fill="#FFF7ED"
+                        stroke="#EA580C"
+                        strokeWidth="2"
+                      />
+                      <rect
+                        x="30"
+                        y="17"
+                        width="22"
+                        height="31"
+                        rx="3"
+                        fill="#FFEDD5"
+                      />
+                      <circle cx="41" cy="55" r="3" fill="#EA580C" />
+                      <rect
+                        x="49"
+                        y="32"
+                        width="31"
+                        height="22"
+                        rx="7"
+                        fill="#fff"
+                        stroke="#FB923C"
+                        strokeWidth="2"
+                      />
+                      <path
+                        d="M57 39h15M57 45h10"
+                        stroke="#FDBA74"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                      />
+                      <circle cx="17" cy="31" r="9" fill="#EA580C" />
+                      <path
+                        d="M13 31l3 3 5-6"
+                        stroke="#fff"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                      <rect
+                        x="62"
+                        y="56"
+                        width="17"
+                        height="14"
+                        rx="4"
+                        fill="#F97316"
+                      />
+                      <path
+                        d="M66 65l3-3 3 2 4-5"
+                        stroke="#fff"
+                        strokeWidth="1.5"
+                      />
+                    </svg>
+                  </div>
+                  <div className="service-number">04</div>
                 </div>
-                <div className="service-number">04</div>
-              </div>
-              <h3>Social Media Management</h3>
-              <p>
-                Stay visible with strategic calendars, posts, reels and community-focused content across key platforms.
-              </p>
-              <div className="service-tags-new">
-                <span className="service-tag-new">Content Strategy</span>
-                <span className="service-tag-new">Post Creation</span>
-                <span className="service-tag-new">Growth</span>
-                <span className="service-tag-new">Analytics</span>
-              </div>
-            </article>
+                <h3>Social Media Management</h3>
+                <p>
+                  Stay visible with strategic calendars, posts, reels and community-focused content across key platforms.
+                </p>
+                <div className="service-tags-new">
+                  <span className="service-tag-new">Content Strategy</span>
+                  <span className="service-tag-new">Post Creation</span>
+                  <span className="service-tag-new">Growth</span>
+                  <span className="service-tag-new">Analytics</span>
+                </div>
+                <div className="service-card-badge-link" style={{ color: "#EA580C" }}>
+                  <span>Explore Service</span>
+                  <span>→</span>
+                </div>
+              </article>
+            </Link>
 
             {/* 05 MARKETING */}
-            <article className="service-card-new cyan">
-              <div className="service-card-top">
-                <div className="service-icon-wrap">
-                  <svg viewBox="0 0 100 80" fill="none" aria-hidden="true">
-                    <circle
-                      cx="40"
-                      cy="39"
-                      r="25"
-                      fill="#ECFEFF"
-                      stroke="#0891B2"
-                      strokeWidth="2"
-                    />
-                    <circle
-                      cx="40"
-                      cy="39"
-                      r="16"
-                      fill="#fff"
-                      stroke="#22D3EE"
-                      strokeWidth="2"
-                    />
-                    <circle cx="40" cy="39" r="7" fill="#0891B2" />
-                    <path
-                      d="M40 39L66 14"
-                      stroke="#2563EB"
-                      strokeWidth="4"
-                      strokeLinecap="round"
-                    />
-                    <path
-                      d="M57 16h11v11"
-                      stroke="#2563EB"
-                      strokeWidth="3"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <rect
-                      x="67"
-                      y="43"
-                      width="21"
-                      height="24"
-                      rx="4"
-                      fill="#fff"
-                      stroke="#0891B2"
-                      strokeWidth="2"
-                    />
-                    <path
-                      d="M72 60V53M77 60V49M82 60V45"
-                      stroke="#0891B2"
-                      strokeWidth="3"
-                      strokeLinecap="round"
-                    />
-                  </svg>
+            <Link
+              href="/digital-marketing"
+              className="service-card-link"
+              aria-label="Explore Digital Marketing"
+            >
+              <article className="service-card-new cyan">
+                <div className="service-card-top">
+                  <div className="service-icon-wrap">
+                    <svg viewBox="0 0 100 80" fill="none" aria-hidden="true">
+                      <circle
+                        cx="40"
+                        cy="39"
+                        r="25"
+                        fill="#ECFEFF"
+                        stroke="#0891B2"
+                        strokeWidth="2"
+                      />
+                      <circle
+                        cx="40"
+                        cy="39"
+                        r="16"
+                        fill="#fff"
+                        stroke="#22D3EE"
+                        strokeWidth="2"
+                      />
+                      <circle cx="40" cy="39" r="7" fill="#0891B2" />
+                      <path
+                        d="M40 39L66 14"
+                        stroke="#2563EB"
+                        strokeWidth="4"
+                        strokeLinecap="round"
+                      />
+                      <path
+                        d="M57 16h11v11"
+                        stroke="#2563EB"
+                        strokeWidth="3"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                      <rect
+                        x="67"
+                        y="43"
+                        width="21"
+                        height="24"
+                        rx="4"
+                        fill="#fff"
+                        stroke="#0891B2"
+                        strokeWidth="2"
+                      />
+                      <path
+                        d="M72 60V53M77 60V49M82 60V45"
+                        stroke="#0891B2"
+                        strokeWidth="3"
+                        strokeLinecap="round"
+                      />
+                    </svg>
+                  </div>
+                  <div className="service-number">05</div>
                 </div>
-                <div className="service-number">05</div>
-              </div>
-              <h3>Digital Marketing</h3>
-              <p>
-                Reach the right audience through Google Ads, Meta Ads, SEO and lead-generation campaigns built around goals.
-              </p>
-              <div className="service-tags-new">
-                <span className="service-tag-new">Google Ads</span>
-                <span className="service-tag-new">Meta Ads</span>
-                <span className="service-tag-new">SEO</span>
-                <span className="service-tag-new">Lead Generation</span>
-              </div>
-            </article>
+                <h3>Digital Marketing</h3>
+                <p>
+                  Reach the right audience through Google Ads, Meta Ads, SEO and lead-generation campaigns built around goals.
+                </p>
+                <div className="service-tags-new">
+                  <span className="service-tag-new">Google Ads</span>
+                  <span className="service-tag-new">Meta Ads</span>
+                  <span className="service-tag-new">SEO</span>
+                  <span className="service-tag-new">Lead Generation</span>
+                </div>
+                <div className="service-card-badge-link" style={{ color: "#0891B2" }}>
+                  <span>Explore Service</span>
+                  <span>→</span>
+                </div>
+              </article>
+            </Link>
 
             {/* 06 AI */}
-            <article className="service-card-new darkgreen">
-              <div className="service-card-top">
-                <div className="service-icon-wrap">
-                  <svg viewBox="0 0 100 80" fill="none" aria-hidden="true">
-                    <rect
-                      x="23"
-                      y="20"
-                      width="48"
-                      height="37"
-                      rx="11"
-                      fill="#DCFCE7"
-                      stroke="#15803D"
-                      strokeWidth="2"
-                    />
-                    <circle
-                      cx="38"
-                      cy="38"
-                      r="5"
-                      fill="#fff"
-                      stroke="#15803D"
-                      strokeWidth="2"
-                    />
-                    <circle
-                      cx="56"
-                      cy="38"
-                      r="5"
-                      fill="#fff"
-                      stroke="#15803D"
-                      strokeWidth="2"
-                    />
-                    <path
-                      d="M39 49h16"
-                      stroke="#15803D"
-                      strokeWidth="2.5"
-                      strokeLinecap="round"
-                    />
-                    <path
-                      d="M47 20V12M19 37h-7M75 37h7M27 21l-5-5M67 21l5-5"
-                      stroke="#22C55E"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                    />
-                    <rect
-                      x="66"
-                      y="45"
-                      width="22"
-                      height="19"
-                      rx="6"
-                      fill="#fff"
-                      stroke="#22C55E"
-                      strokeWidth="2"
-                    />
-                    <path
-                      d="M72 51h10M72 56h7"
-                      stroke="#86EFAC"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                    />
-                    <circle cx="84" cy="58" r="7" fill="#22C55E" />
-                    <path
-                      d="M81 58l2 2 4-4"
-                      stroke="#fff"
-                      strokeWidth="1.6"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
+            <Link
+              href="/ai-automation"
+              className="service-card-link"
+              aria-label="Explore AI Automation"
+            >
+              <article className="service-card-new darkgreen">
+                <div className="service-card-top">
+                  <div className="service-icon-wrap">
+                    <svg viewBox="0 0 100 80" fill="none" aria-hidden="true">
+                      <rect
+                        x="23"
+                        y="20"
+                        width="48"
+                        height="37"
+                        rx="11"
+                        fill="#DCFCE7"
+                        stroke="#15803D"
+                        strokeWidth="2"
+                      />
+                      <circle
+                        cx="38"
+                        cy="38"
+                        r="5"
+                        fill="#fff"
+                        stroke="#15803D"
+                        strokeWidth="2"
+                      />
+                      <circle
+                        cx="56"
+                        cy="38"
+                        r="5"
+                        fill="#fff"
+                        stroke="#15803D"
+                        strokeWidth="2"
+                      />
+                      <path
+                        d="M39 49h16"
+                        stroke="#15803D"
+                        strokeWidth="2.5"
+                        strokeLinecap="round"
+                      />
+                      <path
+                        d="M47 20V12M19 37h-7M75 37h7M27 21l-5-5M67 21l5-5"
+                        stroke="#22C55E"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                      />
+                      <rect
+                        x="66"
+                        y="45"
+                        width="22"
+                        height="19"
+                        rx="6"
+                        fill="#fff"
+                        stroke="#22C55E"
+                        strokeWidth="2"
+                      />
+                      <path
+                        d="M72 51h10M72 56h7"
+                        stroke="#86EFAC"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                      />
+                      <circle cx="84" cy="58" r="7" fill="#22C55E" />
+                      <path
+                        d="M81 58l2 2 4-4"
+                        stroke="#fff"
+                        strokeWidth="1.6"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </div>
+                  <div className="service-number">06</div>
                 </div>
-                <div className="service-number">06</div>
-              </div>
-              <h3>AI Automation</h3>
-              <p>
-                Reduce repetitive work with AI agents, chatbots, WhatsApp workflows, automated follow-ups and smart systems.
-              </p>
-              <div className="service-tags-new">
-                <span className="service-tag-new">Chatbots</span>
-                <span className="service-tag-new">AI Agents</span>
-                <span className="service-tag-new">WhatsApp</span>
-                <span className="service-tag-new">Workflows</span>
-              </div>
-            </article>
+                <h3>AI Automation</h3>
+                <p>
+                  Reduce repetitive work with AI agents, chatbots, WhatsApp workflows, automated follow-ups and smart systems.
+                </p>
+                <div className="service-tags-new">
+                  <span className="service-tag-new">Chatbots</span>
+                  <span className="service-tag-new">AI Agents</span>
+                  <span className="service-tag-new">WhatsApp</span>
+                  <span className="service-tag-new">Workflows</span>
+                </div>
+                <div className="service-card-badge-link" style={{ color: "#15803D" }}>
+                  <span>Explore Service</span>
+                  <span>→</span>
+                </div>
+              </article>
+            </Link>
           </div>
 
           <div className="services-bottom">
@@ -1329,22 +1390,22 @@ export default function Home() {
               <h4>Services</h4>
               <ul>
                 <li>
-                  <a href="#services">Website Development</a>
+                  <Link href="/website-development">Website Development</Link>
                 </li>
                 <li>
-                  <a href="#services">Branding &amp; Design</a>
+                  <Link href="/branding-and-visual-design">Branding &amp; Design</Link>
                 </li>
                 <li>
-                  <a href="#services">Video &amp; Reels</a>
+                  <Link href="/video-and-reels">Video &amp; Reels</Link>
                 </li>
                 <li>
-                  <a href="#services">Social Media</a>
+                  <Link href="/social-media-management">Social Media</Link>
                 </li>
                 <li>
-                  <a href="#services">Digital Marketing</a>
+                  <Link href="/digital-marketing">Digital Marketing</Link>
                 </li>
                 <li>
-                  <a href="#services">AI Automation</a>
+                  <Link href="/ai-automation">AI Automation</Link>
                 </li>
               </ul>
             </div>
