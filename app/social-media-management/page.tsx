@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import GrowthAuditCTA from "../components/GrowthAuditCTA";
+import Footer from "../components/Footer";
 
 export default function SocialMediaManagementPage() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -611,146 +613,8 @@ export default function SocialMediaManagementPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="cta-section" id="contact">
-        <div className="section-inner">
-          <div className="cta-box reveal">
-            <div className="section-eyebrow">Let&apos;s Grow</div>
-            <h2>
-              Ready to make your social media{" "}
-              <span>work harder?</span>
-            </h2>
-            <p>
-              Tell us about your business, audience and goals. We&apos;ll build a
-              social media system that keeps your brand active, consistent and
-              moving onward.
-            </p>
-            <div className="cta-btns">
-              <a href="mailto:hello@smartonward.com" className="btn-primary">
-                📧 Start a Social Project
-              </a>
-              <a
-                href="https://wa.me/91XXXXXXXXXX"
-                className="cta-secondary"
-              >
-                💬 WhatsApp Us
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FOOTER */}
-      <footer>
-        <div className="footer-inner">
-          <div className="footer-grid">
-            <div className="footer-brand">
-              <div className="logo" style={{ marginBottom: 0 }}>
-                <img
-                  src="/logo.png"
-                  alt="SmartOnward Logo"
-                  className="logo-img"
-                  height={28}
-                  style={{ height: "28px", width: "auto", maxHeight: "28px", objectFit: "contain" }}
-                />
-                <div className="logo-text" style={{ color: "#fff" }}>
-                  <span style={{ color: "#60A5FA" }}>Smart</span>Onward
-                </div>
-              </div>
-              <p>
-                We move brands onward — through smart websites, content,
-                marketing and AI automation.
-              </p>
-            </div>
-
-            <div className="footer-col">
-              <h4>Services</h4>
-              <ul>
-                <li>
-                  <Link href="/website-development">Website Development</Link>
-                </li>
-                <li>
-                  <Link href="/branding-and-visual-design">
-                    Branding &amp; Design
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/video-and-reels">Video &amp; Reels</Link>
-                </li>
-                <li>
-                  <Link href="/social-media-management">Social Media</Link>
-                </li>
-                <li>
-                  <Link href="/digital-marketing">Digital Marketing</Link>
-                </li>
-                <li>
-                  <Link href="/ai-automation">AI Automation</Link>
-                </li>
-              </ul>
-            </div>
-
-            <div className="footer-col">
-              <h4>Company</h4>
-              <ul>
-                <li>
-                  <Link href="/#about">About Us</Link>
-                </li>
-                <li>
-                  <a href="#process">Our Process</a>
-                </li>
-                <li>
-                  <a href="#contact">Contact</a>
-                </li>
-              </ul>
-            </div>
-
-            <div className="footer-col">
-              <h4>Connect</h4>
-              <ul>
-                <li>
-                  <a href="#">Instagram</a>
-                </li>
-                <li>
-                  <a href="#">Facebook</a>
-                </li>
-                <li>
-                  <a href="#">LinkedIn</a>
-                </li>
-                <li>
-                  <a href="https://wa.me/91XXXXXXXXXX">WhatsApp</a>
-                </li>
-                <li>
-                  <a href="mailto:hello@smartonward.com">
-                    hello@smartonward.com
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="footer-bottom">
-            <p>© 2026 SmartOnward. All rights reserved. Built with ❤️ in India.</p>
-            <div className="social-links">
-              <a href="#" className="social-link" aria-label="LinkedIn">
-                in
-              </a>
-              <a href="#" className="social-link" aria-label="Facebook">
-                f
-              </a>
-              <a href="#" className="social-link" aria-label="Instagram">
-                ig
-              </a>
-              <a
-                href="https://wa.me/91XXXXXXXXXX"
-                className="social-link"
-                aria-label="WhatsApp"
-              >
-                wa
-              </a>
-            </div>
-          </div>
-        </div>
-      </footer>
+            <GrowthAuditCTA />
+      <Footer />
     </>
   );
 }
