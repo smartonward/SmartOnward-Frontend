@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from "react";
-import { sendEmail } from "../actions/sendEmail";
+import { sendEmail } from "@/app/actions/sendEmail";
 
 export default function GrowthAuditCTA() {
   const [formSubmitted, setFormSubmitted] = useState(false);
