@@ -1,557 +1,188 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import Link from "next/link";
 import GrowthAuditCTA from "../components/GrowthAuditCTA";
 import Footer from "../components/Footer";
 
 export default function DigitalMarketingPage() {
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const revealItems = document.querySelectorAll(".reveal:not(.is-visible)");
-    if ("IntersectionObserver" in window) {
-      const revealObserver = new IntersectionObserver(
-        (entries, observer) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("is-visible");
-              observer.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.12, rootMargin: "0px 0px -30px 0px" }
-      );
-      revealItems.forEach((item) => revealObserver.observe(item));
-      return () => revealObserver.disconnect();
-    } else {
-      revealItems.forEach((item) => item.classList.add("is-visible"));
-    }
-  }, []);
-
-  const closeMenu = () => setMenuOpen(false);
-
   return (
     <>
-      {/* NAV */}
-      <nav>
-        <div className="nav-inner">
-          <Link href="/" className="logo" aria-label="SmartOnward home">
-            <img
-              src="/logo.png"
-              alt="SmartOnward Logo"
-              className="logo-img"
-              height={28}
-              style={{ height: "28px", width: "auto", maxHeight: "28px", objectFit: "contain" }}
-            />
-            <div className="logo-text">
-              <span>Smart</span>Onward
-            </div>
-          </Link>
+      <main className="relative z-10">
+        {/* HERO SECTION */}
+        <section className="relative pt-24 sm:pt-32 pb-20 md:pb-28 text-center px-4 sm:px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto flex flex-col items-center">
 
-          <ul className={`nav-links ${menuOpen ? "open" : ""}`} id="navLinks">
-            <li>
-              <Link href="/#services" onClick={closeMenu}>
-                All Services
-              </Link>
-            </li>
-            <li>
-              <a href="#services" onClick={closeMenu}>
-                Services
-              </a>
-            </li>
-            <li>
-              <a href="#channels" onClick={closeMenu}>
-                Channels
-              </a>
-            </li>
-            <li>
-              <a href="#results" onClick={closeMenu}>
-                Results
-              </a>
-            </li>
-            <li>
-              <a href="#process" onClick={closeMenu}>
-                Process
-              </a>
-            </li>
-            <li>
-              <a
-                href="#contact"
-                className="nav-cta"
-                onClick={closeMenu}
-              >
-                Get Started →
-              </a>
-            </li>
-          </ul>
-
-          <button
-            className="menu-btn"
-            id="menuBtn"
-            aria-label="Toggle menu"
-            onClick={() => setMenuOpen((prev) => !prev)}
-          >
-            {menuOpen ? "✕" : "☰"}
-          </button>
-        </div>
-      </nav>
-
-      {/* HERO */}
-      <section className="hero-web" id="hero">
-        <div className="hero-web-grid reveal is-visible">
-          <div>
-            <div className="hero-badge">
-              <span className="hero-badge-dot"></span> Digital Marketing
-            </div>
-            <h1>
-              Turn attention into <span>traffic</span>, leads and{" "}
-              <em>growth.</em>
+            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-[76px] font-black text-slate-950 tracking-tight leading-[1.08] max-w-4xl">
+              Turn attention into <span className="text-blue-600 italic">traffic</span>, leads and <em>growth.</em>
             </h1>
-            <p className="hero-copy">
-              We build digital marketing campaigns that connect the right
-              audience with the right message — across search, social, paid
-              advertising and content.
+
+            <p className="mt-8 text-lg sm:text-xl text-slate-600 max-w-2xl leading-relaxed font-medium">
+              We build digital marketing campaigns that connect the right audience with the right message — across search, social, paid advertising and content.
             </p>
-            <div className="hero-btns">
-              <a href="#contact" className="btn-primary">
-                Grow My Business →
+
+            <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
+              <a
+                className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold shadow-lg shadow-blue-500/20 hover:shadow-glow-blue transition-all duration-200 hover:-translate-y-0.5"
+                href="#schedule"
+              >
+                <span>Grow My Business</span>
+                <span className="ml-2 font-bold text-lg">→</span>
               </a>
-              <a href="#services" className="btn-secondary">
+              <a
+                className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl bg-white hover:bg-slate-50 text-slate-900 font-bold shadow-md border border-slate-200/80 transition-all duration-200 hover:-translate-y-0.5"
+                href="#services"
+              >
                 Explore Services
               </a>
             </div>
-            <div className="hero-web-notes">
-              <div className="hero-web-note">
-                <b>✓</b> Data-driven
-              </div>
-              <div className="hero-web-note">
-                <b>✓</b> Conversion focused
-              </div>
-              <div className="hero-web-note">
-                <b>✓</b> Full-funnel
-              </div>
+
+            <div className="mt-12 flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-sm font-semibold text-slate-500">
+              <div className="flex items-center gap-2"><span className="text-emerald-500">✓</span> Data-driven</div>
+              <div className="flex items-center gap-2"><span className="text-emerald-500">✓</span> Conversion focused</div>
+              <div className="flex items-center gap-2"><span className="text-emerald-500">✓</span> Full-funnel</div>
             </div>
           </div>
+        </section>
 
-          <div className="marketing-board">
-            <div className="dash-top">
-              <div className="dash-title">Campaign Performance</div>
-              <div className="live">● Campaigns Active</div>
-            </div>
-            <div className="funnel">
-              <div className="funnel-row f1">
-                <span>REACH</span>
-                <span>128K</span>
-              </div>
-              <div className="funnel-row f2">
-                <span>VISITS</span>
-                <span>18.4K</span>
-              </div>
-              <div className="funnel-row f3">
-                <span>LEADS</span>
-                <span>2.8K</span>
-              </div>
-              <div className="funnel-row f4">
-                <span>CONVERSIONS</span>
-                <span>684</span>
-              </div>
-            </div>
-            <div className="campaign-stats">
-              <div className="stat">
-                <strong>4.7×</strong>
-                <span className="up">ROAS ↗</span>
-              </div>
-              <div className="stat">
-                <strong>−31%</strong>
-                <span className="up">CPL ↗</span>
-              </div>
-              <div className="stat">
-                <strong>+82%</strong>
-                <span className="up">Leads ↗</span>
-              </div>
-            </div>
-            <div className="channel-row">
-              <div className="channel">
-                <b>G</b>Search
-              </div>
-              <div className="channel">
-                <b>◎</b>Meta
-              </div>
-              <div className="channel">
-                <b>in</b>LinkedIn
-              </div>
-              <div className="channel">
-                <b>✦</b>SEO
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* STRIP */}
-      <div className="strip">
-        <div className="strip-inner">
-          <div className="strip-item">
-            <strong>SEO</strong>
-            <span>Organic growth</span>
-          </div>
-          <div className="strip-item">
-            <strong>Paid Ads</strong>
-            <span>Targeted acquisition</span>
-          </div>
-          <div className="strip-item">
-            <strong>Content</strong>
-            <span>Audience building</span>
-          </div>
-          <div className="strip-item">
-            <strong>Analytics</strong>
-            <span>Measure &amp; improve</span>
-          </div>
-        </div>
-      </div>
-
-      {/* SERVICES - WHAT WE DO */}
-      <section className="services" id="services">
-        <div className="section-inner">
-          <div className="center services-headline">
-            <div className="section-eyebrow">What We Do</div>
-            <h2 className="section-title">
-              A complete digital marketing <span>engine.</span>
-            </h2>
-            <p className="section-sub">
-              We combine strategy, creative, acquisition and analytics so your
-              marketing works as one connected system instead of isolated
-              activities.
-            </p>
-          </div>
-
-          <div className="service-web-grid reveal">
-            <div className="service-web-card">
-              <div className="web-icon">🔎</div>
-              <h3>Search Engine Optimization</h3>
-              <p>
-                Improve your organic visibility with technical, on-page and
-                content-focused SEO strategies.
-              </p>
-              <div className="web-tags">
-                <span className="web-tag">SEO</span>
-                <span className="web-tag">Keywords</span>
-              </div>
-            </div>
-
-            <div className="service-web-card">
-              <div className="web-icon">🎯</div>
-              <h3>Google &amp; Meta Ads</h3>
-              <p>
-                Performance-focused paid campaigns designed around audiences,
-                offers, landing pages and conversions.
-              </p>
-              <div className="web-tags">
-                <span className="web-tag">PPC</span>
-                <span className="web-tag">Meta Ads</span>
-              </div>
-            </div>
-
-            <div className="service-web-card">
-              <div className="web-icon">📣</div>
-              <h3>Social Media Marketing</h3>
-              <p>
-                Connect your social content and campaigns to broader marketing
-                goals, audiences and offers.
-              </p>
-              <div className="web-tags">
-                <span className="web-tag">Social</span>
-                <span className="web-tag">Campaigns</span>
-              </div>
-            </div>
-
-            <div className="service-web-card">
-              <div className="web-icon">✍️</div>
-              <h3>Content Marketing</h3>
-              <p>
-                Useful, persuasive content that builds authority, attracts the
-                right audience and supports conversion.
-              </p>
-              <div className="web-tags">
-                <span className="web-tag">Blogs</span>
-                <span className="web-tag">Content</span>
-              </div>
-            </div>
-
-            <div className="service-web-card">
-              <div className="web-icon">🧲</div>
-              <h3>Lead Generation</h3>
-              <p>
-                Build acquisition journeys that turn clicks and attention into
-                enquiries, calls, bookings and opportunities.
-              </p>
-              <div className="web-tags">
-                <span className="web-tag">Leads</span>
-                <span className="web-tag">Funnels</span>
-              </div>
-            </div>
-
-            <div className="service-web-card">
-              <div className="web-icon">📊</div>
-              <h3>Analytics &amp; CRO</h3>
-              <p>
-                Track what matters, identify drop-offs and continuously improve
-                campaigns and conversion paths.
-              </p>
-              <div className="web-tags">
-                <span className="web-tag">Analytics</span>
-                <span className="web-tag">CRO</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* STRATEGY / WHY US */}
-      <section className="value-sec" id="strategy">
-        <div className="section-inner">
-          <div className="value-grid reveal">
-            <div className="value-panel">
-              <div
-                className="hero-badge"
-                style={{
-                  background: "rgba(96,165,250,.15)",
-                  color: "#93C5FD",
-                  marginBottom: "8px",
-                }}
-              >
-                Why SmartOnward
-              </div>
-              <h3>
-                We don&apos;t just run ads. We build the{" "}
-                <span>whole growth journey.</span>
-              </h3>
-              <p>
-                Your marketing works better when your website, brand, content,
-                social media, ads and AI automation work together. That&apos;s
-                the advantage of a full-fledged agency.
+        {/* SERVICES - WHAT WE DO */}
+        <section className="py-24 relative" id="services">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <p className="text-blue-600 text-xs font-bold tracking-widest uppercase mb-3">What We Do</p>
+              <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight mb-4">
+                A complete digital marketing <span className="text-blue-600 italic">engine.</span>
+              </h2>
+              <p className="text-slate-600 text-lg">
+                We combine strategy, creative, acquisition and analytics so your marketing works as one connected system instead of isolated activities.
               </p>
             </div>
 
-            <div className="value-list">
-              <div className="value-item">
-                <div className="val-check">✓</div>
-                <div>
-                  <h4>Full-funnel thinking</h4>
-                  <p>
-                    Awareness, consideration, leads and conversion connected
-                    together.
-                  </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                {
+                  icon: "🔎",
+                  title: "Search Engine Optimization",
+                  desc: "Improve your organic visibility with technical, on-page and content-focused SEO strategies.",
+                  tags: ["SEO", "Keywords"]
+                },
+                {
+                  icon: "🎯",
+                  title: "Google & Meta Ads",
+                  desc: "Performance-focused paid campaigns designed around audiences, offers, landing pages and conversions.",
+                  tags: ["PPC", "Meta Ads"]
+                },
+                {
+                  icon: "📣",
+                  title: "Social Media Marketing",
+                  desc: "Connect your social content and campaigns to broader marketing goals, audiences and offers.",
+                  tags: ["Social", "Campaigns"]
+                },
+                {
+                  icon: "✍️",
+                  title: "Content Marketing",
+                  desc: "Useful, persuasive content that builds authority, attracts the right audience and supports conversion.",
+                  tags: ["Blogs", "Content"]
+                },
+                {
+                  icon: "🧲",
+                  title: "Lead Generation",
+                  desc: "Build acquisition journeys that turn clicks and attention into enquiries, calls, bookings and opportunities.",
+                  tags: ["Leads", "Funnels"]
+                },
+                {
+                  icon: "📊",
+                  title: "Analytics & CRO",
+                  desc: "Track what matters, identify drop-offs and continuously improve campaigns and conversion paths.",
+                  tags: ["Analytics", "CRO"]
+                }
+              ].map((service, idx) => (
+                <div key={idx} className="bg-white/60 backdrop-blur-md rounded-2xl p-8 shadow-xl shadow-slate-200/50 border border-slate-100 hover:-translate-y-1 transition-transform duration-300">
+                  <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-2xl mb-6 shadow-sm border border-blue-100">
+                    {service.icon}
+                  </div>
+                  <h3 className="text-xl font-bold text-slate-900 mb-3">{service.title}</h3>
+                  <p className="text-sm text-slate-600 leading-relaxed mb-6">{service.desc}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {service.tags.map(tag => (
+                      <span key={tag} className="px-3 py-1 rounded-lg bg-slate-100 text-slate-600 text-xs font-semibold">{tag}</span>
+                    ))}
+                  </div>
                 </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* WHY US */}
+        <section className="py-24 relative" id="strategy">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              <div>
+                <p className="text-blue-600 text-xs font-bold tracking-widest uppercase mb-3">Why SmartOnward</p>
+                <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight mb-6 leading-tight">
+                  We don&apos;t just run ads. We build the <span className="text-blue-600 italic">whole growth journey.</span>
+                </h2>
+                <p className="text-slate-600 text-lg mb-8">
+                  Your marketing works better when your website, brand, content, social media, ads and AI automation work together. That&apos;s the advantage of a full-fledged agency.
+                </p>
               </div>
-              <div className="value-item">
-                <div className="val-check">✓</div>
-                <div>
-                  <h4>Audience targeting</h4>
-                  <p>Reach the people most relevant to your business and offer.</p>
-                </div>
-              </div>
-              <div className="value-item">
-                <div className="val-check">✓</div>
-                <div>
-                  <h4>Creative + performance</h4>
-                  <p>
-                    Strong visuals and messaging backed by measurable outcomes.
-                  </p>
-                </div>
-              </div>
-              <div className="value-item">
-                <div className="val-check">✓</div>
-                <div>
-                  <h4>Landing page alignment</h4>
-                  <p>Campaign traffic sent to experiences designed to convert.</p>
-                </div>
-              </div>
-              <div className="value-item">
-                <div className="val-check">✓</div>
-                <div>
-                  <h4>Transparent reporting</h4>
-                  <p>
-                    Clear performance metrics and practical next-step
-                    recommendations.
-                  </p>
-                </div>
-              </div>
-              <div className="value-item">
-                <div className="val-check">✓</div>
-                <div>
-                  <h4>Continuous optimization</h4>
-                  <p>
-                    Test, learn and improve instead of setting campaigns and
-                    forgetting them.
-                  </p>
+
+              <div className="bg-white rounded-[2rem] p-8 shadow-xl shadow-slate-200/50 border border-slate-100">
+                <div className="space-y-6">
+                  {[
+                    { title: "Full-funnel thinking", desc: "Awareness, consideration, leads and conversion connected together." },
+                    { title: "Audience targeting", desc: "Reach the people most relevant to your business and offer." },
+                    { title: "Creative + performance", desc: "Strong visuals and messaging backed by measurable outcomes." },
+                    { title: "Continuous optimization", desc: "Test, learn and improve instead of setting campaigns and forgetting them." }
+                  ].map((item, idx) => (
+                    <div key={idx} className="flex items-start gap-4">
+                      <div className="w-8 h-8 rounded-full bg-emerald-50 flex items-center justify-center flex-shrink-0 border border-emerald-100">
+                        <span className="text-emerald-500 font-bold text-sm">✓</span>
+                      </div>
+                      <div>
+                        <h4 className="text-slate-900 font-bold mb-1">{item.title}</h4>
+                        <p className="text-sm text-slate-600">{item.desc}</p>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* CHANNELS */}
-      <section className="services" id="channels">
-        <div className="section-inner">
-          <div className="center services-headline">
-            <div className="section-eyebrow">Marketing Channels</div>
-            <h2 className="section-title">
-              Meet your customers <span>where they are.</span>
-            </h2>
-            <p className="section-sub">
-              The right mix depends on your business, audience and goals. We
-              build channel strategies around what can actually move the needle.
-            </p>
-          </div>
+        {/* CHANNELS */}
+        <section className="py-24 relative" id="channels">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <p className="text-blue-600 text-xs font-bold tracking-widest uppercase mb-3">Marketing Channels</p>
+              <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight mb-4">
+                Meet your customers <span className="text-blue-600 italic">where they are.</span>
+              </h2>
+              <p className="text-slate-600 text-lg">
+                The right mix depends on your business, audience and goals. We build channel strategies around what can actually move the needle.
+              </p>
+            </div>
 
-          <div className="channel-grid reveal">
-            <div className="channel-card">
-              <div className="channel-icon">G</div>
-              <h4>Google Search</h4>
-              <p>
-                Capture high-intent users actively looking for your products or
-                services.
-              </p>
-            </div>
-            <div className="channel-card">
-              <div className="channel-icon">◎</div>
-              <h4>Meta Ads</h4>
-              <p>
-                Reach targeted audiences across Facebook and Instagram with
-                creative campaigns.
-              </p>
-            </div>
-            <div className="channel-card">
-              <div className="channel-icon">in</div>
-              <h4>LinkedIn</h4>
-              <p>
-                Build B2B awareness, authority and targeted professional lead
-                generation.
-              </p>
-            </div>
-            <div className="channel-card">
-              <div className="channel-icon">✦</div>
-              <h4>Organic Search</h4>
-              <p>
-                Build sustainable visibility through SEO, content and useful
-                search experiences.
-              </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                { icon: "G", title: "Google Search", desc: "Capture high-intent users actively looking for your products or services." },
+                { icon: "◎", title: "Meta Ads", desc: "Reach targeted audiences across Facebook and Instagram with creative campaigns." },
+                { icon: "in", title: "LinkedIn", desc: "Build B2B awareness, authority and targeted professional lead generation." },
+                { icon: "✦", title: "Organic Search", desc: "Build sustainable visibility through SEO, content and useful search experiences." }
+              ].map((channel, idx) => (
+                <div key={idx} className="bg-white/80 backdrop-blur-md rounded-2xl p-6 border border-slate-200 shadow-sm hover:border-blue-300 transition-colors">
+                  <div className="text-3xl font-black text-blue-600 mb-4">{channel.icon}</div>
+                  <h4 className="text-lg font-bold text-slate-900 mb-2">{channel.title}</h4>
+                  <p className="text-sm text-slate-600">{channel.desc}</p>
+                </div>
+              ))}
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* RESULTS */}
-      <section className="results" id="results">
-        <div className="section-inner">
-          <div className="center services-headline">
-            <div className="section-eyebrow">What We Measure</div>
-            <h2 className="section-title">
-              Marketing should be <span>measurable.</span>
-            </h2>
-            <p className="section-sub">
-              We focus on metrics that help you understand whether your marketing
-              is creating business value — not just generating activity.
-            </p>
-          </div>
-
-          <div className="result-grid reveal">
-            <div className="result">
-              <div className="result-top">
-                <span className="result-label">Qualified Leads</span>
-                <span className="result-badge">Growth</span>
-              </div>
-              <strong>+82%</strong>
-              <p>
-                Improve the volume and quality of enquiries generated through your
-                digital channels.
-              </p>
-              <div className="bar">
-                <span className="r1"></span>
-              </div>
-            </div>
-
-            <div className="result">
-              <div className="result-top">
-                <span className="result-label">Cost Per Lead</span>
-                <span className="result-badge">Efficiency</span>
-              </div>
-              <strong>−31%</strong>
-              <p>
-                Optimize targeting, creative and conversion journeys to reduce
-                wasted acquisition spend.
-              </p>
-              <div className="bar">
-                <span className="r2"></span>
-              </div>
-            </div>
-
-            <div className="result">
-              <div className="result-top">
-                <span className="result-label">Conversion Rate</span>
-                <span className="result-badge">Performance</span>
-              </div>
-              <strong>+54%</strong>
-              <p>
-                Improve the percentage of visitors who take meaningful actions on
-                your website.
-              </p>
-              <div className="bar">
-                <span className="r3"></span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* PROCESS */}
-      <section className="services" id="process">
-        <div className="section-inner">
-          <div className="center">
-            <div className="section-eyebrow">Our Process</div>
-            <h2 className="section-title">
-              From strategy to <span>measurable growth.</span>
-            </h2>
-            <p className="section-sub">
-              A structured process that keeps campaigns focused, transparent and
-              continuously improving.
-            </p>
-          </div>
-
-          <div className="process-web-grid reveal">
-            <div className="step-web">
-              <div className="step-web-num">01 / DISCOVER</div>
-              <h4>Understand</h4>
-              <p>Business, audience, competitors and growth goals.</p>
-            </div>
-            <div className="step-web">
-              <div className="step-web-num">02 / STRATEGY</div>
-              <h4>Plan</h4>
-              <p>Channels, offers, messaging and acquisition journey.</p>
-            </div>
-            <div className="step-web">
-              <div className="step-web-num">03 / LAUNCH</div>
-              <h4>Execute</h4>
-              <p>Creative, campaigns, landing pages and tracking.</p>
-            </div>
-            <div className="step-web">
-              <div className="step-web-num">04 / MEASURE</div>
-              <h4>Analyze</h4>
-              <p>Review traffic, leads, conversions and costs.</p>
-            </div>
-            <div className="step-web">
-              <div className="step-web-num">05 / OPTIMIZE</div>
-              <h4>Grow</h4>
-              <p>Test, improve and scale what is working.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-            <GrowthAuditCTA />
+        <GrowthAuditCTA />
+      </main>
       <Footer />
     </>
   );

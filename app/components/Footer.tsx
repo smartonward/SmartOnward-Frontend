@@ -9,11 +9,8 @@ export default function Footer() {
 
             {/* Column 1: Brand & Intro */}
             <div className="space-y-6">
-              <Link href="/" className="inline-flex items-center gap-3">
-                <img src="/logo.png" alt="SmartOnward Logo" className="w-10 h-10 object-contain" />
-                <span className="font-extrabold text-white text-2xl tracking-tight">
-                  SmartOnward<span className="text-blue-500">.</span>
-                </span>
+              <Link href="/" className="inline-flex items-center">
+                <img src="/logo-new.png" alt="SmartOnward Logo" className="h-12 w-auto object-contain rounded-lg bg-white/10 p-1" />
               </Link>
               <p className="text-sm text-slate-500 leading-relaxed max-w-xs">
                 We engineer digital momentum through headless web architecture, viral content, and intelligent AI automation systems.
@@ -49,7 +46,7 @@ export default function Footer() {
                 <li><Link href="/" className="hover:text-blue-400 transition-colors">Home</Link></li>
                 <li><Link href="#services" className="hover:text-blue-400 transition-colors">Services</Link></li>
                 <li><Link href="#schedule" className="hover:text-blue-400 transition-colors">Growth Audit</Link></li>
-                <li><Link href="#" className="hover:text-blue-400 transition-colors">About Us</Link></li>
+                <li><Link href="/about" className="hover:text-blue-400 transition-colors">About Us</Link></li>
               </ul>
             </div>
 

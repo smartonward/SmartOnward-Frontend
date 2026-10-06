@@ -30,6 +30,15 @@ module.exports = {
         'glow-blue': '0 10px 30px -10px rgba(37, 99, 235, 0.35)',
         'pill': '0 20px 45px -15px rgba(15, 23, 42, 0.08), 0 4px 12px rgba(15, 23, 42, 0.04)',
         'card-hover': '0 25px 50px -12px rgba(37, 99, 235, 0.12)'
+      },
+      animation: {
+        'scroll': 'scroll 30s linear infinite',
+      },
+      keyframes: {
+        'scroll': {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(calc(-50% - 10px))' },
+        }
       }
     },
   },

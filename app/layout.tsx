@@ -34,6 +34,8 @@ export const metadata: Metadata = {
 };
 
 import Header from "./components/Header";
+import AmbientBackground from "./components/AmbientBackground";
+import GrowthAuditModal from "./components/GrowthAuditModal";
 
 export default function RootLayout({
   children,
@@ -46,8 +48,10 @@ export default function RootLayout({
       className={`scroll-smooth ${inter.variable} ${firaCode.variable} ${poppins.variable}`}
     >
       <body className="font-sans antialiased text-slate-900 selection:bg-blue-100 selection:text-blue-700 relative min-h-screen">
+        <AmbientBackground />
         <Header />
         {children}
+        <GrowthAuditModal />
       </body>
     </html>
   );

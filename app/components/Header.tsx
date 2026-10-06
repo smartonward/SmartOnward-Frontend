@@ -6,6 +6,7 @@ import Link from "next/link";
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrollY, setScrollY] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,6 +14,19 @@ export default function Header() {
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const handleOpen = () => setIsModalOpen(true);
+    const handleClose = () => setIsModalOpen(false);
+    
+    window.addEventListener('open-audit-modal', handleOpen);
+    window.addEventListener('close-audit-modal', handleClose);
+    
+    return () => {
+      window.removeEventListener('open-audit-modal', handleOpen);
+      window.removeEventListener('close-audit-modal', handleClose);
+    };
   }, []);
 
   const closeMenu = () => setMenuOpen(false);
@@ -27,11 +41,11 @@ export default function Header() {
 
   return (
     <header
-      className="sticky z-50 flex justify-center w-full"
+      className={`sticky z-50 flex justify-center w-full transition-opacity duration-300 ${isModalOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
       style={{ top: `${currentTop}px` }}
     >
       <div
-        className={`bg-white/90 backdrop-blur-lg shadow-sm flex flex-row items-center justify-between gap-4 flex-nowrap overflow-hidden transition-colors ${progress > 0 ? "border border-slate-200/80" : "border-b border-slate-200/80"
+        className={`relative bg-white/90 backdrop-blur-lg shadow-sm flex flex-row items-center justify-between gap-4 flex-nowrap overflow-hidden transition-colors ${progress > 0 ? "border border-slate-200/80" : "border-b border-slate-200/80"
           }`}
         style={{
           width: currentWidth,
@@ -42,44 +56,39 @@ export default function Header() {
         }}
       >
         {/* Brand Logo */}
-        <Link href="/" className="flex-shrink-0 flex items-center space-x-3 group" aria-label="SmartOnward Home">
+        <Link href="/" className="flex-shrink-0 flex items-center group" aria-label="SmartOnward Home">
           <img
-            src="/logo.png"
+            src="/logo-new.png"
             alt="SmartOnward Logo"
             className="logo-img group-hover:scale-105 transition-transform duration-200"
-            style={{ height: "32px", width: "auto", maxHeight: "32px", objectFit: "contain" }}
+            style={{ height: "70px", width: "auto", objectFit: "contain" }}
           />
-          <div className="flex flex-col">
-            <span className="text-xl font-extrabold tracking-tight text-slate-900 whitespace-nowrap">
-              SmartOnward<span className="text-blue-600">.</span>
-            </span>
-            <span className="text-[10px] font-mono tracking-widest text-slate-500 uppercase -mt-1 font-medium whitespace-nowrap hidden sm:block">
-              Revenue Operating System
-            </span>
-          </div>
         </Link>
 
-        <div role="navigation" className="hidden lg:flex items-center gap-5 xl:gap-8 text-[13px] xl:text-sm font-bold text-slate-600 flex-shrink-0">
+        <div role="navigation" className="hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 items-center gap-5 xl:gap-8 text-[13px] xl:text-sm font-bold text-slate-600 flex-shrink-0">
           <Link className="hover:text-blue-600 transition-colors" href="/#home">
             Home
           </Link>
           <Link className="hover:text-blue-600 transition-colors" href="/#services">
             Services
           </Link>
-          <Link className="hover:text-blue-600 transition-colors" href="/#about">
+          <Link className="hover:text-blue-600 transition-colors" href="/about">
             About
           </Link>
         </div>
 
         {/* Right CTA Button & Mobile Menu Toggle */}
         <div className="flex-shrink-0 flex items-center gap-3 sm:gap-4">
-          <Link
+          <button
             className="inline-flex items-center justify-center px-5 sm:px-6 py-2 sm:py-2.5 rounded-full bg-[#2563EB] hover:bg-blue-700 text-white text-sm font-semibold shadow-md shadow-blue-500/20 hover:shadow-glow-blue transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 whitespace-nowrap"
-            href="/#schedule"
+            onClick={(e) => {
+              e.preventDefault();
+              window.dispatchEvent(new Event('open-audit-modal'));
+            }}
           >
             <span>Get Started</span>
             <span className="ml-1.5 font-bold">→</span>
-          </Link>
+          </button>
 
           <button
             className="lg:hidden p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100"

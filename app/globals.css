@@ -26,6 +26,15 @@
   border-radius: 999px;
 }
 
+/* Hide Scrollbar */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 /* Engineer Highlight Underline */
 .engineer-highlight {
   position: relative;
@@ -1742,7 +1751,7 @@ footer {
   position: relative
 }
 
-footer::before {
+footer::disabled_before {
   content: '';
   position: absolute;
   top: 0;

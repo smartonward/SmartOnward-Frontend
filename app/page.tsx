@@ -3,92 +3,28 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import GrowthAuditCTA from "./components/GrowthAuditCTA";
+
 import Footer from "./components/Footer";
+import CoverflowCarousel from "./components/CoverflowCarousel";
+import StruggleSection from "./components/StruggleSection";
 
 export default function Home() {
   const [activeEngine, setActiveEngine] = useState<"web" | "grow" | "auto">("web");
 
-  // Mouse-following Blue Glow Spotlight effect
-  useEffect(() => {
-    const glow = document.getElementById("cursor-blue-glow");
-    if (!glow) return;
-
-    let targetX = -500;
-    let targetY = -500;
-    let currentX = -500;
-    let currentY = -500;
-    let isMoving = false;
-    let animationFrameId: number;
-
-    const handlePointerMove = (e: PointerEvent) => {
-      // Account for CSS zoom on the html element
-      const zoomStr = getComputedStyle(document.documentElement).zoom;
-      const zoom = zoomStr && zoomStr !== "normal" ? parseFloat(zoomStr) : 1;
-
-      targetX = e.clientX / zoom;
-      targetY = e.clientY / zoom;
-
-      if (!isMoving) {
-        isMoving = true;
-        animationFrameId = requestAnimationFrame(renderCursor);
-      }
-    };
-
-    function renderCursor() {
-      currentX += (targetX - currentX) * 0.18;
-      currentY += (targetY - currentY) * 0.18;
-
-      if (glow) {
-        glow.style.left = `${currentX}px`;
-        glow.style.top = `${currentY}px`;
-      }
-
-      if (Math.abs(targetX - currentX) > 0.1 || Math.abs(targetY - currentY) > 0.1) {
-        animationFrameId = requestAnimationFrame(renderCursor);
-      } else {
-        isMoving = false;
-      }
-    }
-
-    window.addEventListener("pointermove", handlePointerMove);
-
-    return () => {
-      window.removeEventListener("pointermove", handlePointerMove);
-      cancelAnimationFrame(animationFrameId);
-    };
-  }, []);
+  // Ambient background moved to layout.tsx via AmbientBackground.tsx
 
 
   
 
   return (
     <>
-      {/* Ambient Background Layer (Interactive Mouse-Following Blue Glow + Floating Orbs) */}
-      <div
-        id="cursor-blue-glow"
-        className="fixed pointer-events-none rounded-full blur-3xl -z-5 transition-transform duration-75 ease-out"
-        style={{
-          width: "480px",
-          height: "480px",
-          background:
-            "radial-gradient(circle, rgba(37, 99, 235, 0.22) 0%, rgba(147, 210, 253, 0.18) 45%, rgba(255, 255, 255, 0) 70%)",
-          transform: "translate(-50%, -50%)",
-          left: "-500px",
-          top: "-500px",
-        }}
-      />
-      <div aria-hidden="true" className="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
-        {/* Sky Blue Orb 1 */}
-        <div className="absolute -top-24 left-1/4 w-[600px] h-[600px] rounded-full bg-gradient-to-br from-[#60A5FA]/35 via-[#38BDF8]/25 to-transparent blur-3xl animate-drift-1" />
-        {/* Sky Blue Orb 2 */}
-        <div className="absolute top-1/2 -right-32 w-[650px] h-[650px] rounded-full bg-gradient-to-bl from-[#38BDF8]/30 via-[#93C5FD]/25 to-transparent blur-3xl animate-drift-2" />
-        {/* Sky Blue Orb 3 */}
-        <div className="absolute -bottom-32 left-10 w-[700px] h-[700px] rounded-full bg-gradient-to-tr from-[#93C5FD]/35 via-[#60A5FA]/25 to-transparent blur-3xl animate-drift-3" />
-      </div>
+      {/* Ambient Background Layer is now rendered in layout.tsx */}
 
 
       {/* MAIN CONTENT */}
       <main className="relative z-10">
+
+        
         {/* HERO SECTION */}
         <section className="relative pt-16 sm:pt-24 pb-20 md:pb-28 text-center px-4 sm:px-6 lg:px-8" id="home">
           <div className="max-w-5xl mx-auto flex flex-col items-center">
@@ -98,7 +34,7 @@ export default function Home() {
             <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-[76px] font-black text-slate-950 tracking-tight leading-[1.08] max-w-4xl">
               We don&apos;t just market your brand.
               <br />
-              We <span className="engineer-highlight">engineer</span> its momentum.
+              We <span className="engineer-highlight italic">engineer</span> its momentum.
             </h1>
 
             {/* Subtitle */}
@@ -108,21 +44,16 @@ export default function Home() {
 
             {/* CTA Action Row */}
             <div className="mt-10 flex flex-col sm:flex-row items-center gap-4 w-full justify-center">
-              <a
+              <button
                 className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl bg-blue-600 text-white font-semibold text-base shadow-lg shadow-blue-600/30 hover:bg-blue-700 hover:shadow-blue-600/40 hover:-translate-y-0.5 transition-all duration-200"
-                href="#schedule"
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.dispatchEvent(new Event('open-audit-modal'));
+                }}
               >
                 <span>Schedule Growth Audit (Free 30m Blueprint)</span>
                 <span className="ml-2 text-lg">→</span>
-              </a>
-              <a
-                className="w-full sm:w-auto inline-flex items-center justify-center px-7 py-4 rounded-xl bg-white/80 backdrop-blur-md border border-white/60 text-slate-800 font-semibold text-base shadow-sm hover:bg-white/90 hover:border-slate-300 hover:-translate-y-0.5 transition-all duration-200"
-                href="#services"
-              >
-                <span className="mr-2 text-blue-600">🗂</span>
-                <span>Explore Live Architecture</span>
-                <span className="ml-1 text-slate-400">↓</span>
-              </a>
+              </button>
             </div>
 
             {/* Floating Stat Capsule Bar */}
@@ -167,7 +98,7 @@ export default function Home() {
             {/* Section Header */}
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl sm:text-5xl font-black text-slate-950 tracking-tight leading-tight">
-                Everything you need to <span className="text-blue-600">move onward.</span>
+                Everything you need to <span className="text-blue-600 italic">move onward.</span>
               </h2>
               <p className="mt-4 text-slate-600 text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
                 From building your digital presence to growing your audience and automating everyday work, SmartOnward brings the right capabilities together under one roof.
@@ -506,316 +437,9 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 3 INTEGRATED OPERATING ENGINES */}
-        <section className="py-24 bg-white/60 backdrop-blur-md border-y border-slate-200/80" id="engines">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
-              <div>
-                <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
-                  The 3 Integrated Operating Engines
-                </h2>
-              </div>
-              <p className="mt-4 md:mt-0 text-sm sm:text-base text-slate-500 max-w-md">
-                Interactive blueprints showing how each modular layer delivers compound efficiency to client operations.
-              </p>
-            </div>
 
-            {/* Engine Selectors */}
-            <div className="flex flex-wrap gap-2 p-1.5 bg-slate-100/80 backdrop-blur-md rounded-xl max-w-2xl mx-auto mb-10 border border-slate-200/80">
-              <button
-                className={`flex-1 min-w-[140px] py-3 px-4 rounded-lg font-semibold text-xs sm:text-sm transition-all ${activeEngine === "web"
-                  ? "bg-white text-blue-600 shadow-sm"
-                  : "text-slate-600 hover:text-slate-900"
-                  }`}
-                onClick={() => setActiveEngine("web")}
-              >
-                01. Build: Web Core
-              </button>
-              <button
-                className={`flex-1 min-w-[140px] py-3 px-4 rounded-lg font-semibold text-xs sm:text-sm transition-all ${activeEngine === "grow"
-                  ? "bg-white text-blue-600 shadow-sm"
-                  : "text-slate-600 hover:text-slate-900"
-                  }`}
-                onClick={() => setActiveEngine("grow")}
-              >
-                02. Grow: Ads &amp; Content
-              </button>
-              <button
-                className={`flex-1 min-w-[140px] py-3 px-4 rounded-lg font-semibold text-xs sm:text-sm transition-all ${activeEngine === "auto"
-                  ? "bg-white text-blue-600 shadow-sm"
-                  : "text-slate-600 hover:text-slate-900"
-                  }`}
-                onClick={() => setActiveEngine("auto")}
-              >
-                03. Automate: WhatsApp AI
-              </button>
-            </div>
-
-            {/* Telemetry Display Containers */}
-            <div className="bg-slate-950/95 backdrop-blur-md rounded-2xl p-6 sm:p-8 text-white border border-slate-800 shadow-2xl overflow-hidden relative min-h-[480px]">
-              {/* State 1: Web Engine */}
-              {activeEngine === "web" && (
-                <div className="transition-opacity duration-300">
-                  <div className="flex flex-col lg:flex-row gap-8 items-stretch">
-                    <div className="w-full lg:w-1/2 flex flex-col justify-between">
-                      <div>
-                        <span className="px-2.5 py-1 rounded bg-blue-500/20 text-blue-400 font-mono text-xs uppercase font-medium">
-                          Headless Cloud Architecture
-                        </span>
-                        <h3 className="text-2xl sm:text-3xl font-bold mt-3 text-white">
-                          Sub-second Web Infrastructure Engineered to Convert
-                        </h3>
-                        <p className="text-slate-400 text-sm mt-3 leading-relaxed">
-                          Zero template bloat. Fully customized frontend builds compiled to edge nodes with reactive booking gates and high-retention telemetry.
-                        </p>
-                      </div>
-
-                      <div className="grid grid-cols-3 gap-3 my-6">
-                        <div className="p-3.5 bg-slate-900/90 rounded-xl border border-slate-800">
-                          <div className="text-emerald-400 font-mono font-bold text-xl">99/100</div>
-                          <div className="text-[11px] text-slate-400 uppercase font-mono mt-1">Lighthouse Score</div>
-                        </div>
-                        <div className="p-3.5 bg-slate-900/90 rounded-xl border border-slate-800">
-                          <div className="text-blue-400 font-mono font-bold text-xl">&lt; 280ms</div>
-                          <div className="text-[11px] text-slate-400 uppercase font-mono mt-1">Global TTFB</div>
-                        </div>
-                        <div className="p-3.5 bg-slate-900/90 rounded-xl border border-slate-800">
-                          <div className="text-purple-400 font-mono font-bold text-xl">+42%</div>
-                          <div className="text-[11px] text-slate-400 uppercase font-mono mt-1">CVR Uplift</div>
-                        </div>
-                      </div>
-
-                      <div className="space-y-2.5 text-xs font-mono text-slate-300">
-                        <div className="flex items-center space-x-2">
-                          <span className="text-emerald-400">✓</span>
-                          <span>Edge caching via Cloudflare CDN network</span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <span className="text-emerald-400">✓</span>
-                          <span>Native Webhook and WhatsApp CRM bi-directional sync</span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <span className="text-emerald-400">✓</span>
-                          <span>Direct-to-checkout streamlined pipeline</span>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="w-full lg:w-1/2 bg-slate-900/90 rounded-xl border border-slate-800 p-5 font-mono text-xs flex flex-col justify-between">
-                      <div className="flex items-center justify-between pb-3 border-b border-slate-800 text-slate-400 text-[11px]">
-                        <div className="flex space-x-1.5">
-                          <span className="w-2.5 h-2.5 rounded-full bg-rose-500/80" />
-                          <span className="w-2.5 h-2.5 rounded-full bg-amber-500/80" />
-                          <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/80" />
-                        </div>
-                        <span>pipeline-audit.config.ts</span>
-                      </div>
-                      <div className="py-4 space-y-2 overflow-x-auto text-slate-300">
-                        <div>
-                          <span className="text-purple-400">export const</span> <span className="text-blue-400">revenueStack</span> = &#123;
-                        </div>
-                        <div className="pl-4">
-                          engine: <span className="text-amber-300">&apos;SmartOnward UltraCore&apos;</span>,
-                        </div>
-                        <div className="pl-4">
-                          hydrationSpeed: <span className="text-emerald-300">&apos;0.18s&apos;</span>,
-                        </div>
-                        <div className="pl-4">conversionSignals: [</div>
-                        <div className="pl-8 text-slate-400">
-                          <span className="text-blue-300">&apos;instant_lead_routing&apos;</span>,{" "}
-                          <span className="text-blue-300">&apos;exit_intent_salvage&apos;</span>,{" "}
-                          <span className="text-blue-300">&apos;pixel_enrichment&apos;</span>
-                        </div>
-                        <div className="pl-4">],</div>
-                        <div className="pl-4">
-                          failoverRedundancy: <span className="text-emerald-400">true</span>,
-                        </div>
-                        <div className="pl-4">
-                          analyticsTelemetry: <span className="text-blue-300">&apos;real_time_stream&apos;</span>
-                        </div>
-                        <div>&#125;;</div>
-                      </div>
-                      <div className="bg-slate-950 p-3 rounded-lg border border-slate-800/80 flex items-center justify-between text-xs">
-                        <span className="text-emerald-400 font-semibold">Status: 200 OK - Production Live</span>
-                        <span className="text-slate-500">Latency: 14ms</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              {/* State 2: Grow Engine */}
-              {activeEngine === "grow" && (
-                <div className="transition-opacity duration-300">
-                  <div className="flex flex-col lg:flex-row gap-8 items-stretch">
-                    <div className="w-full lg:w-1/2 flex flex-col justify-between">
-                      <div>
-                        <span className="px-2.5 py-1 rounded bg-emerald-500/20 text-emerald-400 font-mono text-xs uppercase font-medium">
-                          Algorithmic Traffic Synthesis
-                        </span>
-                        <h3 className="text-2xl sm:text-3xl font-bold mt-3 text-white">
-                          Cold-Audience Acquisition Without Friction
-                        </h3>
-                        <p className="text-slate-400 text-sm mt-3 leading-relaxed">
-                          We deploy rapid creative testing matrices and automated bid adjustment workflows across Meta and Search to pinpoint breakout CAC efficiencies.
-                        </p>
-                      </div>
-
-                      <div className="grid grid-cols-3 gap-3 my-6">
-                        <div className="p-3.5 bg-slate-900/90 rounded-xl border border-slate-800">
-                          <div className="text-blue-400 font-mono font-bold text-xl">4.82x</div>
-                          <div className="text-[11px] text-slate-400 uppercase font-mono mt-1">Blended ROAS</div>
-                        </div>
-                        <div className="p-3.5 bg-slate-900/90 rounded-xl border border-slate-800">
-                          <div className="text-emerald-400 font-mono font-bold text-xl">+64%</div>
-                          <div className="text-[11px] text-slate-400 uppercase font-mono mt-1">CTR Scale</div>
-                        </div>
-                        <div className="p-3.5 bg-slate-900/90 rounded-xl border border-slate-800">
-                          <div className="text-amber-400 font-mono font-bold text-xl">12+</div>
-                          <div className="text-[11px] text-slate-400 uppercase font-mono mt-1">Weekly Creatives</div>
-                        </div>
-                      </div>
-
-                      <div className="space-y-2.5 text-xs font-mono text-slate-300">
-                        <div className="flex items-center space-x-2">
-                          <span className="text-emerald-400">✓</span>
-                          <span>AI creative modular variant generation</span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <span className="text-emerald-400">✓</span>
-                          <span>Autonomous stop-loss bidding guardrails</span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <span className="text-emerald-400">✓</span>
-                          <span>Full-funnel attribution telemetry</span>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="w-full lg:w-1/2 bg-slate-900/90 rounded-xl border border-slate-800 p-6 flex flex-col justify-between font-mono">
-                      <div className="text-xs text-slate-400 pb-2 border-b border-slate-800 flex justify-between">
-                        <span>LIVE CAMPAIGN TELEMETRY</span>
-                        <span className="text-emerald-400 animate-pulse">STREAMING</span>
-                      </div>
-                      <div className="space-y-4 my-4">
-                        <div>
-                          <div className="flex justify-between text-xs mb-1">
-                            <span className="text-slate-300">Ad Impressions (Top Funnel)</span>
-                            <span className="text-white font-bold">142,800</span>
-                          </div>
-                          <div className="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
-                            <div className="w-full h-full bg-blue-500 rounded-full" />
-                          </div>
-                        </div>
-                        <div>
-                          <div className="flex justify-between text-xs mb-1">
-                            <span className="text-slate-300">High-Intent Clicks (3.8% CTR)</span>
-                            <span className="text-white font-bold">5,426</span>
-                          </div>
-                          <div className="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
-                            <div className="w-2/3 h-full bg-blue-400 rounded-full" />
-                          </div>
-                        </div>
-                        <div>
-                          <div className="flex justify-between text-xs mb-1">
-                            <span className="text-slate-300">Verified Pipeline Conversions</span>
-                            <span className="text-emerald-400 font-bold">642 Qualified Actions</span>
-                          </div>
-                          <div className="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
-                            <div className="w-1/3 h-full bg-emerald-500 rounded-full" />
-                          </div>
-                        </div>
-                      </div>
-                      <div className="p-3 bg-emerald-500/10 border border-emerald-500/30 rounded-lg text-emerald-300 text-xs flex justify-between items-center">
-                        <span>Efficiency Target Achieved</span>
-                        <span className="font-bold">Conversion Rate +48% Over Benchmark</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              {/* State 3: Automation Engine */}
-              {activeEngine === "auto" && (
-                <div className="transition-opacity duration-300">
-                  <div className="flex flex-col lg:flex-row gap-8 items-stretch">
-                    <div className="w-full lg:w-1/2 flex flex-col justify-between">
-                      <div>
-                        <span className="px-2.5 py-1 rounded bg-purple-500/20 text-purple-400 font-mono text-xs uppercase font-medium">
-                          Instant WhatsApp Qualification
-                        </span>
-                        <h3 className="text-2xl sm:text-3xl font-bold mt-3 text-white">
-                          24/7 Conversational AI That Closes Appointments
-                        </h3>
-                        <p className="text-slate-400 text-sm mt-3 leading-relaxed">
-                          Zero response lag. When a user taps your ad or landing page, our verified WhatsApp concierge answers in 4 seconds, qualifies requirements, and locks in the calendar booking.
-                        </p>
-                      </div>
-
-                      <div className="grid grid-cols-3 gap-3 my-6">
-                        <div className="p-3.5 bg-slate-900/90 rounded-xl border border-slate-800">
-                          <div className="text-emerald-400 font-mono font-bold text-xl">&lt; 4 sec</div>
-                          <div className="text-[11px] text-slate-400 uppercase font-mono mt-1">Response Time</div>
-                        </div>
-                        <div className="p-3.5 bg-slate-900/90 rounded-xl border border-slate-800">
-                          <div className="text-purple-400 font-mono font-bold text-xl">100%</div>
-                          <div className="text-[11px] text-slate-400 uppercase font-mono mt-1">Lead Capture</div>
-                        </div>
-                        <div className="p-3.5 bg-slate-900/90 rounded-xl border border-slate-800">
-                          <div className="text-blue-400 font-mono font-bold text-xl">0 hrs</div>
-                          <div className="text-[11px] text-slate-400 uppercase font-mono mt-1">Manual Chasing</div>
-                        </div>
-                      </div>
-
-                      <div className="space-y-2.5 text-xs font-mono text-slate-300">
-                        <div className="flex items-center space-x-2">
-                          <span className="text-emerald-400">✓</span>
-                          <span>Automated multi-lingual conversation handling</span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <span className="text-emerald-400">✓</span>
-                          <span>Instant Google Calendar and CRM slot reservation</span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <span className="text-emerald-400">✓</span>
-                          <span>Human handover alert protocol for VIP deals</span>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="w-full lg:w-1/2 bg-slate-900/90 rounded-xl border border-slate-800 p-5 font-mono text-xs flex flex-col justify-between">
-                      <div className="flex justify-between items-center text-slate-400 pb-2 border-b border-slate-800">
-                        <span>DISPATCHER WEBHOOK EVENT</span>
-                        <span className="text-emerald-400">CONNECTED</span>
-                      </div>
-                      <div className="py-3 text-slate-300 space-y-1.5 leading-relaxed">
-                        <div className="text-slate-500"># Inbound webhook from ad click</div>
-                        <div>
-                          &gt; Event: <span className="text-amber-300">&quot;customer_intent_received&quot;</span>
-                        </div>
-                        <div>
-                          &gt; Channel: <span className="text-emerald-400">&quot;WhatsApp Meta Cloud API&quot;</span>
-                        </div>
-                        <div>
-                          &gt; AI Prompt: <span className="text-purple-300">&quot;Qualify requirement &amp; schedule roadmap&quot;</span>
-                        </div>
-                        <div>
-                          &gt; Execution: <span className="text-blue-400">Slot booked for Friday 14:00 GMT</span>
-                        </div>
-                        <div>
-                          &gt; CRM Record: <span className="text-emerald-300">#4921 updated with lead tags</span>
-                        </div>
-                      </div>
-                      <div className="p-3 rounded bg-blue-900/30 border border-blue-700/40 text-blue-200 text-xs">
-                        ⚡ Autonomous Action: Notification pushed to Founders Slack channel
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
-          </div>
-        </section>
+        {/* 3 THINGS HOLDING YOUR BUSINESS BACK */}
+        <StruggleSection />
 
         {/* SPEED MATRIX / VELOCITY BLUEPRINT */}
         <section className="py-24 relative" id="speed-matrix">
@@ -941,7 +565,7 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto mb-20">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 tracking-tight">
-                From idea to <span className="text-blue-600">impact.</span>
+                From idea to <span className="text-blue-600 italic">impact.</span>
               </h2>
               <p className="mt-6 text-sm sm:text-base text-slate-500 leading-relaxed max-w-2xl mx-auto">
                 A clear, structured process so you know what is happening, why it matters and what comes next.
@@ -1343,80 +967,15 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl sm:text-5xl font-black text-slate-950 tracking-tight leading-tight">
-                Built for businesses ready to <span className="text-blue-600">move forward.</span>
+                Built for businesses ready to <span className="text-blue-600 italic">move forward.</span>
               </h2>
               <p className="mt-4 text-slate-600 text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
                 Whether you are starting from scratch or improving an existing digital presence, we adapt the solution to where your business is today.
               </p>
             </div>
 
-            {/* 5 Cards Horizontal Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
-              {/* Card 1: Startups */}
-              <div className="bg-white/80 backdrop-blur-md border border-slate-200/80 rounded-2xl p-6 text-center shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-between">
-                <div>
-                  <div className="w-14 h-14 mx-auto mb-4 flex items-center justify-center text-3xl select-none">
-                    🚀
-                  </div>
-                  <h3 className="text-base font-bold text-slate-900 mb-2 font-sans">Startups</h3>
-                  <p className="text-xs text-slate-500 leading-relaxed">
-                    Build your brand and digital foundation from the ground up.
-                  </p>
-                </div>
-              </div>
-
-              {/* Card 2: Growing Businesses */}
-              <div className="bg-white/80 backdrop-blur-md border border-slate-200/80 rounded-2xl p-6 text-center shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-between">
-                <div>
-                  <div className="w-14 h-14 mx-auto mb-4 flex items-center justify-center text-3xl select-none">
-                    📈
-                  </div>
-                  <h3 className="text-base font-bold text-slate-900 mb-2 font-sans">Growing Businesses</h3>
-                  <p className="text-xs text-slate-500 leading-relaxed">
-                    Upgrade your presence, marketing and customer acquisition.
-                  </p>
-                </div>
-              </div>
-
-              {/* Card 3: Local Businesses */}
-              <div className="bg-white/80 backdrop-blur-md border border-slate-200/80 rounded-2xl p-6 text-center shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-between">
-                <div>
-                  <div className="w-14 h-14 mx-auto mb-4 flex items-center justify-center text-3xl select-none">
-                    🏪
-                  </div>
-                  <h3 className="text-base font-bold text-slate-900 mb-2 font-sans">Local Businesses</h3>
-                  <p className="text-xs text-slate-500 leading-relaxed">
-                    Get discovered, generate enquiries and automate customer interactions.
-                  </p>
-                </div>
-              </div>
-
-              {/* Card 4: D2C & Brands */}
-              <div className="bg-white/80 backdrop-blur-md border border-slate-200/80 rounded-2xl p-6 text-center shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-between">
-                <div>
-                  <div className="w-14 h-14 mx-auto mb-4 flex items-center justify-center text-3xl select-none">
-                    🛍️
-                  </div>
-                  <h3 className="text-base font-bold text-slate-900 mb-2 font-sans">D2C &amp; Brands</h3>
-                  <p className="text-xs text-slate-500 leading-relaxed">
-                    Build content, campaigns and digital experiences around your customers.
-                  </p>
-                </div>
-              </div>
-
-              {/* Card 5: Professionals */}
-              <div className="bg-white/80 backdrop-blur-md border border-slate-200/80 rounded-2xl p-6 text-center shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-between">
-                <div>
-                  <div className="w-14 h-14 mx-auto mb-4 flex items-center justify-center text-3xl select-none">
-                    💼
-                  </div>
-                  <h3 className="text-base font-bold text-slate-900 mb-2 font-sans">Professionals</h3>
-                  <p className="text-xs text-slate-500 leading-relaxed">
-                    Build authority through websites, branding and consistent content.
-                  </p>
-                </div>
-              </div>
-            </div>
+            {/* 3D Coverflow Carousel */}
+            <CoverflowCarousel />
           </div>
         </section>
 
@@ -1425,7 +984,7 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 tracking-tight">
-                From digital presence to <span className="text-blue-600">business systems.</span>
+                From digital presence to <span className="text-blue-600 italic">business systems.</span>
               </h2>
               <p className="mt-6 text-sm sm:text-[15px] text-slate-500 max-w-2xl mx-auto leading-relaxed">
                 Our work is designed to solve practical business needs - not simply to add another digital asset.

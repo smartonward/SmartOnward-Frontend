@@ -1,456 +1,176 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import Link from "next/link";
 import GrowthAuditCTA from "../components/GrowthAuditCTA";
 import Footer from "../components/Footer";
 
 export default function WebsiteDevelopmentPage() {
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const revealItems = document.querySelectorAll(".reveal:not(.is-visible)");
-    if ("IntersectionObserver" in window) {
-      const revealObserver = new IntersectionObserver(
-        (entries, observer) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("is-visible");
-              observer.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.12, rootMargin: "0px 0px -30px 0px" }
-      );
-      revealItems.forEach((item) => revealObserver.observe(item));
-      return () => revealObserver.disconnect();
-    } else {
-      revealItems.forEach((item) => item.classList.add("is-visible"));
-    }
-  }, []);
-
-  const closeMenu = () => setMenuOpen(false);
-
   return (
     <>
-      {/* NAV */}
-      <nav>
-        <div className="nav-inner">
-          <Link href="/" className="logo" aria-label="SmartOnward home">
-            <img
-              src="/logo.png"
-              alt="SmartOnward Logo"
-              className="logo-img"
-              height={28}
-              style={{ height: "28px", width: "auto", maxHeight: "28px", objectFit: "contain" }}
-            />
-            <div className="logo-text">
-              <span>Smart</span>Onward
-            </div>
-          </Link>
+      <main className="relative z-10">
+        {/* HERO SECTION */}
+        <section className="relative pt-24 sm:pt-32 pb-20 md:pb-28 text-center px-4 sm:px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto flex flex-col items-center">
 
-          <ul className={`nav-links ${menuOpen ? "open" : ""}`} id="navLinks">
-            <li>
-              <Link href="/#services" onClick={closeMenu}>
-                All Services
-              </Link>
-            </li>
-            <li>
-              <a href="#services" onClick={closeMenu}>
-                What We Build
-              </a>
-            </li>
-            <li>
-              <a href="#value" onClick={closeMenu}>
-                Why Us
-              </a>
-            </li>
-            <li>
-              <a href="#process" onClick={closeMenu}>
-                Process
-              </a>
-            </li>
-            <li>
-              <a href="#technology" onClick={closeMenu}>
-                Technology
-              </a>
-            </li>
-            <li>
-              <a
-                href="#contact"
-                className="nav-cta"
-                onClick={closeMenu}
-              >
-                Get Started →
-              </a>
-            </li>
-          </ul>
-
-          <button
-            className="menu-btn"
-            id="menuBtn"
-            aria-label="Toggle menu"
-            onClick={() => setMenuOpen((prev) => !prev)}
-          >
-            {menuOpen ? "✕" : "☰"}
-          </button>
-        </div>
-      </nav>
-
-      {/* HERO */}
-      <section className="hero-web" id="hero">
-        <div className="hero-web-grid reveal is-visible">
-          <div>
-            <div className="hero-badge">
-              <span className="hero-badge-dot"></span> Website Development
-            </div>
-            <h1>
-              Websites built to <span>look great</span> and{" "}
-              <em>grow your business.</em>
+            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-[76px] font-black text-slate-950 tracking-tight leading-[1.08] max-w-4xl">
+              Websites built to <span className="text-blue-600 italic">look great</span> and <em>grow your business.</em>
             </h1>
-            <p className="hero-copy">
-              We design and develop fast, modern, conversion-focused websites
-              that make your brand look credible, communicate your value and turn
-              visitors into customers.
+
+            <p className="mt-8 text-lg sm:text-xl text-slate-600 max-w-2xl leading-relaxed font-medium">
+              We design and develop fast, modern, conversion-focused websites that make your brand look credible, communicate your value and turn visitors into customers.
             </p>
-            <div className="hero-btns">
-              <a href="#contact" className="btn-primary">
-                Build My Website →
+
+            <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
+              <a
+                className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold shadow-lg shadow-blue-500/20 hover:shadow-glow-blue transition-all duration-200 hover:-translate-y-0.5"
+                href="#schedule"
+              >
+                <span>Build My Website</span>
+                <span className="ml-2 font-bold text-lg">→</span>
               </a>
-              <a href="#services" className="btn-secondary">
+              <a
+                className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl bg-white hover:bg-slate-50 text-slate-900 font-bold shadow-md border border-slate-200/80 transition-all duration-200 hover:-translate-y-0.5"
+                href="#services"
+              >
                 Explore Services
               </a>
             </div>
-            <div className="hero-web-notes">
-              <div className="hero-web-note">
-                <b>✓</b> Mobile-first
+          </div>
+        </section>
+
+        {/* SERVICES - WHAT WE BUILD */}
+        <section className="pt-8 pb-24 relative" id="services">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight mb-4">
+                Everything your <span className="text-blue-600 italic">website needs</span>
+              </h2>
+              <p className="text-slate-600 text-lg">
+                From a professional business presence to a complete digital experience, our full-service approach covers strategy, design, development and launch.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                {
+                  icon: "🌐",
+                  title: "Business Websites",
+                  desc: "Professional websites designed to establish trust, explain your services and generate enquiries.",
+                  tags: ["3–5 Pages", "Responsive"]
+                },
+                {
+                  icon: "🛍️",
+                  title: "E-Commerce Websites",
+                  desc: "Product-focused online stores with clean shopping experiences and conversion-friendly layouts.",
+                  tags: ["Products", "Checkout"]
+                },
+                {
+                  icon: "🎯",
+                  title: "Landing Pages",
+                  desc: "Focused campaign pages built around one goal — leads, bookings, sales or registrations.",
+                  tags: ["High Conversion", "Ads Ready"]
+                },
+                {
+                  icon: "🎨",
+                  title: "UI/UX Design",
+                  desc: "Modern interfaces with thoughtful layouts, hierarchy and user journeys that make websites easier to use.",
+                  tags: ["Figma", "UX Flow"]
+                },
+                {
+                  icon: "🤖",
+                  title: "AI & Chatbot Integration",
+                  desc: "Connect your website with AI assistants, lead capture, WhatsApp and automated customer support.",
+                  tags: ["AI", "Chatbot"]
+                },
+                {
+                  icon: "📈",
+                  title: "SEO & Analytics",
+                  desc: "Technical foundations, Search Console, Analytics and on-page essentials so your website is ready to grow.",
+                  tags: ["SEO", "Analytics"]
+                }
+              ].map((service, idx) => (
+                <div key={idx} className="bg-white/60 backdrop-blur-md rounded-2xl p-8 shadow-xl shadow-slate-200/50 border border-slate-100 hover:-translate-y-1 transition-transform duration-300">
+                  <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-2xl mb-6 shadow-sm border border-blue-100">
+                    {service.icon}
+                  </div>
+                  <h3 className="text-xl font-bold text-slate-900 mb-3">{service.title}</h3>
+                  <p className="text-sm text-slate-600 leading-relaxed mb-6">{service.desc}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {service.tags.map(tag => (
+                      <span key={tag} className="px-3 py-1 rounded-lg bg-slate-100 text-slate-600 text-xs font-semibold">{tag}</span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* WHY US */}
+        <section className="py-24 relative" id="value">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              <div>
+                <p className="text-blue-600 text-xs font-bold tracking-widest uppercase mb-3">Why SmartOnward</p>
+                <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight mb-6 leading-tight">
+                  We don&apos;t just build a website. We build your <span className="text-blue-600 italic">digital presence.</span>
+                </h2>
+                <p className="text-slate-600 text-lg mb-8">
+                  As a full-fledged digital agency, we can connect your website with branding, content, social media, digital marketing and AI automation — so everything works together.
+                </p>
               </div>
-              <div className="hero-web-note">
-                <b>✓</b> SEO-ready
-              </div>
-              <div className="hero-web-note">
-                <b>✓</b> Fast &amp; secure
+
+              <div className="bg-white rounded-[2rem] p-8 shadow-xl shadow-slate-200/50 border border-slate-100">
+                <div className="space-y-6">
+                  {[
+                    { title: "Conversion-focused", desc: "Clear calls-to-action and journeys designed around business goals." },
+                    { title: "Mobile-first", desc: "Clean experiences across phones, tablets and desktops." },
+                    { title: "Performance-minded", desc: "Lightweight layouts and optimized assets for faster loading." },
+                    { title: "Brand consistent", desc: "Your colors, voice and identity carried throughout the site." },
+                    { title: "Easy to scale", desc: "Built with room for new pages, integrations and campaigns." }
+                  ].map((item, idx) => (
+                    <div key={idx} className="flex items-start gap-4">
+                      <div className="w-8 h-8 rounded-full bg-emerald-50 flex items-center justify-center flex-shrink-0 border border-emerald-100">
+                        <span className="text-emerald-500 font-bold text-sm">✓</span>
+                      </div>
+                      <div>
+                        <h4 className="text-slate-900 font-bold mb-1">{item.title}</h4>
+                        <p className="text-sm text-slate-600">{item.desc}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
+        </section>
 
-          <div className="browser">
-            <div className="browser-top">
-              <span className="browser-dot"></span>
-              <span className="browser-dot"></span>
-              <span className="browser-dot"></span>
-              <div className="address-bar">yourbusiness.com</div>
-            </div>
-            <div className="site-preview">
-              <div className="preview-nav">
-                <div className="preview-logo">
-                  <span>Smart</span>Brand
-                </div>
-                <div className="preview-links">
-                  <i></i>
-                  <i></i>
-                  <i></i>
-                </div>
-              </div>
-              <div className="preview-content">
-                <div>
-                  <div className="preview-title">
-                    Your brand.
-                    <br />
-                    <span>Better online.</span>
-                  </div>
-                  <div className="preview-line"></div>
-                  <div className="preview-line short"></div>
-                  <div className="preview-button"></div>
-                </div>
-                <div className="preview-card">
-                  <div className="preview-image"></div>
-                  <div className="preview-mini">
-                    <i></i>
-                    <i></i>
-                  </div>
-                  <div className="preview-mini">
-                    <i></i>
-                    <i></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* STATS STRIP */}
-      <div className="strip">
-        <div className="strip-inner">
-          <div className="strip-item">
-            <strong>5–15 Days</strong>
-            <span>Typical delivery</span>
-          </div>
-          <div className="strip-item">
-            <strong>100%</strong>
-            <span>Responsive layouts</span>
-          </div>
-          <div className="strip-item">
-            <strong>SEO</strong>
-            <span>Ready foundations</span>
-          </div>
-          <div className="strip-item">
-            <strong>24/7</strong>
-            <span>Support available</span>
-          </div>
-        </div>
-      </div>
-
-      {/* SERVICES - WHAT WE BUILD */}
-      <section className="services" id="services">
-        <div className="section-inner">
-          <div className="center services-headline">
-            <div className="section-eyebrow">What We Build</div>
-            <h2 className="section-title">
-              Everything your <span>website needs</span>
+        {/* TECHNOLOGY */}
+        <section className="py-24 relative bg-slate-50/50" id="technology">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p className="text-blue-600 text-xs font-bold tracking-widest uppercase mb-3">Technology</p>
+            <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight mb-4">
+              Built with the <span className="text-blue-600 italic">right tools</span>
             </h2>
-            <p className="section-sub">
-              From a professional business presence to a complete digital
-              experience, our full-service approach covers strategy, design,
-              development and launch.
+            <p className="text-slate-600 text-lg max-w-2xl mx-auto mb-12">
+              We choose the technology based on your business, budget, timeline and future requirements.
             </p>
-          </div>
-
-          <div className="service-web-grid reveal">
-            <div className="service-web-card">
-              <div className="web-icon">🌐</div>
-              <h3>Business Websites</h3>
-              <p>
-                Professional websites designed to establish trust, explain your
-                services and generate enquiries.
-              </p>
-              <div className="web-tags">
-                <span className="web-tag">3–5 Pages</span>
-                <span className="web-tag">Responsive</span>
-              </div>
-            </div>
-
-            <div className="service-web-card">
-              <div className="web-icon">🛍️</div>
-              <h3>E-Commerce Websites</h3>
-              <p>
-                Product-focused online stores with clean shopping experiences and
-                conversion-friendly layouts.
-              </p>
-              <div className="web-tags">
-                <span className="web-tag">Products</span>
-                <span className="web-tag">Checkout</span>
-              </div>
-            </div>
-
-            <div className="service-web-card">
-              <div className="web-icon">🎯</div>
-              <h3>Landing Pages</h3>
-              <p>
-                Focused campaign pages built around one goal — leads, bookings,
-                sales or registrations.
-              </p>
-              <div className="web-tags">
-                <span className="web-tag">High Conversion</span>
-                <span className="web-tag">Ads Ready</span>
-              </div>
-            </div>
-
-            <div className="service-web-card">
-              <div className="web-icon">🎨</div>
-              <h3>UI/UX Design</h3>
-              <p>
-                Modern interfaces with thoughtful layouts, hierarchy and user
-                journeys that make websites easier to use.
-              </p>
-              <div className="web-tags">
-                <span className="web-tag">Figma</span>
-                <span className="web-tag">UX Flow</span>
-              </div>
-            </div>
-
-            <div className="service-web-card">
-              <div className="web-icon">🤖</div>
-              <h3>AI &amp; Chatbot Integration</h3>
-              <p>
-                Connect your website with AI assistants, lead capture, WhatsApp
-                and automated customer support.
-              </p>
-              <div className="web-tags">
-                <span className="web-tag">AI</span>
-                <span className="web-tag">Chatbot</span>
-              </div>
-            </div>
-
-            <div className="service-web-card">
-              <div className="web-icon">📈</div>
-              <h3>SEO &amp; Analytics</h3>
-              <p>
-                Technical foundations, Search Console, Analytics and on-page
-                essentials so your website is ready to grow.
-              </p>
-              <div className="web-tags">
-                <span className="web-tag">SEO</span>
-                <span className="web-tag">Analytics</span>
-              </div>
+            <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
+              {[
+                "HTML5", "CSS3", "JavaScript", "React", "Next.js", "WordPress",
+                "Shopify", "Webflow", "Node.js", "PHP", "API Integration",
+                "AI Integration", "WhatsApp"
+              ].map((tech) => (
+                <span key={tech} className="px-4 py-2 rounded-full bg-white border border-slate-200 text-slate-700 font-medium shadow-sm hover:border-blue-300 hover:text-blue-700 transition-colors">
+                  {tech}
+                </span>
+              ))}
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* VALUE SECTION */}
-      <section className="value-sec" id="value">
-        <div className="section-inner">
-          <div className="value-grid reveal">
-            <div className="value-panel">
-              <div
-                className="hero-badge"
-                style={{
-                  background: "rgba(96,165,250,.15)",
-                  color: "#93C5FD",
-                  marginBottom: "8px",
-                }}
-              >
-                Why SmartOnward
-              </div>
-              <h3>
-                We don&apos;t just build a website.
-                <br />
-                We build your <span>digital presence.</span>
-              </h3>
-              <p>
-                As a full-fledged digital agency, we can connect your website
-                with branding, content, social media, digital marketing and AI
-                automation — so everything works together.
-              </p>
-            </div>
-
-            <div className="value-list">
-              <div className="value-item">
-                <div className="val-check">✓</div>
-                <div>
-                  <h4>Conversion-focused</h4>
-                  <p>
-                    Clear calls-to-action and journeys designed around business
-                    goals.
-                  </p>
-                </div>
-              </div>
-              <div className="value-item">
-                <div className="val-check">✓</div>
-                <div>
-                  <h4>Mobile-first</h4>
-                  <p>Clean experiences across phones, tablets and desktops.</p>
-                </div>
-              </div>
-              <div className="value-item">
-                <div className="val-check">✓</div>
-                <div>
-                  <h4>Performance-minded</h4>
-                  <p>Lightweight layouts and optimized assets for faster loading.</p>
-                </div>
-              </div>
-              <div className="value-item">
-                <div className="val-check">✓</div>
-                <div>
-                  <h4>Brand consistent</h4>
-                  <p>Your colors, voice and identity carried throughout the site.</p>
-                </div>
-              </div>
-              <div className="value-item">
-                <div className="val-check">✓</div>
-                <div>
-                  <h4>Easy to scale</h4>
-                  <p>Built with room for new pages, integrations and campaigns.</p>
-                </div>
-              </div>
-              <div className="value-item">
-                <div className="val-check">✓</div>
-                <div>
-                  <h4>Launch support</h4>
-                  <p>Testing, deployment and post-launch assistance when needed.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* PROCESS SECTION */}
-      <section id="process">
-        <div className="section-inner">
-          <div className="center">
-            <div className="section-eyebrow">Our Process</div>
-            <h2 className="section-title">
-              From idea to <span>online</span>
-            </h2>
-            <p className="section-sub">
-              A simple, transparent workflow designed to keep your project
-              moving without unnecessary complexity.
-            </p>
-          </div>
-
-          <div className="process-web-grid reveal">
-            <div className="step-web">
-              <div className="step-web-num">01 / DISCOVER</div>
-              <h4>Understand</h4>
-              <p>Goals, audience, competitors and project scope.</p>
-            </div>
-            <div className="step-web">
-              <div className="step-web-num">02 / PLAN</div>
-              <h4>Structure</h4>
-              <p>Sitemap, content direction and conversion journey.</p>
-            </div>
-            <div className="step-web">
-              <div className="step-web-num">03 / DESIGN</div>
-              <h4>Visualize</h4>
-              <p>UI/UX, branding and responsive page designs.</p>
-            </div>
-            <div className="step-web">
-              <div className="step-web-num">04 / BUILD</div>
-              <h4>Develop</h4>
-              <p>Responsive development, integrations and testing.</p>
-            </div>
-            <div className="step-web">
-              <div className="step-web-num">05 / LAUNCH</div>
-              <h4>Grow</h4>
-              <p>Deploy, optimize and support your next phase.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* TECHNOLOGY */}
-      <section className="tech-sec" id="technology">
-        <div className="section-inner center">
-          <div className="section-eyebrow">Technology</div>
-          <h2 className="section-title">
-            Built with the <span>right tools</span>
-          </h2>
-          <p className="section-sub">
-            We choose the technology based on your business, budget, timeline and
-            future requirements.
-          </p>
-          <div className="tech-list reveal">
-            <span className="tech-pill">HTML5</span>
-            <span className="tech-pill">CSS3</span>
-            <span className="tech-pill">JavaScript</span>
-            <span className="tech-pill">React</span>
-            <span className="tech-pill">Next.js</span>
-            <span className="tech-pill">WordPress</span>
-            <span className="tech-pill">Shopify</span>
-            <span className="tech-pill">Webflow</span>
-            <span className="tech-pill">Node.js</span>
-            <span className="tech-pill">PHP</span>
-            <span className="tech-pill">API Integration</span>
-            <span className="tech-pill">AI Integration</span>
-            <span className="tech-pill">WhatsApp</span>
-          </div>
-        </div>
-      </section>
-
-            <GrowthAuditCTA />
+        <GrowthAuditCTA />
+      </main>
       <Footer />
     </>
   );
