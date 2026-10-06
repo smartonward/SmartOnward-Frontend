@@ -3,77 +3,77 @@ import Link from "next/link";
 export default function Footer() {
   // PREMIUM FOOTER
   return (
-      <footer className="bg-slate-950 border-t border-slate-900 pt-20 pb-10 text-slate-400 font-sans">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-8 mb-16">
+    <footer className="bg-slate-950 border-t border-slate-900 pt-20 pb-10 text-slate-400 font-sans">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-8 mb-16">
 
-            {/* Column 1: Brand & Intro */}
-            <div className="space-y-6">
-              <Link href="/" className="inline-flex items-center">
-                <img src="/logo-new.png" alt="SmartOnward Logo" className="h-12 w-auto object-contain rounded-lg bg-white/10 p-1" />
-              </Link>
-              <p className="text-sm text-slate-500 leading-relaxed max-w-xs">
-                We engineer digital momentum through headless web architecture, viral content, and intelligent AI automation systems.
-              </p>
-              {/* Contact Email */}
-              <div className="pt-2">
-                <a href="mailto:hello@smartonward.com" className="flex items-center space-x-2 text-sm hover:text-white transition-colors group w-max">
-                  <svg className="w-4 h-4 text-slate-600 group-hover:text-blue-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                  <span>hello@smartonward.com</span>
-                </a>
-              </div>
-              {/* Social Icons Placeholder */}
-              <div className="flex space-x-4 pt-2">
-                <a href="#" className="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors duration-300">
-                  <span className="sr-only">Twitter</span>
-                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" /></svg>
-                </a>
-                <a href="#" className="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors duration-300">
-                  <span className="sr-only">LinkedIn</span>
-                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" /></svg>
-                </a>
-                <a href="#" className="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors duration-300">
-                  <span className="sr-only">Instagram</span>
-                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" /></svg>
-                </a>
-              </div>
+          {/* Column 1: Brand & Intro */}
+          <div className="space-y-6">
+            <Link href="/" className="inline-flex items-center">
+              <img src="/footer-logo.png" alt="SmartOnward Logo" className="h-16 w-auto object-contain rounded-xl bg-white/5 p-2" />
+            </Link>
+            <p className="text-sm text-slate-500 leading-relaxed max-w-xs">
+              We engineer digital momentum through headless web architecture, viral content, and intelligent AI automation systems.
+            </p>
+            {/* Contact Email */}
+            <div className="pt-2">
+              <a href="mailto:hello@smartonward.com" className="flex items-center space-x-2 text-sm hover:text-white transition-colors group w-max">
+                <svg className="w-4 h-4 text-slate-600 group-hover:text-blue-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                <span>hello@smartonward.com</span>
+              </a>
             </div>
-
-            {/* Column 2: Navigation */}
-            <div>
-              <h4 className="text-white font-bold mb-6 text-sm tracking-wider uppercase">Navigation</h4>
-              <ul className="space-y-4 text-sm">
-                <li><Link href="/" className="hover:text-blue-400 transition-colors">Home</Link></li>
-                <li><Link href="#services" className="hover:text-blue-400 transition-colors">Services</Link></li>
-                <li><Link href="#schedule" className="hover:text-blue-400 transition-colors">Growth Audit</Link></li>
-                <li><Link href="/about" className="hover:text-blue-400 transition-colors">About Us</Link></li>
-              </ul>
+            {/* Social Icons Placeholder */}
+            <div className="flex space-x-4 pt-2">
+              <a href="#" className="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors duration-300">
+                <span className="sr-only">Twitter</span>
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" /></svg>
+              </a>
+              <a href="#" className="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors duration-300">
+                <span className="sr-only">LinkedIn</span>
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" /></svg>
+              </a>
+              <a href="#" className="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors duration-300">
+                <span className="sr-only">Instagram</span>
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" /></svg>
+              </a>
             </div>
-
-            {/* Column 3: Services */}
-            <div>
-              <h4 className="text-white font-bold mb-6 text-sm tracking-wider uppercase">Our Services</h4>
-              <ul className="space-y-4 text-sm">
-                <li><Link href="/website-development" className="hover:text-blue-400 transition-colors">Website Development</Link></li>
-                <li><Link href="/social-media-management" className="hover:text-blue-400 transition-colors">Social Media Management</Link></li>
-                <li><Link href="/search-engine-optimization" className="hover:text-blue-400 transition-colors">SEO Mastery</Link></li>
-                <li><Link href="/digital-marketing" className="hover:text-blue-400 transition-colors">Digital Marketing</Link></li>
-                <li><Link href="/ai-automation" className="hover:text-blue-400 transition-colors">AI Automation</Link></li>
-              </ul>
-            </div>
-
           </div>
 
-          {/* Bottom Bar */}
-          <div className="pt-8 border-t border-slate-900 flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-mono">
-            <p>© 2026 SmartOnward Inc. Engineered for Momentum.</p>
-            <div className="flex flex-wrap gap-x-6 gap-y-2">
-              <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-              <a href="#" className="hover:text-white transition-colors">Cookie Policy</a>
-            </div>
+          {/* Column 2: Navigation */}
+          <div>
+            <h4 className="text-white font-bold mb-6 text-sm tracking-wider uppercase">Navigation</h4>
+            <ul className="space-y-4 text-sm">
+              <li><Link href="/" className="hover:text-blue-400 transition-colors">Home</Link></li>
+              <li><Link href="/services" className="hover:text-blue-400 transition-colors">Services</Link></li>
+              <li><Link href="/schedule" className="hover:text-blue-400 transition-colors">Growth Audit</Link></li>
+              <li><Link href="/about" className="hover:text-blue-400 transition-colors">About Us</Link></li>
+            </ul>
+          </div>
+
+          {/* Column 3: Services */}
+          <div>
+            <h4 className="text-white font-bold mb-6 text-sm tracking-wider uppercase">Our Services</h4>
+            <ul className="space-y-4 text-sm">
+              <li><Link href="/website-development" className="hover:text-blue-400 transition-colors">Website Development</Link></li>
+              <li><Link href="/social-media-management" className="hover:text-blue-400 transition-colors">Social Media Management</Link></li>
+              <li><Link href="/search-engine-optimization" className="hover:text-blue-400 transition-colors">SEO Mastery</Link></li>
+              <li><Link href="/digital-marketing" className="hover:text-blue-400 transition-colors">Digital Marketing</Link></li>
+              <li><Link href="/ai-automation" className="hover:text-blue-400 transition-colors">AI Automation</Link></li>
+            </ul>
+          </div>
+
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="pt-8 border-t border-slate-900 flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-mono">
+          <p>© 2026 SmartOnward Inc. Engineered for Momentum.</p>
+          <div className="flex flex-wrap gap-x-6 gap-y-2">
+            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+            <a href="#" className="hover:text-white transition-colors">Cookie Policy</a>
           </div>
         </div>
-      </footer>
+      </div>
+    </footer>
   );
 }
