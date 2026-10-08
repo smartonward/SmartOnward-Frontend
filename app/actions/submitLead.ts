@@ -8,8 +8,11 @@ export async function submitLead(formData: FormData) {
     const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || process.env.SUPABASE_ANON_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY;
 
     if (!supabaseUrl || !supabaseKey) {
+      const missing = [];
+      if (!supabaseUrl) missing.push("URL");
+      if (!supabaseKey) missing.push("KEY");
       console.error("Supabase environment variables are missing.");
-      return { success: false, error: "Configuration error. Please try again later." };
+      return { success: false, error: `Configuration error: Missing ${missing.join(" and ")}.` };
     }
 
     const supabase = createClient(supabaseUrl, supabaseKey);
