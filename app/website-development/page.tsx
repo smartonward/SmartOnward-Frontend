@@ -67,7 +67,7 @@ export default function WebsiteDevelopmentPage() {
                 {
                   icon: "🎯",
                   title: "Landing Pages",
-                  desc: "Focused campaign pages built around one goal — leads, bookings, sales or registrations.",
+                  desc: "Focused campaign pages built around one goal - leads, bookings, sales or registrations.",
                   tags: ["High Conversion", "Ads Ready"]
                 },
                 {
@@ -111,12 +111,11 @@ export default function WebsiteDevelopmentPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div>
-                <p className="text-blue-600 text-xs font-bold tracking-widest uppercase mb-3">Why SmartOnward</p>
                 <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight mb-6 leading-tight">
                   We don&apos;t just build a website. We build your <span className="text-blue-600 italic">digital presence.</span>
                 </h2>
                 <p className="text-slate-600 text-lg mb-8">
-                  As a full-fledged digital agency, we can connect your website with branding, content, social media, digital marketing and AI automation — so everything works together.
+                  As a full-fledged digital agency, we can connect your website with branding, content, social media, digital marketing and AI automation - so everything works together.
                 </p>
               </div>
 
@@ -148,7 +147,6 @@ export default function WebsiteDevelopmentPage() {
         {/* TECHNOLOGY */}
         <section className="py-24 relative bg-slate-50/50" id="technology">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p className="text-blue-600 text-xs font-bold tracking-widest uppercase mb-3">Technology</p>
             <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight mb-4">
               Built with the <span className="text-blue-600 italic">right tools</span>
             </h2>

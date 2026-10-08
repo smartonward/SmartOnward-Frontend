@@ -11,19 +11,15 @@ export default function VideoAndReelsPage() {
         {/* HERO SECTION */}
         <section className="relative pt-24 sm:pt-32 pb-20 md:pb-28 text-center px-4 sm:px-6 lg:px-8">
           <div className="max-w-5xl mx-auto flex flex-col items-center">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50/50 border border-blue-100 text-blue-600 text-xs font-bold tracking-wide uppercase mb-8 shadow-sm">
-              <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
-              Video &amp; Reels
-            </div>
-            
+
             <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-[76px] font-black text-slate-950 tracking-tight leading-[1.08] max-w-4xl">
               Content that makes people <span className="text-blue-600 italic">stop</span>, <em>watch</em> and remember.
             </h1>
-            
+
             <p className="mt-8 text-lg sm:text-xl text-slate-600 max-w-2xl leading-relaxed font-medium">
               We create scroll-stopping videos, Reels and short-form content that bring your brand to life, communicate your message and keep your audience engaged.
             </p>
-            
+
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
               <a
                 className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold shadow-lg shadow-blue-500/20 hover:shadow-glow-blue transition-all duration-200 hover:-translate-y-0.5"
@@ -57,7 +53,7 @@ export default function VideoAndReelsPage() {
                 From one Reel to a <span className="text-blue-600 italic">complete content system.</span>
               </h2>
               <p className="text-slate-600 text-lg">
-                As a full-fledged digital agency, we connect video with your branding, social media and marketing goals — not just random content.
+                As a full-fledged digital agency, we connect video with your branding, social media and marketing goals - not just random content.
               </p>
             </div>
 
@@ -127,7 +123,7 @@ export default function VideoAndReelsPage() {
                   We don&apos;t create videos just to <span className="text-blue-600 italic">fill your feed.</span>
                 </h2>
                 <p className="text-slate-600 text-lg mb-8">
-                  We create content with a purpose — attention, awareness, engagement, leads or sales. And because we&apos;re a full-service agency, your video can work with your website, brand identity, social strategy and campaigns.
+                  We create content with a purpose - attention, awareness, engagement, leads or sales. And because we&apos;re a full-service agency, your video can work with your website, brand identity, social strategy and campaigns.
                 </p>
               </div>
 
@@ -159,12 +155,11 @@ export default function VideoAndReelsPage() {
         <section className="py-24 relative" id="formats">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <p className="text-blue-600 text-xs font-bold tracking-widest uppercase mb-3">Content Formats</p>
               <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight mb-4">
                 One idea. <span className="text-blue-600 italic">Multiple ways to show it.</span>
               </h2>
               <p className="text-slate-600 text-lg">
-                We can create content in the formats your audience already consumes — while keeping your visual identity consistent.
+                We can create content in the formats your audience already consumes - while keeping your visual identity consistent.
               </p>
             </div>
 

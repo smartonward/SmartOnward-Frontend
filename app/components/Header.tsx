@@ -69,7 +69,7 @@ export default function Header() {
           <Link className="hover:text-blue-600 transition-colors" href="/#home">
             Home
           </Link>
-          <Link className="hover:text-blue-600 transition-colors" href="/#services">
+          <Link className="hover:text-blue-600 transition-colors" href="/services">
             Services
           </Link>
           <Link className="hover:text-blue-600 transition-colors" href="/about">
@@ -116,7 +116,9 @@ export default function Header() {
               Home
             </Link>
             <div className="py-2 border-b border-slate-100">
-              <span className="block text-slate-400 text-xs font-bold uppercase tracking-wider mb-2">Services</span>
+              <Link href="/services" onClick={closeMenu} className="block text-slate-400 text-xs font-bold uppercase tracking-wider mb-2 hover:text-blue-600 transition-colors">
+                All Services
+              </Link>
               <div className="flex flex-col gap-2 pl-2">
                 <Link href="/digital-marketing" onClick={closeMenu} className="block text-slate-800 font-semibold hover:text-blue-600">Digital Marketing</Link>
                 <Link href="/ai-automation" onClick={closeMenu} className="block text-slate-800 font-semibold hover:text-blue-600">AI Automation</Link>

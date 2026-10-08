@@ -13,7 +13,9 @@ export default function AIAutomationPage() {
           <div className="max-w-5xl mx-auto flex flex-col items-center">
 
             <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-[76px] font-black text-slate-950 tracking-tight leading-[1.08] max-w-4xl">
-              Work smarter with <span className="text-blue-600 italic">AI-powered</span> systems that run for you.
+              Work smarter with <br />
+              <span className="text-blue-600 italic">AI-powered</span> systems that <br />
+              run for you.
             </h1>
 
             <p className="mt-8 text-lg sm:text-xl text-slate-600 max-w-2xl leading-relaxed font-medium">
@@ -35,12 +37,6 @@ export default function AIAutomationPage() {
                 Explore Solutions
               </a>
             </div>
-
-            <div className="mt-12 flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-sm font-semibold text-slate-500">
-              <div className="flex items-center gap-2"><span className="text-emerald-500">✓</span> Custom workflows</div>
-              <div className="flex items-center gap-2"><span className="text-emerald-500">✓</span> AI integrated</div>
-              <div className="flex items-center gap-2"><span className="text-emerald-500">✓</span> Built around your process</div>
-            </div>
           </div>
         </section>
 
@@ -48,9 +44,8 @@ export default function AIAutomationPage() {
         <section className="py-24 relative" id="services">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <p className="text-blue-600 text-xs font-bold tracking-widest uppercase mb-3">What We Automate</p>
               <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight mb-4">
-                Turn repetitive work into <span className="text-blue-600 italic">smart systems.</span>
+                Turn repetitive work into <span className="engineer-highlight italic">smart systems.</span>
               </h2>
               <p className="text-slate-600 text-lg">
                 We identify where time is being lost and design practical AI and automation workflows around the way your business actually operates.
@@ -118,12 +113,11 @@ export default function AIAutomationPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div>
-                <p className="text-blue-600 text-xs font-bold tracking-widest uppercase mb-3">Why SmartOnward</p>
                 <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight mb-6 leading-tight">
                   We don&apos;t add AI because it&apos;s trendy. We use it where it can create <span className="text-blue-600 italic">real leverage.</span>
                 </h2>
                 <p className="text-slate-600 text-lg mb-8">
-                  As a full-fledged agency, we can connect your automation with your website, marketing, social media, CRM and customer journey — creating one connected digital system.
+                  As a full-fledged agency, we can connect your automation with your website, marketing, social media, CRM and customer journey - creating one connected digital system.
                 </p>
               </div>
 

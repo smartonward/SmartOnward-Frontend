@@ -12,7 +12,7 @@ export default function AboutPage() {
         <section className="relative pt-24 sm:pt-32 pb-20 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto flex flex-col items-center">
 
           <h1 className="text-4xl sm:text-6xl md:text-7xl font-black text-slate-950 tracking-tight leading-[1.1] max-w-4xl">
-            We help businesses <br className="hidden sm:block" /> <span className="text-blue-600 italic">move forward</span> with <br className="hidden sm:block" /> smarter digital solutions.
+            We help businesses <br className="hidden sm:block" /> <span className="engineer-highlight italic">move forward</span> with <br className="hidden sm:block" /> smarter digital solutions.
           </h1>
 
           <p className="mt-8 text-base sm:text-lg text-slate-600 max-w-2xl leading-relaxed font-medium">
@@ -150,26 +150,20 @@ export default function AboutPage() {
         </section>
 
         {/* CUSTOM CTA (Ready to move onward?) */}
-        <section className="bg-slate-900 pt-0 pb-20 px-4 sm:px-6 lg:px-8 w-full relative z-10">
-          <div className="max-w-[1000px] mx-auto bg-[#0b1b42] rounded-[32px] p-12 sm:p-16 text-center relative overflow-hidden shadow-2xl">
-            {/* Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-br from-slate-900/50 via-blue-900/60 to-blue-500/40 pointer-events-none" />
-            <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-blue-500/30 blur-[100px] rounded-full pointer-events-none transform translate-x-1/2 -translate-y-1/2" />
-
-            <div className="relative z-10 flex flex-col items-center">
-              <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight mb-4 leading-tight">
-                Ready to move <span className="text-emerald-400 italic">onward?</span>
-              </h2>
-              <p className="text-slate-300 text-sm sm:text-base font-medium mb-10">
-                Let&apos;s build what&apos;s next.
-              </p>
-              <button
-                onClick={() => window.dispatchEvent(new Event('open-audit-modal'))}
-                className="inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-emerald-500 hover:bg-emerald-400 text-slate-900 font-bold text-sm shadow-lg shadow-emerald-500/20 transition-all duration-200 hover:-translate-y-0.5"
-              >
-                Start a conversation &rarr;
-              </button>
-            </div>
+        <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-[1000px] mx-auto mb-20 relative z-10">
+          <div className="flex flex-col items-center text-center">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-slate-900 tracking-tight mb-6 leading-tight">
+              Ready to move <span className="text-emerald-600 italic">onward?</span>
+            </h2>
+            <p className="text-slate-600 text-lg sm:text-xl font-medium mb-10">
+              Let&apos;s build what&apos;s next.
+            </p>
+            <button
+              onClick={() => window.dispatchEvent(new Event('open-audit-modal'))}
+              className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-emerald-500 hover:bg-emerald-400 text-white font-bold text-sm shadow-lg shadow-emerald-500/20 transition-all duration-200 hover:-translate-y-0.5"
+            >
+              Start a conversation &rarr;
+            </button>
           </div>
         </section>
 

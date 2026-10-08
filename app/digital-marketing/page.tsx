@@ -17,7 +17,7 @@ export default function DigitalMarketingPage() {
             </h1>
 
             <p className="mt-8 text-lg sm:text-xl text-slate-600 max-w-2xl leading-relaxed font-medium">
-              We build digital marketing campaigns that connect the right audience with the right message — across search, social, paid advertising and content.
+              We build digital marketing campaigns that connect the right audience with the right message - across search, social, paid advertising and content.
             </p>
 
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
@@ -35,12 +35,6 @@ export default function DigitalMarketingPage() {
                 Explore Services
               </a>
             </div>
-
-            <div className="mt-12 flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-sm font-semibold text-slate-500">
-              <div className="flex items-center gap-2"><span className="text-emerald-500">✓</span> Data-driven</div>
-              <div className="flex items-center gap-2"><span className="text-emerald-500">✓</span> Conversion focused</div>
-              <div className="flex items-center gap-2"><span className="text-emerald-500">✓</span> Full-funnel</div>
-            </div>
           </div>
         </section>
 
@@ -48,7 +42,6 @@ export default function DigitalMarketingPage() {
         <section className="py-24 relative" id="services">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <p className="text-blue-600 text-xs font-bold tracking-widest uppercase mb-3">What We Do</p>
               <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight mb-4">
                 A complete digital marketing <span className="text-blue-600 italic">engine.</span>
               </h2>
@@ -118,7 +111,6 @@ export default function DigitalMarketingPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div>
-                <p className="text-blue-600 text-xs font-bold tracking-widest uppercase mb-3">Why SmartOnward</p>
                 <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight mb-6 leading-tight">
                   We don&apos;t just run ads. We build the <span className="text-blue-600 italic">whole growth journey.</span>
                 </h2>
@@ -155,7 +147,6 @@ export default function DigitalMarketingPage() {
         <section className="py-24 relative" id="channels">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <p className="text-blue-600 text-xs font-bold tracking-widest uppercase mb-3">Marketing Channels</p>
               <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight mb-4">
                 Meet your customers <span className="text-blue-600 italic">where they are.</span>
               </h2>

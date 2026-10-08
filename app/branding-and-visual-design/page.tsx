@@ -35,12 +35,6 @@ export default function BrandingAndVisualDesignPage() {
                 Explore Services
               </a>
             </div>
-
-            <div className="mt-12 flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-sm font-semibold text-slate-500">
-              <div className="flex items-center gap-2"><span className="text-emerald-500">✓</span> Strategy-led</div>
-              <div className="flex items-center gap-2"><span className="text-emerald-500">✓</span> Consistent identity</div>
-              <div className="flex items-center gap-2"><span className="text-emerald-500">✓</span> Ready to use</div>
-            </div>
           </div>
         </section>
 
@@ -48,12 +42,11 @@ export default function BrandingAndVisualDesignPage() {
         <section className="py-24 relative" id="services">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <p className="text-blue-600 text-xs font-bold tracking-widest uppercase mb-3">What We Create</p>
               <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight mb-4">
                 More than a logo. <span className="text-blue-600 italic">A complete brand.</span>
               </h2>
               <p className="text-slate-600 text-lg">
-                We create the visual building blocks your business needs to look credible everywhere — online, offline and across every customer touchpoint.
+                We create the visual building blocks your business needs to look credible everywhere - online, offline and across every customer touchpoint.
               </p>
             </div>
 
@@ -117,12 +110,11 @@ export default function BrandingAndVisualDesignPage() {
         <section className="py-24 relative" id="system">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <p className="text-blue-600 text-xs font-bold tracking-widest uppercase mb-3">Visual Identity System</p>
               <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight mb-4">
                 A brand system that stays <span className="text-blue-600 italic">consistent.</span>
               </h2>
               <p className="text-slate-600 text-lg">
-                Your identity should work as one connected system — not a collection of random designs.
+                Your identity should work as one connected system - not a collection of random designs.
               </p>
             </div>
 
@@ -154,23 +146,22 @@ export default function BrandingAndVisualDesignPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div>
-                <p className="text-blue-600 text-xs font-bold tracking-widest uppercase mb-3">Typical Deliverables</p>
                 <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight mb-6 leading-tight">
                   Everything you need to <span className="text-blue-600 italic">show up professionally.</span>
                 </h2>
                 <p className="text-slate-600 text-lg mb-8">
-                  The final package can be tailored to your business and stage — from a focused logo project to a complete visual identity.
+                  The final package can be tailored to your business and stage - from a focused logo project to a complete visual identity.
                 </p>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
-                  { num: "01", title: "Logo Suite", desc: "Primary, secondary, icon formats." },
-                  { num: "02", title: "Brand Colors", desc: "Primary, secondary palette." },
-                  { num: "03", title: "Typography", desc: "Font choices and hierarchy." },
-                  { num: "04", title: "Guidelines", desc: "Rules for consistent use." },
-                  { num: "05", title: "Business Cards", desc: "Professional print-ready." },
-                  { num: "06", title: "Social Templates", desc: "Reusable post designs." }
+                  { title: "Logo Suite", desc: "Primary, secondary, icon formats." },
+                  { title: "Brand Colors", desc: "Primary, secondary palette." },
+                  { title: "Typography", desc: "Font choices and hierarchy." },
+                  { title: "Guidelines", desc: "Rules for consistent use." },
+                  { title: "Business Cards", desc: "Professional print-ready." },
+                  { title: "Social Templates", desc: "Reusable post designs." }
                 ].map((item, idx) => (
                   <div key={idx} className="bg-white/80 backdrop-blur-sm rounded-xl p-6 border border-slate-200 shadow-sm">
                     <div className="text-xs font-bold text-blue-600 mb-2">{item.num}</div>
