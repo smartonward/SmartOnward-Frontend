@@ -164,7 +164,6 @@ export default function BrandingAndVisualDesignPage() {
                   { title: "Social Templates", desc: "Reusable post designs." }
                 ].map((item, idx) => (
                   <div key={idx} className="bg-white/80 backdrop-blur-sm rounded-xl p-6 border border-slate-200 shadow-sm">
-                    <div className="text-xs font-bold text-blue-600 mb-2">{item.num}</div>
                     <h4 className="text-slate-900 font-bold mb-1">{item.title}</h4>
                     <p className="text-xs text-slate-500">{item.desc}</p>
                   </div>
