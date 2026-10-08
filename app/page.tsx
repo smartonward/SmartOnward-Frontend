@@ -26,7 +26,7 @@ export default function Home() {
 
 
         {/* HERO SECTION */}
-        <section className="relative pt-16 sm:pt-24 pb-20 md:pb-28 text-center px-4 sm:px-6 lg:px-8" id="home">
+        <section className="relative pt-16 sm:pt-24 pb-12 md:pb-16 text-center px-4 sm:px-6 lg:px-8" id="home">
           <div className="max-w-5xl mx-auto flex flex-col items-center">
 
 
@@ -93,7 +93,7 @@ export default function Home() {
         </section>
 
         {/* CORE SERVICES SECTION (6 CARDS WITH DIRECT LINKS) */}
-        <section className="py-24 relative" id="services">
+        <section className="pt-8 pb-8 md:pt-12 md:pb-12 relative" id="services">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Section Header */}
             <div className="text-center max-w-3xl mx-auto mb-16">
@@ -442,7 +442,7 @@ export default function Home() {
         <StruggleSection />
 
         {/* SPEED MATRIX / VELOCITY BLUEPRINT */}
-        <section className="py-24 relative" id="speed-matrix">
+        <section className="pt-8 pb-8 md:pt-12 md:pb-12 relative" id="speed-matrix">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
@@ -547,7 +547,7 @@ export default function Home() {
               </div>
               <div className="flex items-center space-x-6">
                 <div className="text-right">
-                  <div className="text-xs font-mono text-slate-400 uppercase">Legacy Agency SLA</div>
+                  <div className="text-xs font-mono text-slate-400 uppercase">Legacy Companies SLA</div>
                   <div className="font-mono font-bold text-slate-400 line-through">60–120 Days</div>
                 </div>
                 <div className="h-8 w-px bg-slate-200" />
@@ -561,7 +561,7 @@ export default function Home() {
         </section>
 
         {/* HOW WE WORK / PROCESS */}
-        <section className="py-24 bg-white/60 backdrop-blur-md border-y border-slate-200/80 relative" id="process">
+        <section className="pt-8 pb-8 md:pt-12 md:pb-12 bg-white/60 backdrop-blur-md border-y border-slate-200/80 relative" id="process">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto mb-20">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 tracking-tight">
@@ -963,7 +963,7 @@ export default function Home() {
         </section>
 
         {/* WHO WE HELP */}
-        <section className="py-24 relative" id="who-we-help">
+        <section className="pt-8 pb-8 md:pt-12 md:pb-12 relative" id="who-we-help">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl sm:text-5xl font-black text-slate-950 tracking-tight leading-tight">
@@ -980,7 +980,7 @@ export default function Home() {
         </section>
 
         {/* WHAT WE BUILD SECTION */}
-        <section className="py-24 bg-white/60 backdrop-blur-md border-y border-slate-200/80 relative" id="capabilities">
+        <section className="pt-8 pb-8 md:pt-12 md:pb-12 bg-white/60 backdrop-blur-md border-y border-slate-200/80 relative" id="capabilities">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 tracking-tight">

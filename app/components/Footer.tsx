@@ -57,8 +57,9 @@ export default function Footer() {
             <h4 className="text-white font-bold mb-4 text-sm tracking-wider uppercase">Our Services</h4>
             <ul className="space-y-2 text-sm">
               <li><Link href="/website-development" className="hover:text-blue-400 transition-colors">Website Development</Link></li>
-              <li><Link href="/social-media-management" className="hover:text-blue-400 transition-colors">Social Media Management</Link></li>
-              <li><Link href="/search-engine-optimization" className="hover:text-blue-400 transition-colors">SEO Mastery</Link></li>
+              <li><Link href="/branding-and-visual-design" className="hover:text-blue-400 transition-colors">Branding & Design</Link></li>
+              <li><Link href="/video-and-reels" className="hover:text-blue-400 transition-colors">Video & Reels</Link></li>
+              <li><Link href="/social-media-management" className="hover:text-blue-400 transition-colors">Social Media</Link></li>
               <li><Link href="/digital-marketing" className="hover:text-blue-400 transition-colors">Digital Marketing</Link></li>
               <li><Link href="/ai-automation" className="hover:text-blue-400 transition-colors">AI Automation</Link></li>
             </ul>
@@ -68,11 +69,11 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-4 border-t border-slate-900 flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-mono">
-          <p>© 2026 SmartOnward Technologies Engineered for Momentum.</p>
+          <p>© 2026 SmartOnward Technologies</p>
           <div className="flex flex-wrap gap-x-6 gap-y-2">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-white transition-colors">Cookie Policy</a>
+            <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link href="/terms-of-service" className="hover:text-white transition-colors">Terms of Service</Link>
+            <Link href="/cookie-policy" className="hover:text-white transition-colors">Cookie Policy</Link>
           </div>
         </div>
       </div>

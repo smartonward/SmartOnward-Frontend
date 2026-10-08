@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function StruggleSection() {
   return (
-    <section className="relative w-full max-w-7xl mx-auto px-6 py-24 sm:py-32 flex flex-col items-center">
+    <section className="relative w-full max-w-7xl mx-auto px-6 pt-8 pb-8 sm:pt-12 sm:pb-12 flex flex-col items-center">
       {/* Header */}
       <div className="text-center max-w-3xl mx-auto mb-16">
 
