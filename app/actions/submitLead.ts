@@ -11,8 +11,11 @@ export async function submitLead(formData: FormData) {
       const missing = [];
       if (!supabaseUrl) missing.push("URL");
       if (!supabaseKey) missing.push("KEY");
+      
+      const foundSupaKeys = Object.keys(process.env).filter(k => k.toUpperCase().includes('SUPA')).join(", ");
+      
       console.error("Supabase environment variables are missing.");
-      return { success: false, error: `Configuration error: Missing ${missing.join(" and ")}.` };
+      return { success: false, error: `Error: Missing ${missing.join(" and ")}. Vercel sees: [${foundSupaKeys || "NONE"}]` };
     }
 
     const supabase = createClient(supabaseUrl, supabaseKey);
