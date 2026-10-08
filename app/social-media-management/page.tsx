@@ -35,12 +35,6 @@ export default function SocialMediaManagementPage() {
                 Explore Services
               </a>
             </div>
-
-            <div className="mt-12 flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-sm font-semibold text-slate-500">
-              <div className="flex items-center gap-2"><span className="text-emerald-500">✓</span> Strategy-led</div>
-              <div className="flex items-center gap-2"><span className="text-emerald-500">✓</span> Consistent content</div>
-              <div className="flex items-center gap-2"><span className="text-emerald-500">✓</span> Monthly planning</div>
-            </div>
           </div>
         </section>
 
@@ -48,7 +42,6 @@ export default function SocialMediaManagementPage() {
         <section className="py-24 relative" id="services">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <p className="text-blue-600 text-xs font-bold tracking-widest uppercase mb-3">What We Manage</p>
               <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight mb-4">
                 Your social media, <span className="text-blue-600 italic">handled end-to-end.</span>
               </h2>
@@ -118,7 +111,6 @@ export default function SocialMediaManagementPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div>
-                <p className="text-blue-600 text-xs font-bold tracking-widest uppercase mb-3">Why SmartOnward</p>
                 <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight mb-6 leading-tight">
                   We don&apos;t chase vanity metrics. We build a social presence that supports your <span className="text-blue-600 italic">business.</span>
                 </h2>
@@ -155,7 +147,6 @@ export default function SocialMediaManagementPage() {
         <section className="py-24 relative" id="platforms">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <p className="text-blue-600 text-xs font-bold tracking-widest uppercase mb-3">Platforms</p>
               <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight mb-4">
                 One strategy, <span className="text-blue-600 italic">multiple channels.</span>
               </h2>

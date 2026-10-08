@@ -185,7 +185,7 @@ export default function GrowthAuditModal() {
             </p>
 
             <div className="text-center mt-2.5">
-              <a href="#" className="inline-flex items-center justify-center gap-2 text-[13px] text-slate-600 hover:text-emerald-600 font-medium transition-colors group">
+              <a href="https://wa.me/916299023974" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 text-[13px] text-slate-600 hover:text-emerald-600 font-medium transition-colors group">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                 Or chat directly on WhatsApp
               </a>

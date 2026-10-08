@@ -35,12 +35,6 @@ export default function VideoAndReelsPage() {
                 Explore Services
               </a>
             </div>
-
-            <div className="mt-12 flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-sm font-semibold text-slate-500">
-              <div className="flex items-center gap-2"><span className="text-emerald-500">✓</span> Short-form focused</div>
-              <div className="flex items-center gap-2"><span className="text-emerald-500">✓</span> Brand aligned</div>
-              <div className="flex items-center gap-2"><span className="text-emerald-500">✓</span> Platform ready</div>
-            </div>
           </div>
         </section>
 
@@ -48,7 +42,6 @@ export default function VideoAndReelsPage() {
         <section className="py-24 relative" id="services">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <p className="text-blue-600 text-xs font-bold tracking-widest uppercase mb-3">What We Create</p>
               <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight mb-4">
                 From one Reel to a <span className="text-blue-600 italic">complete content system.</span>
               </h2>
@@ -118,7 +111,6 @@ export default function VideoAndReelsPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div>
-                <p className="text-blue-600 text-xs font-bold tracking-widest uppercase mb-3">Why SmartOnward</p>
                 <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight mb-6 leading-tight">
                   We don&apos;t create videos just to <span className="text-blue-600 italic">fill your feed.</span>
                 </h2>
