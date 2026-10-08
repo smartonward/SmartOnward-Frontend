@@ -66,7 +66,7 @@ export default function Header() {
         </Link>
 
         <div role="navigation" className="hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 items-center gap-5 xl:gap-8 text-[13px] xl:text-sm font-bold text-slate-600 flex-shrink-0">
-          <Link className="hover:text-blue-600 transition-colors" href="/#home">
+          <Link className="hover:text-blue-600 transition-colors" href="/">
             Home
           </Link>
           <Link className="hover:text-blue-600 transition-colors" href="/services">
@@ -112,7 +112,7 @@ export default function Header() {
       {menuOpen && (
         <div className="lg:hidden bg-white/95 backdrop-blur-md border-b border-slate-200 px-6 py-4 space-y-4 shadow-xl">
           <div className="space-y-1">
-            <Link href="/#home" onClick={closeMenu} className="block text-slate-800 font-semibold py-2 border-b border-slate-100">
+            <Link href="/" onClick={closeMenu} className="block text-slate-800 font-semibold py-2 border-b border-slate-100">
               Home
             </Link>
             <div className="py-2 border-b border-slate-100">
