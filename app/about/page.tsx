@@ -16,7 +16,7 @@ export default function AboutPage() {
           </h1>
 
           <p className="mt-8 text-base sm:text-lg text-slate-600 max-w-2xl leading-relaxed font-medium">
-            SmartOnward is a digital growth and technology company combining web development, branding, marketing, content and AI automation to help businesses build, grow and operate better.
+            SmartOnward Technologies is a digital growth and technology company combining web development, branding, marketing, content and AI automation to help businesses build, grow and operate better.
           </p>
         </section>
 
@@ -26,7 +26,7 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-start">
               <div className="lg:col-span-4">
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-[1.15]">
-                  Why SmartOnward <br /><span className="text-blue-600 italic">exists</span>
+                  Why SmartOnward Technologies <br /><span className="text-blue-600 italic">exists</span>
                 </h2>
               </div>
               <div className="lg:col-span-8 lg:pl-10 space-y-6 text-sm sm:text-base text-slate-600 leading-relaxed font-medium pt-2">
@@ -34,10 +34,10 @@ export default function AboutPage() {
                   Growing a business has meant juggling a web developer who doesn&apos;t understand marketing, an agency that doesn&apos;t understand operations, and tools that don&apos;t talk to each other. The result is <span className="font-black text-slate-900">disconnected systems, wasted budget and lost momentum.</span>
                 </p>
                 <p>
-                  SmartOnward brings strategy, creative, technology and automation together in one connected team, so businesses move faster with one clear plan.
+                  SmartOnward Technologies brings strategy, creative, technology and automation together in one connected team, so businesses move faster with one clear plan.
                 </p>
                 <div className="border-l-[3px] border-blue-600 pl-4 py-1 mt-6">
-                  <p className="text-blue-600 font-bold text-base">We built SmartOnward to fix this.</p>
+                  <p className="text-blue-600 font-bold text-base">We built SmartOnward Technologies to fix this.</p>
                 </div>
               </div>
             </div>

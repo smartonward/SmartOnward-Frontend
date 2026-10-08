@@ -12,7 +12,7 @@ export default function Footer() {
           {/* Column 1: Brand & Intro */}
           <div className="space-y-4">
             <Link href="/" className="inline-flex items-center">
-              <img src="/footer-logo.png" alt="SmartOnward Logo" className="h-16 w-auto object-contain rounded-xl bg-white/5 p-2" />
+              <img src="/footer-logo.png" alt="SmartOnward Technologies Logo" className="h-16 w-auto object-contain rounded-xl bg-white/5 p-2" />
             </Link>
             <p className="text-sm text-slate-500 leading-relaxed max-w-xs">
               We engineer digital momentum through headless web architecture, viral content, and intelligent AI automation systems.
@@ -26,7 +26,7 @@ export default function Footer() {
             </div>
             {/* Social Icons Placeholder */}
             <div className="flex space-x-4 pt-2">
-              <a href="#" className="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors duration-300">
+              <a href="https://x.com/smartonward" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors duration-300">
                 <span className="sr-only">Twitter</span>
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" /></svg>
               </a>
@@ -68,7 +68,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-4 border-t border-slate-900 flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-mono">
-          <p>© 2026 SmartOnward Inc. Engineered for Momentum.</p>
+          <p>© 2026 SmartOnward Technologies Engineered for Momentum.</p>
           <div className="flex flex-wrap gap-x-6 gap-y-2">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-white transition-colors">Terms of Service</a>

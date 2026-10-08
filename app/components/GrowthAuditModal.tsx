@@ -53,25 +53,41 @@ export default function GrowthAuditModal() {
 
   const handleAuditSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const form = e.currentTarget;
+    
     setIsSubmitting(true);
     setFormError("");
     setFormSubmitted(false);
 
-    const formData = new FormData(e.currentTarget);
-    const result = await sendEmail(formData);
+    try {
+      const formData = new FormData(form);
+      
+      // Import the action dynamically or at the top of the file. 
+      // For Next.js client components, it's often easier to import it at the top, 
+      // but let's assume it's imported at the top of this file shortly.
+      // Wait, let's actually just do a standard fetch if we can't import easily, or import it.
+      // Let's import it at the top of the file in a separate replace_file_content block, 
+      // but for now let's just use it here assuming we import it.
+      
+      const { submitLead } = await import('../actions/submitLead');
+      const result = await submitLead(formData);
 
-    setIsSubmitting(false);
-
-    if (result.success) {
-      setFormSubmitted(true);
-      e.currentTarget.reset();
-      setSelectedFocus([]);
-      setTimeout(() => {
-        setFormSubmitted(false);
-        closeModal();
-      }, 3000);
-    } else {
-      setFormError(result.error || "An error occurred.");
+      if (result.success) {
+        setIsSubmitting(false);
+        setFormSubmitted(true);
+        form.reset();
+        setSelectedFocus([]);
+        setTimeout(() => {
+          setFormSubmitted(false);
+          closeModal();
+        }, 3000);
+      } else {
+        setIsSubmitting(false);
+        setFormError(result.error || "Something went wrong.");
+      }
+    } catch (err) {
+      setIsSubmitting(false);
+      setFormError("Failed to submit. Please try again.");
     }
   };
 
@@ -201,8 +217,8 @@ export default function GrowthAuditModal() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
               </svg>
             </div>
-            <h4 className="text-xl font-bold text-slate-900 mb-2">Blueprint Reserved</h4>
-            <p className="text-slate-600 text-sm">Direct calendar confirmation sent to your inbox. We look forward to speaking with you.</p>
+            <h4 className="text-xl font-bold text-slate-900 mb-2">We heard your request!</h4>
+            <p className="text-slate-600 text-sm">We'll be in touch with you shortly to discuss your project.</p>
           </div>
         )}
         {formError && (

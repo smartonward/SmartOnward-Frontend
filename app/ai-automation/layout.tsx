@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "SmartOnward — AI Automation",
+  title: "SmartOnward Technologies — AI Automation",
   description:
     "We automate repetitive work, connect your tools and build AI-powered workflows that help your team respond faster, save time and focus on higher-value work.",
 };

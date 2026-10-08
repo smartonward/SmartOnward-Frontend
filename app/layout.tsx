@@ -28,9 +28,9 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "SmartOnward - We Engineer Momentum | Autonomous Growth & Web Architecture",
+  title: "SmartOnward Technologies - We Engineer Momentum | Autonomous Growth & Web Architecture",
   description:
-    "SmartOnward consolidates high-converting web architecture, viral content engines, and intelligent 24/7 AI automation into one cohesive revenue operating system.",
+    "SmartOnward Technologies consolidates high-converting web architecture, viral content engines, and intelligent 24/7 AI automation into one cohesive revenue operating system.",
 };
 
 import Header from "./components/Header";

@@ -14,7 +14,7 @@ export default function Home() {
   // Ambient background moved to layout.tsx via AmbientBackground.tsx
 
 
-  
+
 
   return (
     <>
@@ -24,7 +24,7 @@ export default function Home() {
       {/* MAIN CONTENT */}
       <main className="relative z-10">
 
-        
+
         {/* HERO SECTION */}
         <section className="relative pt-16 sm:pt-24 pb-20 md:pb-28 text-center px-4 sm:px-6 lg:px-8" id="home">
           <div className="max-w-5xl mx-auto flex flex-col items-center">
@@ -39,7 +39,7 @@ export default function Home() {
 
             {/* Subtitle */}
             <p className="mt-8 text-base sm:text-lg md:text-xl text-slate-600 max-w-3xl leading-relaxed font-normal">
-              SmartOnward consolidates high-converting web architecture, viral content engines, and intelligent 24/7 AI automation into one cohesive revenue operating system-replacing fragmented agencies and manual friction.
+              SmartOnward Technologies consolidates high-converting web architecture, viral content engines, and intelligent 24/7 AI automation into one cohesive revenue operating system-replacing fragmented agencies and manual friction.
             </p>
 
             {/* CTA Action Row */}
@@ -68,9 +68,9 @@ export default function Home() {
                 </div>
                 {/* Stat 2 */}
                 <div className="flex flex-col items-center justify-center text-center px-2 lg:px-4 pt-4 md:pt-0">
-                  <span className="text-3xl sm:text-3xl lg:text-4xl font-black text-emerald-500 tracking-tight font-sans whitespace-nowrap">95%</span>
+                  <span className="text-3xl sm:text-3xl lg:text-4xl font-black text-emerald-500 tracking-tight font-sans whitespace-nowrap">24/7</span>
                   <span className="text-[10px] sm:text-xs font-semibold text-slate-500 mt-1.5 uppercase tracking-widest font-mono whitespace-nowrap">
-                    Retention Rate
+                    AI Automations
                   </span>
                 </div>
                 {/* Stat 3 */}
@@ -82,9 +82,9 @@ export default function Home() {
                 </div>
                 {/* Stat 4 */}
                 <div className="flex flex-col items-center justify-center text-center px-2 lg:px-4 pt-4 md:pt-0">
-                  <span className="text-3xl sm:text-3xl lg:text-4xl font-black text-blue-600 tracking-tight font-sans whitespace-nowrap">3.8x</span>
+                  <span className="text-3xl sm:text-3xl lg:text-4xl font-black text-blue-600 tracking-tight font-sans whitespace-nowrap">100%</span>
                   <span className="text-[10px] sm:text-xs font-semibold text-slate-500 mt-1.5 uppercase tracking-widest font-mono whitespace-nowrap">
-                    Avg. Client Lift
+                    In-House Team
                   </span>
                 </div>
               </div>
@@ -98,10 +98,10 @@ export default function Home() {
             {/* Section Header */}
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl sm:text-5xl font-black text-slate-950 tracking-tight leading-tight">
-                Everything you need to <span className="text-blue-600 italic">move onward.</span>
+                All your needs under <span className="text-blue-600 italic">one roof</span>
               </h2>
               <p className="mt-4 text-slate-600 text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
-                From building your digital presence to growing your audience and automating everyday work, SmartOnward brings the right capabilities together under one roof.
+                From building your digital presence to growing your audience and automating everyday work, SmartOnward Technologies brings the right capabilities together under one roof.
               </p>
             </div>
 
@@ -449,7 +449,7 @@ export default function Home() {
                 Why We Ship in 5–15 Days, Not 6 Months
               </h2>
               <p className="text-slate-600 text-base mt-3">
-                Traditional agencies pad hours with bureaucratic review cycles. SmartOnward works like a high-performance software engineering sprint.
+                Traditional agencies pad hours with bureaucratic review cycles. SmartOnward Technologies works like a high-performance software engineering sprint.
               </p>
             </div>
 
@@ -552,7 +552,7 @@ export default function Home() {
                 </div>
                 <div className="h-8 w-px bg-slate-200" />
                 <div className="text-right">
-                  <div className="text-xs font-mono text-blue-600 uppercase font-semibold">SmartOnward SLA</div>
+                  <div className="text-xs font-mono text-blue-600 uppercase font-semibold">SmartOnward Technologies SLA</div>
                   <div className="font-mono font-bold text-xl text-blue-600">5–15 Days Max</div>
                 </div>
               </div>
@@ -598,7 +598,7 @@ export default function Home() {
                       <stop offset="100%" stopColor="#10b981" />
                     </linearGradient>
                   </defs>
-                  
+
                   {/* Background Track */}
                   <path
                     d="M 100 32 L 300 208 L 500 32 L 700 208 L 900 32 L 1100 208"
@@ -607,7 +607,7 @@ export default function Home() {
                     strokeWidth="2"
                     strokeDasharray="6 6"
                   />
-                  
+
                   {/* Moving Gradient Line */}
                   <path
                     d="M 100 32 L 300 208 L 500 32 L 700 208 L 900 32 L 1100 208"
@@ -705,7 +705,7 @@ export default function Home() {
 
             {/* PHASE CARDS (Accordion layout) */}
             <div className="mt-24 relative z-10 flex flex-col lg:flex-row -space-y-4 lg:space-y-0 lg:-space-x-6 h-auto lg:h-[420px] w-full px-4 lg:px-8 max-w-7xl mx-auto">
-              
+
               {/* Card 1: Discover */}
               <div className="group relative flex-1 lg:hover:flex-[4] transition-all duration-500 ease-out overflow-hidden bg-white/95 backdrop-blur-md rounded-3xl shadow-xl lg:shadow-[-15px_0_30px_-10px_rgba(0,0,0,0.1)] hover:shadow-2xl flex flex-col min-h-[120px] lg:min-h-0 z-10 hover:z-30 origin-left">
                 <div className="absolute inset-0 lg:w-full p-5 lg:p-8 flex flex-row lg:flex-col items-center lg:items-center justify-between z-10 transition-opacity duration-300 group-hover:opacity-0 bg-slate-50/50 lg:bg-transparent">
@@ -1072,7 +1072,7 @@ export default function Home() {
             {/* Bottom Note */}
             <div className="mt-6 border border-slate-200/80 rounded-2xl p-4 sm:p-6 bg-white/70 backdrop-blur-md text-center shadow-sm">
               <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed">
-                <strong className="text-slate-900 font-bold">Looking for something specific?</strong> SmartOnward can combine multiple capabilities into one project - for example, a new website + brand identity + content system + lead-generation setup + AI chatbot.
+                <strong className="text-slate-900 font-bold">Looking for something specific?</strong> SmartOnward Technologies can combine multiple capabilities into one project - for example, a new website + brand identity + content system + lead-generation setup + AI chatbot.
               </p>
             </div>
           </div>

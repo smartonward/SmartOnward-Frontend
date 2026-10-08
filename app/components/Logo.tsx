@@ -4,7 +4,7 @@ export function LogoIcon({ size = 36, className = "" }: { size?: number; classNa
   return (
     <img
       src="/logo.png"
-      alt="SmartOnward Logo"
+      alt="SmartOnward Technologies Logo"
       style={{ height: `${size}px`, width: "auto", objectFit: "contain", display: "block" }}
       className={`logo-img ${className}`}
     />

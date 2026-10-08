@@ -56,10 +56,10 @@ export default function Header() {
         }}
       >
         {/* Brand Logo */}
-        <Link href="/" className="flex-shrink-0 flex items-center group" aria-label="SmartOnward Home">
+        <Link href="/" className="flex-shrink-0 flex items-center group" aria-label="SmartOnward Technologies Home">
           <img
             src="/logo-new.png"
-            alt="SmartOnward Logo"
+            alt="SmartOnward Technologies Logo"
             className="logo-img group-hover:scale-105 transition-transform duration-200"
             style={{ height: "70px", width: "auto", objectFit: "contain" }}
           />

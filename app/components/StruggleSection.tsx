@@ -31,12 +31,12 @@ export default function StruggleSection() {
           </p>
 
           <div className="bg-slate-50 rounded-2xl p-5 mb-8 border border-slate-100">
-            <div className="flex items-start gap-4 mb-4">
-              <span className="px-2.5 py-1 rounded-md bg-red-100 text-red-700 text-[10px] font-bold uppercase tracking-wider shrink-0 mt-0.5">Before</span>
+            <div className="flex flex-col gap-2 mb-4">
+              <span className="w-fit px-2.5 py-1 rounded-md bg-red-100 text-red-700 text-[10px] font-bold uppercase tracking-wider">Before</span>
               <span className="text-sm text-slate-600 leading-snug">Confusing, slow & hard to navigate</span>
             </div>
-            <div className="flex items-start gap-4">
-              <span className="px-2.5 py-1 rounded-md bg-green-100 text-green-700 text-[10px] font-bold uppercase tracking-wider shrink-0 mt-0.5">With SmartOnward</span>
+            <div className="flex flex-col gap-2">
+              <span className="w-fit px-2.5 py-1 rounded-md bg-green-100 text-green-700 text-[10px] font-bold uppercase tracking-wider">With SmartOnward Technologies</span>
               <span className="text-sm font-medium text-slate-800 leading-snug">Modern, fast & mobile-friendly</span>
             </div>
           </div>
@@ -60,12 +60,12 @@ export default function StruggleSection() {
           </p>
 
           <div className="bg-slate-50 rounded-2xl p-5 mb-8 border border-slate-100">
-            <div className="flex items-start gap-4 mb-4">
-              <span className="px-2.5 py-1 rounded-md bg-red-100 text-red-700 text-[10px] font-bold uppercase tracking-wider shrink-0 mt-0.5">Before</span>
+            <div className="flex flex-col gap-2 mb-4">
+              <span className="w-fit px-2.5 py-1 rounded-md bg-red-100 text-red-700 text-[10px] font-bold uppercase tracking-wider">Before</span>
               <span className="text-sm text-slate-600 leading-snug">Weeks without posting or leads</span>
             </div>
-            <div className="flex items-start gap-4">
-              <span className="px-2.5 py-1 rounded-md bg-green-100 text-green-700 text-[10px] font-bold uppercase tracking-wider shrink-0 mt-0.5">With SmartOnward</span>
+            <div className="flex flex-col gap-2">
+              <span className="w-fit px-2.5 py-1 rounded-md bg-green-100 text-green-700 text-[10px] font-bold uppercase tracking-wider">With SmartOnward Technologies</span>
               <span className="text-sm font-medium text-slate-800 leading-snug">Done-for-you reels & targeted ads</span>
             </div>
           </div>
@@ -89,12 +89,12 @@ export default function StruggleSection() {
           </p>
 
           <div className="bg-slate-50 rounded-2xl p-5 mb-8 border border-slate-100">
-            <div className="flex items-start gap-4 mb-4">
-              <span className="px-2.5 py-1 rounded-md bg-red-100 text-red-700 text-[10px] font-bold uppercase tracking-wider shrink-0 mt-0.5">Before</span>
+            <div className="flex flex-col gap-2 mb-4">
+              <span className="w-fit px-2.5 py-1 rounded-md bg-red-100 text-red-700 text-[10px] font-bold uppercase tracking-wider">Before</span>
               <span className="text-sm text-slate-600 leading-snug">4+ hour delay or missed calls</span>
             </div>
-            <div className="flex items-start gap-4">
-              <span className="px-2.5 py-1 rounded-md bg-green-100 text-green-700 text-[10px] font-bold uppercase tracking-wider shrink-0 mt-0.5">With SmartOnward</span>
+            <div className="flex flex-col gap-2">
+              <span className="w-fit px-2.5 py-1 rounded-md bg-green-100 text-green-700 text-[10px] font-bold uppercase tracking-wider">With SmartOnward Technologies</span>
               <span className="text-sm font-medium text-slate-800 leading-snug">Instant WhatsApp reply in seconds</span>
             </div>
           </div>
