@@ -33,11 +33,16 @@ module.exports = {
       },
       animation: {
         'scroll': 'scroll 30s linear infinite',
+        'infinite-scroll': 'infinite-scroll 25s linear infinite',
       },
       keyframes: {
         'scroll': {
           '0%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateX(calc(-50% - 10px))' },
+        },
+        'infinite-scroll': {
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(calc(-33.33333% - 8px))' },
         }
       }
     },

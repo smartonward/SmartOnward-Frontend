@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes infinite-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-33.33333% - 8px)); }
+}
+
+.animate-infinite-scroll {
+  animation: infinite-scroll 25s linear infinite !important;
+}
+
+.animate-infinite-scroll:hover {
+  animation-play-state: paused !important;
+}
+
 :root {
   --blue: #2563EB;
   --blue-dark: #1E40AF;
@@ -4236,4 +4249,15 @@ footer::disabled_before {
   .use-grid {
     grid-template-columns: 1fr;
   }
+}
+
+@keyframes infinite-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-33.33333% - 8px)); }
+}
+.animate-infinite-scroll {
+  animation: infinite-scroll 25s linear infinite;
+}
+.animate-infinite-scroll:hover {
+  animation-play-state: paused;
 }
