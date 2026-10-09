@@ -24,7 +24,7 @@ export default function StruggleSection() {
               Problem 1
             </span>
           </div>
-          
+
           <h3 className="text-2xl font-bold text-slate-900 mb-3">Your website looks old or confusing.</h3>
           <p className="text-slate-500 mb-8 flex-grow">
             Visitors land, don't trust what they see, and click away in seconds.
@@ -53,7 +53,7 @@ export default function StruggleSection() {
               Problem 2
             </span>
           </div>
-          
+
           <h3 className="text-2xl font-bold text-slate-900 mb-3">No time to post or run ads.</h3>
           <p className="text-slate-500 mb-8 flex-grow">
             Social pages sit empty because you are too busy running daily business.
@@ -82,7 +82,7 @@ export default function StruggleSection() {
               Problem 3
             </span>
           </div>
-          
+
           <h3 className="text-2xl font-bold text-slate-900 mb-3">Replying to leads too late.</h3>
           <p className="text-slate-500 mb-8 flex-grow">
             When a customer asks a question, waiting hours means they hire someone else.
@@ -109,21 +109,24 @@ export default function StruggleSection() {
       <div className="bg-white border border-slate-200 rounded-3xl p-8 sm:p-10 w-full flex flex-col lg:flex-row items-center justify-between gap-8 shadow-sm">
         <div className="max-w-2xl text-center lg:text-left">
           <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mb-2">
-            Get all 3 solved together — with one reliable team instead of juggling multiple freelancers.
+            Get all 3 solved together - with one reliable team instead of juggling multiple freelancers.
           </h3>
           <p className="text-slate-500">
             No communication chaos. A single predictable sprint with guaranteed delivery.
           </p>
         </div>
         <div className="flex flex-col sm:flex-row items-center gap-4 shrink-0">
-          <Link 
-            href="/#contact"
+          <button
+            onClick={(e) => {
+              e.preventDefault();
+              window.dispatchEvent(new Event('open-audit-modal'));
+            }}
             className="w-full sm:w-auto px-6 py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-all flex items-center justify-center gap-2 shadow-sm"
           >
             Get a Free Website & Growth Review <span aria-hidden="true">&rarr;</span>
-          </Link>
-          <a 
-            href="https://wa.me/YOUR_NUMBER"
+          </button>
+          <a
+            href="https://wa.me/916299023974"
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto px-6 py-3.5 bg-white border border-slate-200 hover:border-slate-300 text-slate-700 font-semibold rounded-xl transition-all flex items-center justify-center gap-2.5 shadow-sm"

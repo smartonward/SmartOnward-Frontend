@@ -106,7 +106,7 @@ export default function Home() {
             </div>
 
             {/* 6 Core Services Expanding Accordion */}
-            <div className="flex flex-col lg:flex-row -space-y-4 lg:space-y-0 lg:-space-x-6 h-auto lg:h-[450px] w-full px-4 lg:px-8">
+            <div className="flex flex-col lg:flex-row space-y-3 lg:space-y-0 lg:-space-x-6 h-auto lg:h-[450px] w-full px-4 lg:px-8">
 
               {/* Card 01: Website Development */}
               <Link
@@ -114,7 +114,7 @@ export default function Home() {
                 className="group relative flex-1 lg:hover:flex-[4] transition-all duration-500 ease-out overflow-hidden bg-white/95 backdrop-blur-md rounded-3xl shadow-xl lg:shadow-[-15px_0_30px_-10px_rgba(0,0,0,0.1)] hover:shadow-2xl flex flex-col min-h-[120px] lg:min-h-0 z-10 hover:z-30 origin-left"
               >
                 {/* Collapsed State (Visible by default, fades out on hover) */}
-                <div className="absolute inset-0 lg:w-full p-5 lg:p-8 flex flex-row lg:flex-col items-center lg:items-center justify-between z-10 transition-opacity duration-300 group-hover:opacity-0 bg-slate-50/50 lg:bg-transparent">
+                <div className="hidden lg:flex absolute inset-0 lg:w-full p-5 lg:p-8 flex-row lg:flex-col items-center lg:items-center justify-between z-10 transition-opacity duration-300 lg:group-hover:opacity-0 bg-slate-50/50 lg:bg-transparent">
                   <div className="w-12 h-12 lg:w-14 lg:h-14 rounded-xl bg-blue-50 flex flex-shrink-0 items-center justify-center text-blue-600 border border-blue-100/80 lg:mb-6">
                     <svg className="w-6 h-6 lg:w-7 lg:h-7" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
                       <rect height="14" rx="2" width="18" x="3" y="4" />
@@ -132,7 +132,7 @@ export default function Home() {
                 </div>
 
                 {/* Expanded State (Hidden by default, fades in on hover) */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 p-6 lg:p-10 flex flex-col justify-between z-20 bg-white w-full lg:min-w-[450px]">
+                <div className="relative lg:absolute inset-0 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-500 delay-100 p-6 lg:p-10 flex flex-col justify-between z-20 bg-white w-full lg:min-w-[450px]">
                   <div className="absolute -right-10 -bottom-10 w-44 h-44 bg-blue-100/40 rounded-full blur-2xl pointer-events-none group-hover:scale-125 transition-transform duration-500" />
                   <div className="relative z-10">
                     <div className="flex items-center justify-end mb-8">
@@ -165,7 +165,7 @@ export default function Home() {
                 href="/branding-and-visual-design"
                 className="group relative flex-1 lg:hover:flex-[4] transition-all duration-500 ease-out overflow-hidden bg-white/95 backdrop-blur-md rounded-3xl shadow-xl lg:shadow-[-15px_0_30px_-10px_rgba(0,0,0,0.1)] hover:shadow-2xl flex flex-col min-h-[120px] lg:min-h-0 z-10 hover:z-30 origin-left"
               >
-                <div className="absolute inset-0 lg:w-full p-5 lg:p-8 flex flex-row lg:flex-col items-center lg:items-center justify-between z-10 transition-opacity duration-300 group-hover:opacity-0 bg-slate-50/50 lg:bg-transparent">
+                <div className="hidden lg:flex absolute inset-0 lg:w-full p-5 lg:p-8 flex-row lg:flex-col items-center lg:items-center justify-between z-10 transition-opacity duration-300 lg:group-hover:opacity-0 bg-slate-50/50 lg:bg-transparent">
                   <div className="w-12 h-12 lg:w-14 lg:h-14 rounded-xl bg-emerald-50 flex flex-shrink-0 items-center justify-center text-emerald-600 border border-emerald-100/80 lg:mb-6">
                     <svg className="w-6 h-6 lg:w-7 lg:h-7" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
                       <path d="M4 6h16M4 12h10M4 18h6" />
@@ -181,7 +181,7 @@ export default function Home() {
                   </span>
                 </div>
 
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 p-6 lg:p-10 flex flex-col justify-between z-20 bg-white w-full lg:min-w-[450px]">
+                <div className="relative lg:absolute inset-0 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-500 delay-100 p-6 lg:p-10 flex flex-col justify-between z-20 bg-white w-full lg:min-w-[450px]">
                   <div className="absolute -right-10 -bottom-10 w-44 h-44 bg-emerald-100/40 rounded-full blur-2xl pointer-events-none group-hover:scale-125 transition-transform duration-500" />
                   <div className="relative z-10">
                     <div className="flex items-center justify-end mb-8">
@@ -214,7 +214,7 @@ export default function Home() {
                 href="/video-and-reels"
                 className="group relative flex-1 lg:hover:flex-[4] transition-all duration-500 ease-out overflow-hidden bg-white/95 backdrop-blur-md rounded-3xl shadow-xl lg:shadow-[-15px_0_30px_-10px_rgba(0,0,0,0.1)] hover:shadow-2xl flex flex-col min-h-[120px] lg:min-h-0 z-10 hover:z-30 origin-left"
               >
-                <div className="absolute inset-0 lg:w-full p-5 lg:p-8 flex flex-row lg:flex-col items-center lg:items-center justify-between z-10 transition-opacity duration-300 group-hover:opacity-0 bg-slate-50/50 lg:bg-transparent">
+                <div className="hidden lg:flex absolute inset-0 lg:w-full p-5 lg:p-8 flex-row lg:flex-col items-center lg:items-center justify-between z-10 transition-opacity duration-300 lg:group-hover:opacity-0 bg-slate-50/50 lg:bg-transparent">
                   <div className="w-12 h-12 lg:w-14 lg:h-14 rounded-xl bg-purple-50 flex flex-shrink-0 items-center justify-center text-purple-600 border border-purple-100/80 lg:mb-6">
                     <svg className="w-6 h-6 lg:w-7 lg:h-7" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
                       <rect height="12" rx="2" width="16" x="2" y="5" />
@@ -231,7 +231,7 @@ export default function Home() {
                   </span>
                 </div>
 
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 p-6 lg:p-10 flex flex-col justify-between z-20 bg-white w-full lg:min-w-[450px]">
+                <div className="relative lg:absolute inset-0 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-500 delay-100 p-6 lg:p-10 flex flex-col justify-between z-20 bg-white w-full lg:min-w-[450px]">
                   <div className="absolute -right-10 -bottom-10 w-44 h-44 bg-purple-100/40 rounded-full blur-2xl pointer-events-none group-hover:scale-125 transition-transform duration-500" />
                   <div className="relative z-10">
                     <div className="flex items-center justify-end mb-8">
@@ -264,7 +264,7 @@ export default function Home() {
                 href="/social-media-management"
                 className="group relative flex-1 lg:hover:flex-[4] transition-all duration-500 ease-out overflow-hidden bg-white/95 backdrop-blur-md rounded-3xl shadow-xl lg:shadow-[-15px_0_30px_-10px_rgba(0,0,0,0.1)] hover:shadow-2xl flex flex-col min-h-[120px] lg:min-h-0 z-10 hover:z-30 origin-left"
               >
-                <div className="absolute inset-0 lg:w-full p-5 lg:p-8 flex flex-row lg:flex-col items-center lg:items-center justify-between z-10 transition-opacity duration-300 group-hover:opacity-0 bg-slate-50/50 lg:bg-transparent">
+                <div className="hidden lg:flex absolute inset-0 lg:w-full p-5 lg:p-8 flex-row lg:flex-col items-center lg:items-center justify-between z-10 transition-opacity duration-300 lg:group-hover:opacity-0 bg-slate-50/50 lg:bg-transparent">
                   <div className="w-12 h-12 lg:w-14 lg:h-14 rounded-xl bg-orange-50 flex flex-shrink-0 items-center justify-center text-orange-600 border border-orange-100/80 lg:mb-6">
                     <svg className="w-6 h-6 lg:w-7 lg:h-7" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
                       <rect height="16" rx="3" width="10" x="5" y="4" />
@@ -281,7 +281,7 @@ export default function Home() {
                   </span>
                 </div>
 
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 p-6 lg:p-10 flex flex-col justify-between z-20 bg-white w-full lg:min-w-[450px]">
+                <div className="relative lg:absolute inset-0 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-500 delay-100 p-6 lg:p-10 flex flex-col justify-between z-20 bg-white w-full lg:min-w-[450px]">
                   <div className="absolute -right-10 -bottom-10 w-44 h-44 bg-orange-100/40 rounded-full blur-2xl pointer-events-none group-hover:scale-125 transition-transform duration-500" />
                   <div className="relative z-10">
                     <div className="flex items-center justify-end mb-8">
@@ -314,7 +314,7 @@ export default function Home() {
                 href="/digital-marketing"
                 className="group relative flex-1 lg:hover:flex-[4] transition-all duration-500 ease-out overflow-hidden bg-white/95 backdrop-blur-md rounded-3xl shadow-xl lg:shadow-[-15px_0_30px_-10px_rgba(0,0,0,0.1)] hover:shadow-2xl flex flex-col min-h-[120px] lg:min-h-0 z-10 hover:z-30 origin-left"
               >
-                <div className="absolute inset-0 lg:w-full p-5 lg:p-8 flex flex-row lg:flex-col items-center lg:items-center justify-between z-10 transition-opacity duration-300 group-hover:opacity-0 bg-slate-50/50 lg:bg-transparent">
+                <div className="hidden lg:flex absolute inset-0 lg:w-full p-5 lg:p-8 flex-row lg:flex-col items-center lg:items-center justify-between z-10 transition-opacity duration-300 lg:group-hover:opacity-0 bg-slate-50/50 lg:bg-transparent">
                   <div className="w-12 h-12 lg:w-14 lg:h-14 rounded-xl bg-cyan-50 flex flex-shrink-0 items-center justify-center text-cyan-600 border border-cyan-100/80 lg:mb-6">
                     <svg className="w-6 h-6 lg:w-7 lg:h-7" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
                       <circle cx="11" cy="11" r="7" />
@@ -332,7 +332,7 @@ export default function Home() {
                   </span>
                 </div>
 
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 p-6 lg:p-10 flex flex-col justify-between z-20 bg-white w-full lg:min-w-[450px]">
+                <div className="relative lg:absolute inset-0 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-500 delay-100 p-6 lg:p-10 flex flex-col justify-between z-20 bg-white w-full lg:min-w-[450px]">
                   <div className="absolute -right-10 -bottom-10 w-44 h-44 bg-cyan-100/40 rounded-full blur-2xl pointer-events-none group-hover:scale-125 transition-transform duration-500" />
                   <div className="relative z-10">
                     <div className="flex items-center justify-end mb-8">
@@ -365,7 +365,7 @@ export default function Home() {
                 href="/ai-automation"
                 className="group relative flex-1 lg:hover:flex-[4] transition-all duration-500 ease-out overflow-hidden bg-white/95 backdrop-blur-md rounded-3xl border border-slate-200/80 hover:border-emerald-500 shadow-xl lg:shadow-[-15px_0_30px_-10px_rgba(0,0,0,0.1)] hover:shadow-2xl flex flex-col min-h-[120px] lg:min-h-0 z-10 hover:z-30 origin-left"
               >
-                <div className="absolute inset-0 lg:w-full p-5 lg:p-8 flex flex-row lg:flex-col items-center lg:items-center justify-between z-10 transition-opacity duration-300 group-hover:opacity-0 bg-slate-50/50 lg:bg-transparent">
+                <div className="hidden lg:flex absolute inset-0 lg:w-full p-5 lg:p-8 flex-row lg:flex-col items-center lg:items-center justify-between z-10 transition-opacity duration-300 lg:group-hover:opacity-0 bg-slate-50/50 lg:bg-transparent">
                   <div className="w-12 h-12 lg:w-14 lg:h-14 rounded-xl bg-emerald-50 flex flex-shrink-0 items-center justify-center text-emerald-600 border border-emerald-100/80 lg:mb-6">
                     <svg className="w-6 h-6 lg:w-7 lg:h-7" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
                       <rect height="10" rx="2" width="14" x="5" y="7" />
@@ -384,7 +384,7 @@ export default function Home() {
                   </span>
                 </div>
 
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 p-6 lg:p-10 flex flex-col justify-between z-20 bg-white w-full lg:min-w-[450px]">
+                <div className="relative lg:absolute inset-0 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-500 delay-100 p-6 lg:p-10 flex flex-col justify-between z-20 bg-white w-full lg:min-w-[450px]">
                   <div className="absolute -right-10 -bottom-10 w-44 h-44 bg-emerald-100/40 rounded-full blur-2xl pointer-events-none group-hover:scale-125 transition-transform duration-500" />
                   <div className="relative z-10">
                     <div className="flex items-center justify-end mb-8">
@@ -704,11 +704,11 @@ export default function Home() {
             </div>
 
             {/* PHASE CARDS (Accordion layout) */}
-            <div className="mt-24 relative z-10 flex flex-col lg:flex-row -space-y-4 lg:space-y-0 lg:-space-x-6 h-auto lg:h-[420px] w-full px-4 lg:px-8 max-w-7xl mx-auto">
+            <div className="mt-24 relative z-10 flex flex-col lg:flex-row space-y-3 lg:space-y-0 lg:-space-x-6 h-auto lg:h-[420px] w-full px-4 lg:px-8 max-w-7xl mx-auto">
 
               {/* Card 1: Discover */}
               <div className="group relative flex-1 lg:hover:flex-[4] transition-all duration-500 ease-out overflow-hidden bg-white/95 backdrop-blur-md rounded-3xl shadow-xl lg:shadow-[-15px_0_30px_-10px_rgba(0,0,0,0.1)] hover:shadow-2xl flex flex-col min-h-[120px] lg:min-h-0 z-10 hover:z-30 origin-left">
-                <div className="absolute inset-0 lg:w-full p-5 lg:p-8 flex flex-row lg:flex-col items-center lg:items-center justify-between z-10 transition-opacity duration-300 group-hover:opacity-0 bg-slate-50/50 lg:bg-transparent">
+                <div className="hidden lg:flex absolute inset-0 lg:w-full p-5 lg:p-8 flex-row lg:flex-col items-center lg:items-center justify-between z-10 transition-opacity duration-300 lg:group-hover:opacity-0 bg-slate-50/50 lg:bg-transparent">
                   <div className="w-12 h-12 lg:w-14 lg:h-14 rounded-xl bg-blue-50 flex flex-shrink-0 items-center justify-center text-blue-600 border border-blue-100/80 lg:mb-6">
                     <svg className="w-6 h-6 lg:w-7 lg:h-7" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
                   </div>
@@ -721,7 +721,7 @@ export default function Home() {
                   </span>
                 </div>
 
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 p-6 lg:p-10 flex flex-col justify-between z-20 bg-white w-full lg:min-w-[450px]">
+                <div className="relative lg:absolute inset-0 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-500 delay-100 p-6 lg:p-10 flex flex-col justify-between z-20 bg-white w-full lg:min-w-[450px]">
                   <div className="absolute -right-10 -bottom-10 w-44 h-44 bg-blue-100/40 rounded-full blur-2xl pointer-events-none group-hover:scale-125 transition-transform duration-500" />
                   <div className="relative z-10 flex flex-col h-full">
                     <div className="flex items-center justify-end mb-8">
@@ -750,7 +750,7 @@ export default function Home() {
 
               {/* Card 2: Strategize */}
               <div className="group relative flex-1 lg:hover:flex-[4] transition-all duration-500 ease-out overflow-hidden bg-white/95 backdrop-blur-md rounded-3xl shadow-xl lg:shadow-[-15px_0_30px_-10px_rgba(0,0,0,0.1)] hover:shadow-2xl flex flex-col min-h-[120px] lg:min-h-0 z-10 hover:z-30 origin-left">
-                <div className="absolute inset-0 lg:w-full p-5 lg:p-8 flex flex-row lg:flex-col items-center lg:items-center justify-between z-10 transition-opacity duration-300 group-hover:opacity-0 bg-slate-50/50 lg:bg-transparent">
+                <div className="hidden lg:flex absolute inset-0 lg:w-full p-5 lg:p-8 flex-row lg:flex-col items-center lg:items-center justify-between z-10 transition-opacity duration-300 lg:group-hover:opacity-0 bg-slate-50/50 lg:bg-transparent">
                   <div className="w-12 h-12 lg:w-14 lg:h-14 rounded-xl bg-teal-50 flex flex-shrink-0 items-center justify-center text-teal-600 border border-teal-100/80 lg:mb-6">
                     <svg className="w-6 h-6 lg:w-7 lg:h-7" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
                   </div>
@@ -763,7 +763,7 @@ export default function Home() {
                   </span>
                 </div>
 
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 p-6 lg:p-10 flex flex-col justify-between z-20 bg-white w-full lg:min-w-[450px]">
+                <div className="relative lg:absolute inset-0 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-500 delay-100 p-6 lg:p-10 flex flex-col justify-between z-20 bg-white w-full lg:min-w-[450px]">
                   <div className="absolute -right-10 -bottom-10 w-44 h-44 bg-teal-100/40 rounded-full blur-2xl pointer-events-none group-hover:scale-125 transition-transform duration-500" />
                   <div className="relative z-10 flex flex-col h-full">
                     <div className="flex items-center justify-end mb-8">
@@ -792,7 +792,7 @@ export default function Home() {
 
               {/* Card 3: Build */}
               <div className="group relative flex-1 lg:hover:flex-[4] transition-all duration-500 ease-out overflow-hidden bg-white/95 backdrop-blur-md rounded-3xl shadow-xl lg:shadow-[-15px_0_30px_-10px_rgba(0,0,0,0.1)] hover:shadow-2xl flex flex-col min-h-[120px] lg:min-h-0 z-10 hover:z-30 origin-left">
-                <div className="absolute inset-0 lg:w-full p-5 lg:p-8 flex flex-row lg:flex-col items-center lg:items-center justify-between z-10 transition-opacity duration-300 group-hover:opacity-0 bg-slate-50/50 lg:bg-transparent">
+                <div className="hidden lg:flex absolute inset-0 lg:w-full p-5 lg:p-8 flex-row lg:flex-col items-center lg:items-center justify-between z-10 transition-opacity duration-300 lg:group-hover:opacity-0 bg-slate-50/50 lg:bg-transparent">
                   <div className="w-12 h-12 lg:w-14 lg:h-14 rounded-xl bg-purple-50 flex flex-shrink-0 items-center justify-center text-purple-600 border border-purple-100/80 lg:mb-6">
                     <svg className="w-6 h-6 lg:w-7 lg:h-7" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
                   </div>
@@ -805,7 +805,7 @@ export default function Home() {
                   </span>
                 </div>
 
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 p-6 lg:p-10 flex flex-col justify-between z-20 bg-white w-full lg:min-w-[450px]">
+                <div className="relative lg:absolute inset-0 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-500 delay-100 p-6 lg:p-10 flex flex-col justify-between z-20 bg-white w-full lg:min-w-[450px]">
                   <div className="absolute -right-10 -bottom-10 w-44 h-44 bg-purple-100/40 rounded-full blur-2xl pointer-events-none group-hover:scale-125 transition-transform duration-500" />
                   <div className="relative z-10 flex flex-col h-full">
                     <div className="flex items-center justify-end mb-8">
@@ -834,7 +834,7 @@ export default function Home() {
 
               {/* Card 4: Launch */}
               <div className="group relative flex-1 lg:hover:flex-[4] transition-all duration-500 ease-out overflow-hidden bg-white/95 backdrop-blur-md rounded-3xl shadow-xl lg:shadow-[-15px_0_30px_-10px_rgba(0,0,0,0.1)] hover:shadow-2xl flex flex-col min-h-[120px] lg:min-h-0 z-10 hover:z-30 origin-left">
-                <div className="absolute inset-0 lg:w-full p-5 lg:p-8 flex flex-row lg:flex-col items-center lg:items-center justify-between z-10 transition-opacity duration-300 group-hover:opacity-0 bg-slate-50/50 lg:bg-transparent">
+                <div className="hidden lg:flex absolute inset-0 lg:w-full p-5 lg:p-8 flex-row lg:flex-col items-center lg:items-center justify-between z-10 transition-opacity duration-300 lg:group-hover:opacity-0 bg-slate-50/50 lg:bg-transparent">
                   <div className="w-12 h-12 lg:w-14 lg:h-14 rounded-xl bg-amber-50 flex flex-shrink-0 items-center justify-center text-amber-600 border border-amber-100/80 lg:mb-6">
                     <svg className="w-6 h-6 lg:w-7 lg:h-7" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
                   </div>
@@ -847,7 +847,7 @@ export default function Home() {
                   </span>
                 </div>
 
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 p-6 lg:p-10 flex flex-col justify-between z-20 bg-white w-full lg:min-w-[450px]">
+                <div className="relative lg:absolute inset-0 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-500 delay-100 p-6 lg:p-10 flex flex-col justify-between z-20 bg-white w-full lg:min-w-[450px]">
                   <div className="absolute -right-10 -bottom-10 w-44 h-44 bg-amber-100/40 rounded-full blur-2xl pointer-events-none group-hover:scale-125 transition-transform duration-500" />
                   <div className="relative z-10 flex flex-col h-full">
                     <div className="flex items-center justify-end mb-8">
@@ -876,7 +876,7 @@ export default function Home() {
 
               {/* Card 5: Optimize */}
               <div className="group relative flex-1 lg:hover:flex-[4] transition-all duration-500 ease-out overflow-hidden bg-white/95 backdrop-blur-md rounded-3xl shadow-xl lg:shadow-[-15px_0_30px_-10px_rgba(0,0,0,0.1)] hover:shadow-2xl flex flex-col min-h-[120px] lg:min-h-0 z-10 hover:z-30 origin-left">
-                <div className="absolute inset-0 lg:w-full p-5 lg:p-8 flex flex-row lg:flex-col items-center lg:items-center justify-between z-10 transition-opacity duration-300 group-hover:opacity-0 bg-slate-50/50 lg:bg-transparent">
+                <div className="hidden lg:flex absolute inset-0 lg:w-full p-5 lg:p-8 flex-row lg:flex-col items-center lg:items-center justify-between z-10 transition-opacity duration-300 lg:group-hover:opacity-0 bg-slate-50/50 lg:bg-transparent">
                   <div className="w-12 h-12 lg:w-14 lg:h-14 rounded-xl bg-emerald-50 flex flex-shrink-0 items-center justify-center text-emerald-600 border border-emerald-100/80 lg:mb-6">
                     <svg className="w-6 h-6 lg:w-7 lg:h-7" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" /><path strokeLinecap="round" strokeLinejoin="round" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" /></svg>
                   </div>
@@ -889,7 +889,7 @@ export default function Home() {
                   </span>
                 </div>
 
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 p-6 lg:p-10 flex flex-col justify-between z-20 bg-white w-full lg:min-w-[450px]">
+                <div className="relative lg:absolute inset-0 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-500 delay-100 p-6 lg:p-10 flex flex-col justify-between z-20 bg-white w-full lg:min-w-[450px]">
                   <div className="absolute -right-10 -bottom-10 w-44 h-44 bg-emerald-100/40 rounded-full blur-2xl pointer-events-none group-hover:scale-125 transition-transform duration-500" />
                   <div className="relative z-10 flex flex-col h-full">
                     <div className="flex items-center justify-end mb-8">
@@ -918,7 +918,7 @@ export default function Home() {
 
               {/* Card 6: Grow */}
               <div className="group relative flex-1 lg:hover:flex-[4] transition-all duration-500 ease-out overflow-hidden bg-white/95 backdrop-blur-md rounded-3xl shadow-xl lg:shadow-[-15px_0_30px_-10px_rgba(0,0,0,0.1)] hover:shadow-2xl flex flex-col min-h-[120px] lg:min-h-0 z-10 hover:z-30 origin-left">
-                <div className="absolute inset-0 lg:w-full p-5 lg:p-8 flex flex-row lg:flex-col items-center lg:items-center justify-between z-10 transition-opacity duration-300 group-hover:opacity-0 bg-slate-50/50 lg:bg-transparent">
+                <div className="hidden lg:flex absolute inset-0 lg:w-full p-5 lg:p-8 flex-row lg:flex-col items-center lg:items-center justify-between z-10 transition-opacity duration-300 lg:group-hover:opacity-0 bg-slate-50/50 lg:bg-transparent">
                   <div className="w-12 h-12 lg:w-14 lg:h-14 rounded-xl bg-green-50 flex flex-shrink-0 items-center justify-center text-green-600 border border-green-100/80 lg:mb-6">
                     <svg className="w-6 h-6 lg:w-7 lg:h-7" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
                   </div>
@@ -931,7 +931,7 @@ export default function Home() {
                   </span>
                 </div>
 
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 p-6 lg:p-10 flex flex-col justify-between z-20 bg-white w-full lg:min-w-[450px]">
+                <div className="relative lg:absolute inset-0 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-500 delay-100 p-6 lg:p-10 flex flex-col justify-between z-20 bg-white w-full lg:min-w-[450px]">
                   <div className="absolute -right-10 -bottom-10 w-44 h-44 bg-green-100/40 rounded-full blur-2xl pointer-events-none group-hover:scale-125 transition-transform duration-500" />
                   <div className="relative z-10 flex flex-col h-full">
                     <div className="flex items-center justify-end mb-8">

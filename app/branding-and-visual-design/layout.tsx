@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "SmartOnward Technologies — Branding & Visual Design",
+  title: "Branding & Visual Design",
   description:
     "We turn ideas into distinctive brand identities that look professional, feel consistent and give your business a visual presence built for growth.",
 };

@@ -1,54 +1,70 @@
-# SmartOnward — Next.js Website
+# SmartOnward Technologies — Next.js Application
 
-Exact conversion of your SmartOnward landing page into a production-ready Next.js 14 (App Router) project.
+A modern, production-ready web application for SmartOnward Technologies, built with Next.js 14, Tailwind CSS, and Supabase.
 
-## 1. Run it locally
+## 🚀 Tech Stack
+- **Framework:** Next.js 14 (App Router) + React + TypeScript
+- **Styling:** Tailwind CSS (Custom Design System, Glassmorphism)
+- **Database / Backend:** Supabase (for Growth Audit lead captures)
+- **Deployment:** Optimized for Vercel or Hostinger
+- **SEO:** Built-in dynamic metadata, sitemap.xml, robots.txt
+
+## 🛠️ Features
+- **Responsive Layout:** Custom sticky floating header and mobile-optimized menus.
+- **Dynamic Services Pages:** Dedicated pages for AI Automation, Digital Marketing, Branding, Video/Reels, Website Development, and Social Media Management.
+- **Lead Generation:** Integrated "Growth Audit" modal form that saves directly to Supabase.
+- **Legal Compliance:** Built-in Cookie Policy, Privacy Policy, Terms of Service, and floating Cookie Banner.
+- **Analytics:** Google Analytics (`G-HZ5THH5NXZ`) pre-configured.
+
+---
+
+## 1. Local Development
+
+First, make sure you have your `.env.local` file configured with your Supabase credentials. (See `.env.example`).
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open http://localhost:3000 — you'll see the exact same site.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-## 2. Push it to GitHub
+## 2. Environment Variables
 
-```bash
-git init
-git add .
-git commit -m "Initial commit - SmartOnward website"
-git branch -M main
-git remote add origin https://github.com/<your-username>/<your-repo>.git
-git push -u origin main
+To run the site fully, you need a Supabase project for the form submissions. Create an `.env.local` file at the root:
+
+```env
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
 ```
 
-(Create the empty repo on GitHub first at https://github.com/new — don't initialize it with a README there, since this project already has one.)
+*Note: When deploying to Hostinger or Vercel, make sure to add these variables to your production environment settings!*
 
-## 3. Deploy it (Vercel — recommended, built by the Next.js team, free tier)
+## 3. Project Structure
 
-**Option A — CLI:**
-```bash
-npm install -g vercel
-vercel login
-vercel --prod
-```
+- **`app/page.tsx`**: The main landing page.
+- **`app/components/`**: Reusable components (`Header.tsx`, `Footer.tsx`, `AuditModal.tsx`, `CookieBanner.tsx`).
+- **`app/lib/`**: Utility files (like `supabase-config.ts` for database connections).
+- **`app/(legal)/`**: Routes for Cookie Policy, Privacy Policy, etc.
+- **`app/(services)/`**: The individual service pages.
+- **`app/globals.css`**: Tailwind directives and custom ambient animations.
 
-**Option B — Dashboard:**
-1. Go to https://vercel.com/new
-2. Import the GitHub repo you just pushed
-3. Leave all settings as default (Vercel auto-detects Next.js)
-4. Click Deploy
+## 4. Editing Content
 
-You'll get a live URL like `smartonward.vercel.app` in about a minute. Add your own domain (e.g. smartonward.com) later under Project → Settings → Domains.
+- **Contact Info:** To update WhatsApp numbers or Emails, check `app/components/Header.tsx`, `app/components/Footer.tsx`, and `app/components/StruggleSection.tsx`.
+- **Database Table:** The Audit Modal pushes to a Supabase table called `growth_audits`. If you change form fields, make sure to update your Supabase table schema to match.
 
-## 4. Editing content later
+## 5. Deployment
 
-- All page content/sections: `app/page.tsx`
-- All styling/colors: `app/globals.css`
-- Site title, meta description: `app/layout.tsx`
-- Update the WhatsApp number (`app/page.tsx`, search for `wa.me/91XXXXXXXXXX`) and the contact email (`hello@smartonward.com`) with your real details before going live.
+### Vercel (Recommended)
+1. Push your repository to GitHub.
+2. Go to Vercel and import the repository.
+3. Add your `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` to the Environment Variables settings.
+4. Click Deploy.
 
-## Tech stack
-- Next.js 14 (App Router) + TypeScript
-- Plain CSS (no framework) — same styling approach as the original HTML
-- Zero external dependencies beyond React/Next.js
+### Hostinger (VPS or Node.js Hosting)
+1. Ensure Node.js is installed on your Hostinger panel.
+2. Clone the repository.
+3. Add the `.env.local` variables via the hPanel.
+4. Run `npm install` and `npm run build`.
+5. Start the production server using `npm start` (or PM2).

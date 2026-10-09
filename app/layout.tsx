@@ -79,18 +79,17 @@ export default function RootLayout({
     >
       <head>
         {/* Analytics */}
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=G-HZ5THH5NXZ`}
-          strategy="afterInteractive"
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-HZ5THH5NXZ" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-HZ5THH5NXZ');
+            `,
+          }}
         />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-HZ5THH5NXZ');
-          `}
-        </Script>
       </head>
       <body className="font-sans antialiased text-slate-900 selection:bg-blue-100 selection:text-blue-700 relative min-h-screen">
         <AmbientBackground />

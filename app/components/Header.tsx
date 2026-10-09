@@ -19,10 +19,10 @@ export default function Header() {
   useEffect(() => {
     const handleOpen = () => setIsModalOpen(true);
     const handleClose = () => setIsModalOpen(false);
-    
+
     window.addEventListener('open-audit-modal', handleOpen);
     window.addEventListener('close-audit-modal', handleClose);
-    
+
     return () => {
       window.removeEventListener('open-audit-modal', handleOpen);
       window.removeEventListener('close-audit-modal', handleClose);
@@ -41,18 +41,16 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky z-50 flex justify-center w-full transition-opacity duration-300 ${isModalOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
+      className={`sticky z-50 flex flex-col items-center w-full transition-opacity duration-300 ${isModalOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
       style={{ top: `${currentTop}px` }}
     >
       <div
-        className={`relative bg-white/90 backdrop-blur-lg shadow-sm flex flex-row items-center justify-between gap-4 flex-nowrap overflow-hidden transition-colors ${progress > 0 ? "border border-slate-200/80" : "border-b border-slate-200/80"
+        className={`relative bg-white/90 backdrop-blur-lg shadow-sm flex flex-row items-center justify-between gap-2 sm:gap-4 flex-nowrap overflow-hidden transition-colors px-3 sm:px-6 ${progress > 0 ? "border border-slate-200/80" : "border-b border-slate-200/80"
           }`}
         style={{
           width: currentWidth,
           height: `${currentHeight}px`,
-          borderRadius: `${currentBorderRadius}px`,
-          paddingLeft: '1.5rem',
-          paddingRight: '1.5rem'
+          borderRadius: `${currentBorderRadius}px`
         }}
       >
         {/* Brand Logo */}
@@ -60,8 +58,7 @@ export default function Header() {
           <img
             src="/logo-new.png"
             alt="SmartOnward Technologies Logo"
-            className="logo-img group-hover:scale-105 transition-transform duration-200"
-            style={{ height: "70px", width: "auto", objectFit: "contain" }}
+            className="h-11 sm:h-12 md:h-[67px] w-auto object-contain group-hover:scale-105 transition-transform duration-200"
           />
         </Link>
 
@@ -78,16 +75,16 @@ export default function Header() {
         </div>
 
         {/* Right CTA Button & Mobile Menu Toggle */}
-        <div className="flex-shrink-0 flex items-center gap-3 sm:gap-4">
+        <div className="flex-shrink-0 flex items-center gap-1.5 sm:gap-4">
           <button
-            className="inline-flex items-center justify-center px-5 sm:px-6 py-2 sm:py-2.5 rounded-full bg-[#2563EB] hover:bg-blue-700 text-white text-sm font-semibold shadow-md shadow-blue-500/20 hover:shadow-glow-blue transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 whitespace-nowrap"
+            className="inline-flex items-center justify-center px-3.5 sm:px-6 py-1.5 sm:py-2.5 rounded-full bg-[#2563EB] hover:bg-blue-700 text-white text-[13px] sm:text-sm font-semibold shadow-md shadow-blue-500/20 hover:shadow-glow-blue transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 whitespace-nowrap"
             onClick={(e) => {
               e.preventDefault();
               window.dispatchEvent(new Event('open-audit-modal'));
             }}
           >
             <span>Get Started</span>
-            <span className="ml-1.5 font-bold">→</span>
+            <span className="ml-1 sm:ml-1.5 font-bold">→</span>
           </button>
 
           <button
@@ -110,32 +107,28 @@ export default function Header() {
 
       {/* Mobile Dropdown Menu */}
       {menuOpen && (
-        <div className="lg:hidden bg-white/95 backdrop-blur-md border-b border-slate-200 px-6 py-4 space-y-4 shadow-xl">
+        <div className="lg:hidden w-[calc(100%-1.5rem)] mt-2 rounded-2xl bg-white/95 backdrop-blur-md border border-slate-200 px-6 py-5 space-y-4 shadow-2xl">
           <div className="space-y-1">
-            <Link href="/" onClick={closeMenu} className="block text-slate-800 font-semibold py-2 border-b border-slate-100">
+            <Link href="/" onClick={closeMenu} className="block text-slate-800 font-semibold py-3 border-b border-slate-100 hover:text-blue-600 transition-colors">
               Home
             </Link>
-            <div className="py-2 border-b border-slate-100">
-              <Link href="/services" onClick={closeMenu} className="block text-slate-400 text-xs font-bold uppercase tracking-wider mb-2 hover:text-blue-600 transition-colors">
-                All Services
-              </Link>
-              <div className="flex flex-col gap-2 pl-2">
-                <Link href="/digital-marketing" onClick={closeMenu} className="block text-slate-800 font-semibold hover:text-blue-600">Digital Marketing</Link>
-                <Link href="/ai-automation" onClick={closeMenu} className="block text-slate-800 font-semibold hover:text-blue-600">AI Automation</Link>
-                <Link href="/branding-and-visual-design" onClick={closeMenu} className="block text-slate-800 font-semibold hover:text-blue-600">Branding & Design</Link>
-                <Link href="/social-media-management" onClick={closeMenu} className="block text-slate-800 font-semibold hover:text-blue-600">Social Media Management</Link>
-              </div>
-            </div>
-            <Link href="/#who-we-help" onClick={closeMenu} className="block text-slate-800 font-semibold py-2 border-b border-slate-100">
-              Who We Help
+            <Link href="/services" onClick={closeMenu} className="block text-slate-800 font-semibold py-3 border-b border-slate-100 hover:text-blue-600 transition-colors">
+              Services
             </Link>
-            <Link href="/#deployments" onClick={closeMenu} className="block text-slate-800 font-semibold py-2 border-b border-slate-100">
-              Selected Works
+            <Link href="/about" onClick={closeMenu} className="block text-slate-800 font-semibold py-3 border-b border-slate-100 hover:text-blue-600 transition-colors">
+              About
             </Link>
           </div>
-          <Link href="/#schedule" onClick={closeMenu} className="block text-center w-full bg-blue-600 text-white font-bold py-3 rounded-xl shadow-lg shadow-blue-500/20">
+          <button 
+            onClick={(e) => {
+              e.preventDefault();
+              closeMenu();
+              window.dispatchEvent(new Event('open-audit-modal'));
+            }}
+            className="block text-center w-full bg-blue-600 text-white font-bold py-3 rounded-xl shadow-lg shadow-blue-500/20"
+          >
             Schedule Growth Audit →
-          </Link>
+          </button>
         </div>
       )}
     </header>
