@@ -115,7 +115,7 @@ export default function DigitalMarketingPage() {
                   We don&apos;t just run ads. We build the <span className="text-blue-600 italic">whole growth journey.</span>
                 </h2>
                 <p className="text-slate-600 text-lg mb-8">
-                  Your marketing works better when your website, brand, content, social media, ads and AI automation work together. That&apos;s the advantage of a full-fledged agency.
+                  Your marketing works better when your website, brand, content, social media, ads and AI automation work together. That&apos;s the advantage of a full-fledged technology company.
                 </p>
               </div>
 

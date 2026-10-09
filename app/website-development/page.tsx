@@ -115,7 +115,7 @@ export default function WebsiteDevelopmentPage() {
                   We don&apos;t just build a website. We build your <span className="text-blue-600 italic">digital presence.</span>
                 </h2>
                 <p className="text-slate-600 text-lg mb-8">
-                  As a full-fledged digital agency, we can connect your website with branding, content, social media, digital marketing and AI automation - so everything works together.
+                  As a full-fledged technology company, we can connect your website with branding, content, social media, digital marketing and AI automation - so everything works together.
                 </p>
               </div>
 

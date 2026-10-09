@@ -117,7 +117,7 @@ export default function AIAutomationPage() {
                   We don&apos;t add AI because it&apos;s trendy. We use it where it can create <span className="text-blue-600 italic">real leverage.</span>
                 </h2>
                 <p className="text-slate-600 text-lg mb-8">
-                  As a full-fledged agency, we can connect your automation with your website, marketing, social media, CRM and customer journey - creating one connected digital system.
+                  As a full-fledged technology company, we can connect your automation with your website, marketing, social media, CRM and customer journey - creating one connected digital system.
                 </p>
               </div>
 

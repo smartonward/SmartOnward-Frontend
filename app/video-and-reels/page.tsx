@@ -46,7 +46,7 @@ export default function VideoAndReelsPage() {
                 From one Reel to a <span className="text-blue-600 italic">complete content system.</span>
               </h2>
               <p className="text-slate-600 text-lg">
-                As a full-fledged digital agency, we connect video with your branding, social media and marketing goals - not just random content.
+                As a full-fledged technology company, we connect video with your branding, social media and marketing goals - not just random content.
               </p>
             </div>
 
@@ -115,7 +115,7 @@ export default function VideoAndReelsPage() {
                   We don&apos;t create videos just to <span className="text-blue-600 italic">fill your feed.</span>
                 </h2>
                 <p className="text-slate-600 text-lg mb-8">
-                  We create content with a purpose - attention, awareness, engagement, leads or sales. And because we&apos;re a full-service agency, your video can work with your website, brand identity, social strategy and campaigns.
+                  We create content with a purpose - attention, awareness, engagement, leads or sales. And because we&apos;re a full-service technology company, your video can work with your website, brand identity, social strategy and campaigns.
                 </p>
               </div>
 

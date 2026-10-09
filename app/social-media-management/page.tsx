@@ -115,7 +115,7 @@ export default function SocialMediaManagementPage() {
                   We don&apos;t chase vanity metrics. We build a social presence that supports your <span className="text-blue-600 italic">business.</span>
                 </h2>
                 <p className="text-slate-600 text-lg mb-8">
-                  Because we&apos;re a full-fledged agency, social media can connect directly with your branding, website, video content, digital marketing and AI-powered workflows.
+                  Because we&apos;re a full-fledged technology company, social media can connect directly with your branding, website, video content, digital marketing and AI-powered workflows.
                 </p>
               </div>
 
