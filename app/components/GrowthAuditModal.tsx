@@ -110,6 +110,12 @@ export default function GrowthAuditModal() {
         <form className="flex-grow flex flex-col space-y-4" onSubmit={handleAuditSubmit}>
           {/* Hidden Inputs */}
           <input type="hidden" name="selectedFocus" value={selectedFocus.join(', ')} />
+          
+          {/* Honeypot Field for Spam Protection */}
+          <div className="absolute left-[-9999px]" aria-hidden="true" tabIndex={-1}>
+            <label htmlFor="bot-field">Do not fill this out if you are human</label>
+            <input type="text" id="bot-field" name="bot_field" tabIndex={-1} autoComplete="off" />
+          </div>
 
           {/* 1. What do you need? (Pills) */}
           <div className="space-y-2">

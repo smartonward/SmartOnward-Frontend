@@ -13,7 +13,7 @@ export default function SocialMediaManagementPage() {
           <div className="max-w-5xl mx-auto flex flex-col items-center">
 
             <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-[76px] font-black text-slate-950 tracking-tight leading-[1.08] max-w-4xl">
-              Don&apos;t just <span className="text-blue-600 italic">post.</span> Build a social presence people <em>remember.</em>
+              Don&apos;t just <span className="engineer-highlight italic">post.</span> Build a social presence people <em>remember.</em>
             </h1>
 
             <p className="mt-8 text-lg sm:text-xl text-slate-600 max-w-2xl leading-relaxed font-medium">

@@ -25,6 +25,20 @@ export async function submitLead(formData: FormData) {
     const website = formData.get("website") as string;
     const details = formData.get("details") as string;
     const selectedFocus = formData.get("selectedFocus") as string;
+    
+    const botField = formData.get("bot_field") as string;
+
+    // Honeypot check for spam protection
+    if (botField) {
+      console.warn("Spam bot detected via honeypot.");
+      // Return success to fool the bot
+      return { success: true };
+    }
+
+    // Basic Server-Side Validation
+    if (!name || !email) {
+      return { success: false, error: "Name and Email are required." };
+    }
 
     const { data, error } = await supabase
       .from("leads")

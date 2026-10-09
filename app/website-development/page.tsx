@@ -13,7 +13,7 @@ export default function WebsiteDevelopmentPage() {
           <div className="max-w-5xl mx-auto flex flex-col items-center">
 
             <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-[76px] font-black text-slate-950 tracking-tight leading-[1.08] max-w-4xl">
-              Websites built to <span className="text-blue-600 italic">look great</span> and <em>grow your business.</em>
+              Websites built to <span className="engineer-highlight italic">look great</span> and <em>grow your business.</em>
             </h1>
 
             <p className="mt-8 text-lg sm:text-xl text-slate-600 max-w-2xl leading-relaxed font-medium">
